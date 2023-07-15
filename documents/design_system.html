@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
+  <style>
+    /* Custom CSS */
+    .dropdown-toggle {
+      text-decoration: none !important;
+    }
+
+    .no-underline {
+      text-decoration: none !important;
+    }
+
+    .navbar .navbar-nav {
+      margin-left: auto;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .social-icons li a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+    } 
+    
+    table, th, td {
+      border: 1px solid;
+    }
+
+    .mermaid svg { height: auto; }
+  </style>
+  <title>UX Wizard</title>
+  <link rel="icon" type="images" href="../images/favicon.png">
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>  
+
+  <!-- Top Area -->
+  <header class="bg-dark text-white py-2">
+    <div class="container">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="d-flex align-items-center">
+          <img src="../images/logo_transparent.png" alt="Logo" height="70">
+        </div>
+        <div class="navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link no-underline">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Research</a>
+              <ul class="dropdown-menu" aria-labelledby="menu1">
+                <li><a class="dropdown-item" href="ux_research_surveys_interviews.html">Surveys and Interviews</a></li>
+                <li><a class="dropdown-item" href="feature_comparison.html">Feature Comparison</a></li>
+                <li><a class="dropdown-item" href="persona_creation.html">Persona Creation</a></li>
+                <li><a class="dropdown-item" href="research_insights.html">Research Insights</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu2">
+                <li><a class="dropdown-item" href="ux_copy.html">Generating Copy</a></li>
+                <li><a class="dropdown-item" href="design_system.html">Design System</a></li>
+                <li><a class="dropdown-item" href="user_flows.html">User Flows</a></li>
+                <li><a class="dropdown-item" href="wireframes.html">Wireframes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu3" data-bs-toggle="dropdown"
+                aria-expanded="false">Graphic Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu3">
+                <li><a class="dropdown-item" href="image_generation.html">Image Generation</a></li>
+                <!-- <li><a class="dropdown-item" href="./documents/image_editing.html">Image Editing</a></li> -->
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Development</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="web_development.html">Web Site Generation</a></li> 
+                <li><a class="dropdown-item" href="copilot_development.html">Using Github Co-Pilot</a></li> 
+                <li><a class="dropdown-item" href="openai_notebook_iframe.html">OpenAI API Setup </a></li> 
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Image Carousel Area -->
+  <!--
+  <section class="pt-5">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/android_text_balloon.jpg" class="d-block mx-auto w-50" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_flower.jpg" class="d-block mx-auto w-50" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_wires.jpg" class="d-block mx-auto w-50" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Section Information -->
+  <section class="py-4">
+    <div class="container">
+      <h2 id="generating-design-system-ideas">Generating Design System Ideas</h2>
+<p>Ai can be used to generate design documentation for ui elements. It can also be used to generate color palette variations using tools such as Coolers.</p>
+<p>The generating design patterns can be used to help identify and test various designs that work well with the given target audiences.</p>
+<h3 id="example-design-system-documentation"><strong>Example Design System Documentation</strong></h3>
+<p><strong>Template for prompt:</strong> Write a design system documentation for a [UI Element]? Represent in a table with the states like default, clicked, hover, active, focus, and disabled. Describe these states with design token (colour, font)</p>
+<p><strong>Prompt: Design Documentation for a Input Box:</strong>
+Give me a sample documentation for an input box of height 44px . Include component anatomy such has height, padding, color, text size, shadows etc. in a table format. Also Include usage guideline, sample use cases, do's and dont's. In a table format along with their respective tokens.</p>
+<details><summary>Response</summary>
+Sure! Here's a sample documentation for an input box with a height of 44px, including component anatomy, usage guidelines, sample use cases, and do's and don'ts. The information is presented in a table format with respective tokens:
+<table>
+<thead>
+<tr>
+<th>Component Anatomy</th>
+<th>Token</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Height</td>
+<td>$input-height</td>
+<td>44px</td>
+</tr>
+<tr>
+<td>Padding</td>
+<td>$input-padding</td>
+<td>8px</td>
+</tr>
+<tr>
+<td>Background Color</td>
+<td>$input-bg-color</td>
+<td>#FFFFFF</td>
+</tr>
+<tr>
+<td>Text Color</td>
+<td>$input-text-color</td>
+<td>#333333</td>
+</tr>
+<tr>
+<td>Border Color</td>
+<td>$input-border-color</td>
+<td>#CCCCCC</td>
+</tr>
+<tr>
+<td>Border Radius</td>
+<td>$input-border-radius</td>
+<td>4px</td>
+</tr>
+<tr>
+<td>Text Size</td>
+<td>$input-text-size</td>
+<td>14px</td>
+</tr>
+<tr>
+<td>Box Shadow</td>
+<td>$input-box-shadow</td>
+<td>0 2px 4px rgba(0, 0, 0, 0.1)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Usage Guidelines:</strong></p>
+<ol>
+<li>Always use the provided token values to maintain consistency in appearance across the application.</li>
+<li>Ensure that the input box has a clear and visible contrast between the background color and text color for easy readability.</li>
+<li>Avoid modifying the height of the input box to maintain the intended design and layout.</li>
+<li>Use appropriate padding to provide sufficient spacing between the input content and the border of the input box.</li>
+<li>Consider using the box shadow to give the input box a subtle depth and visual separation from the surrounding elements.</li>
+</ol>
+<p><strong>Sample Use Cases:</strong></p>
+<ol>
+<li>Login or registration forms.</li>
+<li>Search input fields.</li>
+<li>Comment or feedback input boxes.</li>
+<li>Address or contact information input fields.</li>
+</ol>
+<p><strong>Do's:</strong></p>
+<ol>
+<li>Use the provided token values to maintain consistency.</li>
+<li>Ensure appropriate contrast between text and background colors.</li>
+<li>Test the input box on different screen sizes to ensure it remains visually appealing and functional.</li>
+</ol>
+<p><strong>Don'ts:</strong></p>
+<ol>
+<li>Modify the height without considering the overall design and layout.</li>
+<li>Use colors that may cause readability issues or lack sufficient contrast.</li>
+<li>Overuse box shadows or other effects that may distract users from the input field itself.</li>
+</ol>
+<p>Remember to adapt and customize this sample documentation to match your specific design system, token naming conventions, and guidelines.</p>
+</details>
+<br>
+<h3 id="color-palette-generation-example"><strong>Color Palette Generation Example</strong></h3>
+<p><strong>Template for Prompt:</strong>
+Can you suggest primary, secondary and tertiary colors for an [App / Website]? Represent in a table.</p>
+<p><strong>Prompt:</strong> Can you suggest primary, secondary and tertiary colors for a [Basketball News App/Website]? Represent in a table.</p>
+<details><summary>Response</summary>
+<p>Certainly! Here's a suggestion for primary, secondary, and tertiary colors for a Basketball News App/Website, represented in a table:</p>
+<table>
+<thead>
+<tr>
+<th>Color Usage</th>
+<th>Color Name</th>
+<th>Hex Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary Color</td>
+<td>Midnight Blue</td>
+<td>#003366</td>
+</tr>
+<tr>
+<td>Secondary Color</td>
+<td>Gold</td>
+<td>#FFD700</td>
+</tr>
+<tr>
+<td>Tertiary Color</td>
+<td>White Smoke</td>
+<td>#F5F5F5</td>
+</tr>
+<tr>
+<td>Accent Color</td>
+<td>Electric Blue</td>
+<td>#00FFFF</td>
+</tr>
+<tr>
+<td>Text Color</td>
+<td>Charcoal Gray</td>
+<td>#333333</td>
+</tr>
+<tr>
+<td>Background Color</td>
+<td>Snow White</td>
+<td>#FFFFFF</td>
+</tr>
+</tbody>
+</table>
+<p>Please note that these color choices are just suggestions, and you can adapt them to fit your specific branding and design preferences.</p>
+</details>
+<br>
+<h3 id="example-3-design-patterns-for-a-digital-banking-application"><strong>Example 3: Design Patterns For a Digital Banking Application</strong></h3>
+<p><strong>Prompt:</strong>
+What design patterns work best for a digital banking application?</p>
+<details><summary>Response</summary>
+<p>Design patterns that work best for a digital banking application are those that prioritize usability, security, and clear communication of financial information. Here are some design patterns commonly used in digital banking applications:</p>
+<ol>
+<li>
+<p><strong>Simple and Intuitive Navigation</strong>: Implement a clear and straightforward navigation system that allows users to easily access different sections of the application, such as accounts, transactions, payments, and settings.</p>
+</li>
+<li>
+<p><strong>Clear and Concise Information Hierarchy</strong>: Present financial information in a structured manner, ensuring important details like account balances, recent transactions, and upcoming payments are prominently displayed for quick reference.</p>
+</li>
+<li>
+<p><strong>Responsive and Mobile-Friendly Design</strong>: Optimize the application for mobile devices, as many users prefer to manage their finances on smartphones and tablets. Ensure the interface adapts seamlessly to different screen sizes and resolutions.</p>
+</li>
+<li>
+<p><strong>Consistent and Familiar UI Elements</strong>: Use consistent visual elements, such as buttons, forms, and icons, across the application to create familiarity and ease of use. Maintain consistency with commonly recognized banking interface conventions to ensure user confidence.</p>
+</li>
+<li>
+<p><strong>Security and Authentication Measures</strong>: Implement strong security measures, including secure login methods like biometric authentication (fingerprint, face recognition), two-factor authentication, and encryption of sensitive data. Clearly communicate to users that their information is protected.</p>
+</li>
+<li>
+<p><strong>Efficient Transaction Flows</strong>: Streamline the process of making payments, transfers, and other financial transactions by reducing the number of steps required and providing clear guidance at each stage. Offer predefined templates for common transactions to expedite the process.</p>
+</li>
+<li>
+<p><strong>Personalization and Customization</strong>: Provide users with options to personalize their banking experience, such as customizing dashboard layouts, setting up notifications for account activities, and creating shortcuts for frequently performed actions.</p>
+</li>
+<li>
+<p><strong>Accessible Design</strong>: Ensure the application meets accessibility guidelines, making it usable for individuals with disabilities. Consider features like text-to-speech, high contrast modes, and keyboard navigation options.</p>
+</li>
+<li>
+<p><strong>Help and Support</strong>: Offer easily accessible help and support features, including FAQs, live chat, and contact information for customer support, enabling users to quickly find assistance when needed.</p>
+</li>
+<li>
+<p><strong>Data Visualization and Insights</strong>: Use data visualization techniques to present financial trends, spending patterns, and budgeting insights to users. Visual representations like charts and graphs can help users understand their financial situation more easily.</p>
+</li>
+</ol>
+<p>Remember, while these design patterns can provide a solid foundation, it's crucial to conduct user research, gather feedback, and iterate on the design based on your specific target audience's needs and preferences.</p>
+</details>
+<br>
+
+    </div>
+  </section>
+
+  <!-- Bottom Area -->
+  <footer class="footer bg-dark text-white py-2">
+    <div class="container">
+      <ul class="social-icons">
+        <button class="btn btn-dark" type="button">
+          <a href="https://github.com/" target="_blank"><i class="fab fa-github fa-2x" style="color: #ffffff;"></i></a>
+        </button>
+        <button class="btn btn-dark" type="button">
+          <a href="https://linkedin" target="_blank"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
+        </button>
+      </ul>
+      <p>&copy; 2023 Generative-AI Learn. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
+  <style>
+    /* Custom CSS */
+    .dropdown-toggle {
+      text-decoration: none !important;
+    }
+
+    .no-underline {
+      text-decoration: none !important;
+    }
+
+    .navbar .navbar-nav {
+      margin-left: auto;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .social-icons li a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+    } 
+    
+    table, th, td {
+      border: 1px solid;
+    }
+
+    .mermaid svg { height: auto; }
+  </style>
+  <title>UX Wizard</title>
+  <link rel="icon" type="images" href="../images/favicon.png">
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>  
+
+  <!-- Top Area -->
+  <header class="bg-dark text-white py-2">
+    <div class="container">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="d-flex align-items-center">
+          <img src="../images/logo_transparent.png" alt="Logo" height="70">
+        </div>
+        <div class="navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link no-underline">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Research</a>
+              <ul class="dropdown-menu" aria-labelledby="menu1">
+                <li><a class="dropdown-item" href="ux_research_surveys_interviews.html">Surveys and Interviews</a></li>
+                <li><a class="dropdown-item" href="feature_comparison.html">Feature Comparison</a></li>
+                <li><a class="dropdown-item" href="persona_creation.html">Persona Creation</a></li>
+                <li><a class="dropdown-item" href="research_insights.html">Research Insights</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu2">
+                <li><a class="dropdown-item" href="ux_copy.html">Generating Copy</a></li>
+                <li><a class="dropdown-item" href="design_system.html">Design System</a></li>
+                <li><a class="dropdown-item" href="user_flows.html">User Flows</a></li>
+                <li><a class="dropdown-item" href="wireframes.html">Wireframes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu3" data-bs-toggle="dropdown"
+                aria-expanded="false">Graphic Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu3">
+                <li><a class="dropdown-item" href="image_generation.html">Image Generation</a></li>
+                <!-- <li><a class="dropdown-item" href="./documents/image_editing.html">Image Editing</a></li> -->
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Development</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="web_development.html">Web Site Generation</a></li> 
+                <li><a class="dropdown-item" href="copilot_development.html">Using Github Co-Pilot</a></li> 
+                <li><a class="dropdown-item" href="openai_notebook_iframe.html">OpenAI API Setup </a></li> 
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Image Carousel Area -->
+  <!--
+  <section class="pt-5">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/android_text_balloon.jpg" class="d-block mx-auto w-50" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_flower.jpg" class="d-block mx-auto w-50" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_wires.jpg" class="d-block mx-auto w-50" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Section Information -->
+  <section class="py-4">
+    <div class="container">
+      <h2 id="web-page-development">Web Page Development</h2>
+<p>It is possible use natural language interfaces to specify what is required
+for a given web page layout. This was tested out using ChatGPT only at this point.</p>
+<p>The first goal was to create four main areas:</p>
+<ol>
+<li>a &quot;standard&quot; layout with a top level menu</li>
+<li>an image carousel (gallery)</li>
+<li>a main content section, and</li>
+<li>a footer for things like external links</li>
+</ol>
+<p>The desire was to make the site &quot;responsive&quot; and hence put in as a requirement to use <code>Bootstrap</code>. As there are restrictions on how up-to-date the language model which is used by <code>ChatGPT</code>, we went with a minimal version of <code>Bootstrap</code> 5.</p>
+<p>In all tests it seems best to start with something very simple but very specific. This narrows down the initial possible results.</p>
+<p>Some points worth considering when &quot;engineering&quot; a prompt:</p>
+<ul>
+<li>
+<p>Words used in the prompt must be chosen wisely. For example asking for a &quot;collapsible menu&quot; resulted in code where every menu element was collapsed to show nothing.</p>
+</li>
+<li>
+<p>Even through <code>Bootstrap</code> was used this does not by default end up using the options which make an element responsive. This must be done explicitly. For example, asking for a menu which is &quot;responsive when resizing on different output devices&quot;</p>
+</li>
+<li>
+<p>The version of <code>Bootstrap</code> (and any other dependencies) used is whatever is known by the model at the time the query is used. This currently ends up using a beta version of Bootstrap 5, which required modifying the version reference afterwards to a stable version. Fortunately the beta and release versions did not have significant changes -- but if they did then the could generated could be outdated and unable to be display. For example trying
+to use an older version of <code>Font Awesome</code> resulted in incorrect code being produced and nothing displaying.</p>
+</li>
+<li>
+<p>Options such as alignment and relative sizing was incrementally added to the prompt and the results were mostly as expected. Some additions to set sizing actually did not work as the code added would not work with the Bootstrap code. In cases like this accessing on-line documentation
+provided correct answers with faster turn-around time.</p>
+</li>
+<li>
+<p>Some elements were too large relative to other elements as the content &quot;layout&quot; was not explicitly specified. This was mostly easy to correct by specifying more stringent sizing requirements.
+In the end, manual editing was still required as the generation is not
+aware of the content size being referenced. For example the image sizes for the carousel are not known and thus required manually modifying the scaling of the images.</p>
+</li>
+</ul>
+<p>As a general heuristic, it is worthwhile to create different sections one at a time and then ask the AI to put the elements together. When putting them together adding constraints as for positioning, and sizing should be included. Each section must be clearly specified to avoid affecting other areas. For example if two sections have forms then you must be specific as to which element in which form a given attribute should be applied.</p>
+<p>This makes it relatively easy to add or remove requirements incrementally.</p>
+<h3 id="examples">Examples</h3>
+<h4 id="1-home-page">1. Home Page</h4>
+<p>The &quot;template&quot; for the pages on this site is generated. Tweaks were added to the prompt to make incremental improvements to the structure. The header, image carousel, and main content section were asked for first and then each element was tweaked to adjust the formatting and responsiveness. A footer was added afterwards.</p>
+<p>The text below was returned from ChatGPT by prompting for the AI to create the web page. This was done after performing all of the intermediate incremental prompts. This is a very useful capability which allows for prototyping to be performed incrementally and then creating a summarized final prompt from the iterations.</p>
+<hr>
+<p><strong>Prompt</strong></p>
+<p>You need to create a web page using Bootstrap 5 for a website. The page should have a top horizontal area containing a logo aligned to the left and a collapsible menu aligned to the right. The menu should include the following items: &quot;Home&quot;, &quot;UX Research&quot;, &quot;UX Design&quot;, &quot;Graphic Design&quot;, and &quot;Development&quot;. Each menu item should have two sub-menu items. Below the top area, there should be an image carousel section with images centered at 50% of the width. Finally, there should be an introduction section with space for text.</p>
+<p>Your task is to generate the HTML and CSS code for the web page using Bootstrap 5, following the provided specifications.</p>
+<p><strong>Specifications:</strong></p>
+<ul>
+<li>Use Bootstrap 5.</li>
+<li>The top area should have a dark background and white text.</li>
+<li>The logo should be aligned to the left and have a maximum height of 40 pixels.</li>
+<li>The menu should be aligned to the right and collapse into a hamburger menu when the screen size is reduced.</li>
+<li>The menu should have the following items: &quot;Home&quot;, &quot;UX Research&quot;, &quot;UX Design&quot;, &quot;Graphic Design&quot;, and &quot;Development&quot;. Each menu item should have two sub-menu items.</li>
+<li>The image carousel should be centered and have a duration of 3 seconds between slides.</li>
+<li>The introduction section should have a centered heading and space for text.</li>
+</ul>
+<p>Please generate the HTML and CSS code for the web page based on the provided specifications.</p>
+<hr>
+<h4 id="iterative-refinement">Iterative Refinement</h4>
+<p>Snapshots of the web page resulting from prompt refinements is shown below.</p>
+<details><summary>Prompts and Results</summary>
+<table class="table-fixed table table-light table-striped table-hover table-borderless table-responsive" style="font-size: 90%">
+<thead class="table-primary">
+<tr>
+<th scope="col" style="width:15%">Goal</th>
+<th scope="col" style="width:45%">Prompt</th>
+<th scope="col" style="width:45%">Result</th>
+</tr>
+</thead>
+</table>
+<div class="row px-2 pt-0 vh-30 overflow-auto" style="height: 300">
+<table class="table-fixed table table-light table-striped table-hover table-borderless table-responsive" style="font-size: 90%" style="height: 300">
+<tbody>
+<tr>
+<td style="width:15%">Create Initial Layout</td>
+<td style="width:45%">Generate a web page using bootstrap 5 which has a top horizontal area with an image icon on the left and a menu on the right. The menu contains: "ux research", "ux design", "graphic design", and "development". Add 2 sub-menus under each menu. Under the top area is a image carousel area with images centered at 50% of width. Under that section titled "introduction" with space for text.
+</td>
+<td style="width:45%"><img src="../images/website_trial0.png" width="100%"></td>
+</tr>
+<tr>
+<td style="width:15%">Formatting Refinements</td>
+<td style="width:45%">
+Make the top level menus be horizontal. Remove underlining from top level menus, and slow down the speed of the carousel. Add a "home" menu item as the left-most item in the top menu. Remove underline from "home" menu item
+</td>
+<td style="width:45%"><img src="../images/website_trial1.png" width="100%"></td>
+</tr>
+<tr>
+<td style="width:15%">Responsiveness Refinements</td>
+<td style="width:45%">
+Make top level menu bar collapsible when it no longer fits horizontally
+</td>
+<td style="width:45%"><img src="../images/website_trial2.png" width="100%"></td>
+</tr>
+<tr>
+<td style="width:15%">Responsiveness Refinements</td>
+<td style="width:45%">
+Make the top level menu items right aligned but keep the logo left aligned.
+</td>
+<td style="width:45%"><img src="../images/website_trial3.png" width="100%"></td>
+</tr>
+<tr>
+<td style="width:15%">Footer Addition</td>
+<td style="width:45%">
+dd a footer section with a row for social media icon links for GitHub and LinkedIn and a copyright notice on the next line.
+</td>
+<td style="width:45%"><img src="../images/website_trial4.png" width="100%"></td>
+</tr>
+</tbody>
+</table>
+</details>
+
+    </div>
+  </section>
+
+  <!-- Bottom Area -->
+  <footer class="footer bg-dark text-white py-2">
+    <div class="container">
+      <ul class="social-icons">
+        <button class="btn btn-dark" type="button">
+          <a href="https://github.com/" target="_blank"><i class="fab fa-github fa-2x" style="color: #ffffff;"></i></a>
+        </button>
+        <button class="btn btn-dark" type="button">
+          <a href="https://linkedin" target="_blank"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
+        </button>
+      </ul>
+      <p>&copy; 2023 Generative-AI Learn. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

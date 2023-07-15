@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
+  <style>
+    /* Custom CSS */
+    .dropdown-toggle {
+      text-decoration: none !important;
+    }
+
+    .no-underline {
+      text-decoration: none !important;
+    }
+
+    .navbar .navbar-nav {
+      margin-left: auto;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .social-icons li a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+    } 
+    
+    table, th, td {
+      border: 1px solid;
+    }
+
+    .mermaid svg { height: auto; }
+  </style>
+  <title>UX Wizard</title>
+  <link rel="icon" type="images" href="../images/favicon.png">
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>  
+
+  <!-- Top Area -->
+  <header class="bg-dark text-white py-2">
+    <div class="container">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="d-flex align-items-center">
+          <img src="../images/logo_transparent.png" alt="Logo" height="70">
+        </div>
+        <div class="navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link no-underline">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Research</a>
+              <ul class="dropdown-menu" aria-labelledby="menu1">
+                <li><a class="dropdown-item" href="ux_research_surveys_interviews.html">Surveys and Interviews</a></li>
+                <li><a class="dropdown-item" href="feature_comparison.html">Feature Comparison</a></li>
+                <li><a class="dropdown-item" href="persona_creation.html">Persona Creation</a></li>
+                <li><a class="dropdown-item" href="research_insights.html">Research Insights</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu2">
+                <li><a class="dropdown-item" href="ux_copy.html">Generating Copy</a></li>
+                <li><a class="dropdown-item" href="design_system.html">Design System</a></li>
+                <li><a class="dropdown-item" href="user_flows.html">User Flows</a></li>
+                <li><a class="dropdown-item" href="wireframes.html">Wireframes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu3" data-bs-toggle="dropdown"
+                aria-expanded="false">Graphic Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu3">
+                <li><a class="dropdown-item" href="image_generation.html">Image Generation</a></li>
+                <!-- <li><a class="dropdown-item" href="./documents/image_editing.html">Image Editing</a></li> -->
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Development</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="web_development.html">Web Site Generation</a></li> 
+                <li><a class="dropdown-item" href="copilot_development.html">Using Github Co-Pilot</a></li> 
+                <li><a class="dropdown-item" href="openai_notebook_iframe.html">OpenAI API Setup </a></li> 
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Image Carousel Area -->
+  <!--
+  <section class="pt-5">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/android_text_balloon.jpg" class="d-block mx-auto w-50" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_flower.jpg" class="d-block mx-auto w-50" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_wires.jpg" class="d-block mx-auto w-50" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Section Information -->
+  <section class="py-4">
+    <div class="container">
+      <h2 id="user-flows">User Flows</h2>
+<p>Ai can be used to generate an expect user flow for a website or mobile application. This can help with determining what visual assets and content sections need to be created for a project.</p>
+<p>Ux Designers can also use the user journey steps as reference for testable areas of their applications.</p>
+<h3 id="example-1-user-journey-for-a-banking-application">Example 1: User Journey for a Banking Application</h3>
+<p><strong>Prompt:</strong> What is a typical user journey for a user wanting to deposit a cheque for a banking application in 10 steps</p>
+<details><summary>Response</summary>
+<p>A typical user journey for depositing a cheque through a banking application, simplified into 10 steps, is as follows:</p>
+<ol>
+<li>User opens the banking application and logs in.</li>
+<li>User selects the &quot;Deposit&quot; option from the main menu.</li>
+<li>User chooses the account to which they want to deposit the cheque.</li>
+<li>User captures a photo of the front side of the cheque using the application's camera.</li>
+<li>User captures a photo of the back side of the cheque.</li>
+<li>User confirms the cheque details displayed on the screen.</li>
+<li>User verifies the accuracy of the information and checks for any previous deposits.</li>
+<li>User provides their consent to deposit the cheque digitally.</li>
+<li>Application securely processes the cheque images and initiates the deposit.</li>
+<li>User receives an on-screen confirmation of the successful cheque deposit.</li>
+</ol>
+<p>This simplified user journey highlights the essential steps involved in depositing a cheque through a banking application, focusing on the core actions performed by the user. However, please note that the actual user journey may include additional steps or variations based on the specific features and design of the banking application.</p>
+</details>
+<br>
+<h3 id="example-2-user-flow-for-the-log-in-process-of-an-application">Example 2: User Flow for the Log In Process of an Application</h3>
+<p><strong>Prompt:</strong> Can you generate a user flow for the login section of a banking application</p>
+<details><summary>Response</summary>
+<p>Certainly! Here's a user flow for the login section of a banking application:</p>
+<ol>
+<li>User opens the banking application.</li>
+<li>User is presented with the login screen, prompting them to enter their credentials.</li>
+<li>User enters their username and password.</li>
+<li>User clicks on the &quot;Login&quot; button.</li>
+<li>The application verifies the entered credentials.</li>
+<li>If the credentials are correct, the user is granted access to their account.</li>
+<li>User is redirected to the account dashboard or home screen.</li>
+<li>If the credentials are incorrect, the application displays an error message.</li>
+<li>User has the option to reset their password or recover their username.</li>
+<li>User clicks on the &quot;Forgot Password&quot; or &quot;Forgot Username&quot; link.</li>
+<li>User is directed to the password/username recovery screen.</li>
+<li>User enters the required information (e.g., registered email address, security questions).</li>
+<li>The application verifies the provided information.</li>
+<li>If the information is correct, the user is provided with instructions to reset their password or recover their username.</li>
+<li>User follows the instructions and completes the password/username recovery process.</li>
+<li>User is redirected back to the login screen.</li>
+<li>User can now enter their updated credentials to log in.</li>
+<li>User successfully logs in and is directed to the account dashboard or home screen.</li>
+<li>User decides to log out of the application.</li>
+<li>User clicks on the &quot;Logout&quot; or &quot;Sign out&quot; option.</li>
+<li>User is logged out and the application returns to the login screen.</li>
+</ol>
+</details>
+<br>
+<h3 id="example-3-generative-possible-scenario-reactions">Example 3: Generative Possible Scenario Reactions</h3>
+<p>It is possible to write prompts to simulate possible positive and negative results for each task.</p>
+<p><strong>Prompt:</strong>: Simulate good and bad reactions</p>
+<details><summary>Response</summary>
+Sure! Here are simulated examples of good and bad reactions for the user journey of depositing a check in a banking application:
+<p>Good reaction:</p>
+<ol>
+<li>User: Opens the banking application and logs in.</li>
+<li>User: Navigates to the &quot;Deposit&quot; section within the app.</li>
+<li>User: Easily finds the option to deposit a check using the camera feature.</li>
+<li>User: Positions the check properly and captures a clear photo of the front side.</li>
+<li>User: Verifies that the image is clear and readable.</li>
+<li>User: Takes a photo of the back side, endorses it correctly, and confirms the endorsement.</li>
+<li>User: Reviews the back image and ensures it is clear and readable.</li>
+<li>User: Enters the correct check amount and selects the desired deposit account.</li>
+<li>User: Carefully reviews all the deposit details and confirms the deposit.</li>
+<li>User: Receives a confirmation message that the check deposit has been successfully submitted for processing.</li>
+</ol>
+<p>Bad reaction:</p>
+<ol>
+<li>User: Opens the banking application but faces issues logging in due to a technical error.</li>
+<li>User: Struggles to find the &quot;Deposit&quot; section as it is buried deep within the app's navigation.</li>
+<li>User: Encounters difficulties in locating the option to deposit a check using the camera feature.</li>
+<li>User: Faces challenges in capturing a clear photo of the front side of the check due to poor lighting conditions.</li>
+<li>User: Realizes that the image taken is blurry and needs to retake the photo multiple times.</li>
+<li>User: Struggles to take a photo of the back side and experiences issues with the endorsement process.</li>
+<li>User: Encounters problems reviewing the back image as it appears distorted or partially cut off.</li>
+<li>User: Mistakenly enters the wrong check amount or experiences difficulties in selecting the desired deposit account.</li>
+<li>User: Attempts to review the deposit details but finds them displayed in an unclear or confusing format.</li>
+<li>User: Experiences frustration as the banking application fails to provide a clear confirmation message, leaving them uncertain if the check deposit was successfully submitted or not.</li>
+</ol>
+<p>These simulated reactions illustrate the difference between a smooth and successful user experience (good reaction) and a challenging and frustrating one (bad reaction) during the user journey of depositing a check in a banking application.</p>
+</details>
+<br>
+<h2 id="user-flow-diagrams">User Flow Diagrams</h2>
+<p>It is possible via natural language prompts to take the text based results to produce<br>
+diagrams. In this example the graph was created by asking for some simulated positive and negative<br>
+workflow steps and then creating a <a href="https://mermaid.js.org/syntax/userJourney.html" target="_blank">Mermaid User Journey graph</a> from it using the available diagramming syntax<br>
+for user workflows.</p>
+<p>It is very important to indicate:</p>
+<ol>
+<li>To use the &quot;correct&quot; syntax for user workflows</li>
+<li>To reference the documentation for correctness if possible.</li>
+<li>To indicate the exact format of tasks, as ChatGPT in this case added labels for where the tasks originate from which is illegal Mermaid syntax.</li>
+<li>To indicate a scoring range and to use absolute score and to score all appropriate tasks.</li>
+<li>Clearly indicate which sections you want and which tasks are under each section.</li>
+</ol>
+<p>The resulting sample Mermaid diagram in text form was:</p>
+<details><summary>Mermaid Graph (text)</summary>
+<pre>
+journey
+    title User Journey: Deposit Check in Banking Application with Scores
+<pre><code>section User opens banking application
+    Open banking app : 5
+    Display login : 4
+    Experiences login error : 3
+
+section User logs in
+    Enter credentials : 6
+    Verify credentials : 5
+    Successfully log in : 6
+
+section User navigates to deposit section
+    Go to Deposit area : 6
+    Display Deposit area : 5
+
+section User selects check deposit option
+    Choose check deposit : 6
+    Prompt front image capture : 6
+    Capture front image : 7
+
+section User captures front side of check
+    Verify front image clarity : 6
+    Image is blurry, retake photo : 4
+    Capture clear front image : 7
+
+section User verifies front image
+    Ask for verification : 5
+    Confirm image clarity : 7
+
+section User captures back side of check
+    Capture back image, endorse check : 7
+
+section User verifies back image
+    Ask for verification : 5
+    Capture clear back image : 7
+
+section User enters check amount and account
+    Enter amount and select account : 7
+    Validate entered amount and account : 6
+    Valid inputs : 7
+
+section User reviews deposit details
+    Review deposit information : 6
+    Display deposit details : 5
+
+section User submits check deposit
+    Confirm deposit submission : 7
+    Deposit submitted successfully : 8
+</code></pre>
+</pre>
+</details>
+<br>
+<p>A simpler form of this without adding negative and possible results can look like this</p>
+<pre><code class="language-mermaid"><div class="mermaid">journey
+    title User Journey: Deposit Check in Banking Application
+    section Opens banking app
+        Display login: 7
+    section User logs in
+        Enter credentials : 8
+        Successfully logged in : 9
+    section Navigate to deposit section
+        Display Deposit section : 8
+    section Select check deposit
+        Choose check deposit: 8
+    section Capture both sides of check
+        Capture check images : 8
+    section Enters check amount
+        Enter amount : 9
+        Validate amount : 8
+    section Submits deposit
+        Deposit successful: 9
+</div></code></pre>
+<p>The summary prompt generated is:<br>
+<em><br>
+Sure! Here's a single prompt that encapsulates all the requirements from the previous prompts:</p>
+<p>Please create a Mermaid.js user journey graph representing the process of depositing a check in a banking application. The graph should include steps such as opening the banking application, logging in, navigating to the deposit section, capturing images of the check's front and back sides, verifying the image clarity, entering the check amount and account, reviewing deposit details, and submitting the check deposit. Each step should be assigned an absolute score from 0 to 9, indicating the user's experience or task success level. The graph should not indicate the task origin, and the score for each step should be displayed using the syntax &quot;:&quot; followed by the score. Please make sure to follow the Mermaid.js syntax and structure the graph in a clear and readable manner.</p>
+<p>Please ensure that the Mermaid.js graph is formatted correctly and represents the user journey of depositing a check in a banking application, including the assigned scores for each step.</p>
+<p>Example:</p>
+<pre><code class="language-mermaid"><div class="mermaid">journey
+    title User Journey: Deposit Check in Banking Application with Scores
+
+    section User opens banking application
+        Open banking app : 5
+        Display login : 4
+        Experiences login error : 3
+
+    section User logs in
+        Enter credentials : 6
+        Verify credentials : 5
+        Successfully log in : 6
+
+    section User navigates to deposit section
+        Go to Deposit area : 6
+        Display Deposit area : 5
+
+    section User selects check deposit option
+        Choose check deposit : 6
+        Prompt front image capture : 6
+        Capture front image : 7
+
+    section User captures front side of check
+        Verify front image clarity : 6
+        Image is blurry, retake photo : 4
+        Capture clear front image : 7
+
+    section User verifies front image
+        Ask for verification : 5
+        Confirm image clarity : 7
+
+    section User captures back side of check
+        Capture back image, endorse check : 7
+
+    section User verifies back image
+        Ask for verification : 5
+        Capture clear back image : 7
+
+    section User enters check amount and account
+        Enter amount and select account : 7
+        Validate entered amount and account : 6
+        Valid inputs : 7
+
+    section User reviews deposit details
+        Review deposit information : 6
+        Display deposit details : 5
+
+    section User submits check deposit
+        Confirm deposit submission : 7
+        Deposit submitted successfully : 8
+</div></code></pre>
+</em>
+
+    </div>
+  </section>
+
+  <!-- Bottom Area -->
+  <footer class="footer bg-dark text-white py-2">
+    <div class="container">
+      <ul class="social-icons">
+        <button class="btn btn-dark" type="button">
+          <a href="https://github.com/" target="_blank"><i class="fab fa-github fa-2x" style="color: #ffffff;"></i></a>
+        </button>
+        <button class="btn btn-dark" type="button">
+          <a href="https://linkedin" target="_blank"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
+        </button>
+      </ul>
+      <p>&copy; 2023 Generative-AI Learn. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
+  <style>
+    /* Custom CSS */
+    .dropdown-toggle {
+      text-decoration: none !important;
+    }
+
+    .no-underline {
+      text-decoration: none !important;
+    }
+
+    .navbar .navbar-nav {
+      margin-left: auto;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .social-icons li a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+    }    
+  </style>
+  <title>UX Wizard</title>
+  <link rel="icon" type="images" href="images/favicon.png">
+</head>
+
+<body>
+
+  <!-- Top Area -->
+  <header class="bg-dark text-white py-2">
+    <div class="container">
+      <nav class="navbar sticky-top navbar-expand-sm navbar-dark">
+        <div class="d-flex align-items-center">
+          <img src="images/logo_transparent.png" alt="Logo" height="70">
+        </div>
+        <div class="navbar-collapse justify-content-end">
+          <ul class="navbar-nav ">
+            <li class="nav-item">
+              <a href="#" class="nav-link no-underline">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Research</a>
+              <ul class="dropdown-menu" aria-labelledby="menu1">
+                <li><a class="dropdown-item" href="documents/ux_research_surveys_interviews.html">Surveys and Interviews</a></li>
+                <li><a class="dropdown-item" href="documents/feature_comparison.html">Feature Comparison</a></li>
+                <li><a class="dropdown-item" href="documents/persona_creation.html">Persona Creation</a></li>
+                <li><a class="dropdown-item" href="documents/research_insights.html">Research Insights</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu2">
+                <li><a class="dropdown-item" href="documents/ux_copy.html">Generating Copy</a></li>
+                <li><a class="dropdown-item" href="documents/design_system.html">Design System</a></li>
+                <li><a class="dropdown-item" href="documents/user_flows.html">User Flows</a></li>
+                <li><a class="dropdown-item" href="documents/wireframes.html">Wireframes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu3" data-bs-toggle="dropdown"
+                aria-expanded="false">Graphic Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu3">
+                <li><a class="dropdown-item" href="./documents/image_generation.html">Image Generation</a></li>
+                <!-- <li><a class="dropdown-item" href="./documents/image_editing.html">Image Editing</a></li> -->
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Development</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="./documents/web_development.html">Web Site Generation</a></li> 
+                <li><a class="dropdown-item" href="./documents/copilot_development.html">Using Github Co-Pilot</a></li> 
+                <li><a class="dropdown-item" href="./documents/openai_notebook_iframe.html">OpenAI API Setup </a></li> 
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Image Carousel Area -->
+  <section class="pt-4">
+    <div class="container>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/unused/WizUX1.png" class="d-block mx-auto w-50" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/unused/WizUX2.png" class="d-block mx-auto w-50" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/unused/WizUX3.png" class="d-block mx-auto w-50" alt="Image 3">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/unused/WizUX4.png" class="d-block mx-auto w-50" alt="Image 3">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/unused/WizUX5.png" class="d-block mx-auto w-50" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="py-4">
+    <div class="container">
+      <h2>Introduction</h2>
+      <p>Welcome to our UX Resource website, where we explore the powerful integration of AI tools in the field of User Experience (UX) design. In today's digital landscape, AI technologies have revolutionized the way we approach UX, opening up exciting possibilities for creating seamless, personalized, and intuitive experiences.</p>
+      <p>In this resource hub, we delve into the world of AI tools and their applications in UX design. Ai tools for UX help assist in the UX research process to create survey/interview plans, summarize or compare research data, and create persona templates with existing data. Ai is useful in the early phases of the design process through mockup generation, creating design system templates, and creating digital wireframes from sketches. Ai is also efficient at producing ux copy for onboarding, ui elements and notification text.</p>
+      <p>While AI tools can help make the research process of UX more efficient, it currently struggles with realistic image generation and creating content layouts. For image generation there are issues with blending elements, human anatomy, and rendering readable text. With the layout of content such as for websites, elements are misaligned, and not to scale.</p>
+    </div>
+  </section>
+
+  <!-- Navigation Area -->
+  <section class="py-4">
+    <div class="container bg-light px-2 py-2 shadow" id="hanging-icons">
+
+      <div class="row ps-5 pe-4 row-cols-1 row-cols-sm-4 d-flex flex-row overflow-auto">
+  
+        <div class="col pt-3 pb-3">
+          <div>
+            <img src="images/thinker.png" alt="UX Research"
+              class="rounded border border-white img-fluid w-50 ">
+            <p>
+            <h3 class="fs-5 ">UX Research</h3>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-sm btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Learn More
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="documents/ux_research_surveys_interviews.html">Surveys and Interviews</a></li>
+                <li><a class="dropdown-item" href="documents/feature_comparison.html">Feature Comparison</a></li>
+                <li><a class="dropdown-item" href="documents/persona_creation.html">Persona Creation</a></li>
+                <li><a class="dropdown-item" href="documents/research_insights.html">Research Insights</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col pt-3 pb-3">
+          <div>
+            <img src="images/ux_design.png" alt="UX Design"
+              class="rounded border border-white img-fluid w-50 ">
+            <p>
+            <h3 class="fs-5">UX Design</h3>
+            <button class="btn btn-sm btn-sm btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Learn More
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="documents/ux_copy.html">Generating Copy</a></li>
+              <li><a class="dropdown-item" href="documents/design_system.html">Design System</a></li>
+              <li><a class="dropdown-item" href="documents/user_flows.html">User Flows</a></li>
+              <li><a class="dropdown-item" href="documents/wireframes.html">Wireframes</a></li>
+          </ul>
+          </div>
+        </div>
+  
+        <div class="col pt-3 pb-3">
+          <div>
+            <img src="images/icon5.png" alt="Graphic Design" class="rounded border border-white img-fluid w-50 ">
+            <p>
+            <h3 class="fs-5">Graphic Design</h3>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Learn More
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="./documents/image_generation.html">Image Generation</a></li>
+              </ul>
+            </div>
+            </a>
+          </div>
+        </div>
+  
+        <div class="col pt-3 pb-3">
+          <div>
+            <img src="images/data_universe.png" alt="Development"
+              class="rounded border border-white img-fluid w-50 ">
+            <p>
+            <h3 class="fs-5 ">Development</h3>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Learn More
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="./documents/web_development.html">Web Site Generation</a></li> 
+                <li><a class="dropdown-item" href="./documents/copilot_development.html">Using Github Co-Pilot</a></li> 
+                <li><a class="dropdown-item" href="./documents/openai_notebook_iframe.html">OpenAI API Setup </a></li> 
+              </ul>
+            </div>
+            </a>
+          </div>
+        </div>  
+  
+      </div>
+  </div>
+  </section>
+
+  <!-- Bottom Area -->
+  <footer class="footer bg-dark text-white py-2">
+    <div class="container">
+      <ul class="social-icons">
+        <button class="btn btn-dark" type="button">
+          <a href="https://github.com/" target="_blank"><i class="fab fa-github fa-2x" style="color: #ffffff;"></i></a>
+        </button>
+        <button class="btn btn-dark" type="button">
+          <a href="https://linkedin" target="_blank"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
+        </button>
+      </ul>
+      <p>&copy; 2023 Generative-AI Learn. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
