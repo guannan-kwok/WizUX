@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
+  <style>
+    /* Custom CSS */
+    .dropdown-toggle {
+      text-decoration: none !important;
+    }
+
+    .no-underline {
+      text-decoration: none !important;
+    }
+
+    .navbar .navbar-nav {
+      margin-left: auto;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .social-icons li a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+    } 
+    
+    table, th, td {
+      border: 1px solid;
+    }
+
+    .mermaid svg { height: auto; }
+  </style>
+  <title>Generate AI Learn</title>
+  <link rel="icon" type="images" href="../images/icon_small.png">
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>  
+
+  <!-- Top Area -->
+  <header class="bg-dark text-white py-2">
+    <div class="container">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="d-flex align-items-center">
+          <img src="../images/icon.png" alt="Logo" height="60">
+        </div>
+        <div class="navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link no-underline">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Research</a>
+              <ul class="dropdown-menu" aria-labelledby="menu1">
+                <li><a class="dropdown-item" href="ux_research_surveys_interviews.html">Surveys and Interviews</a></li>
+                <li><a class="dropdown-item" href="feature_comparison.html">Feature Comparison</a></li>
+                <li><a class="dropdown-item" href="persona_creation.html">Persona Creation</a></li>
+                <li><a class="dropdown-item" href="research_insights.html">Research Insights</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu2">
+                <li><a class="dropdown-item" href="ux_copy.html">Generating Copy</a></li>
+                <li><a class="dropdown-item" href="design_system.html">Design System</a></li>
+                <li><a class="dropdown-item" href="user_flows.html">User Flows</a></li>
+                <li><a class="dropdown-item" href="wireframes.html">Wireframes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu3" data-bs-toggle="dropdown"
+                aria-expanded="false">Graphic Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu3">
+                <li><a class="dropdown-item" href="image_generation.html">Image Generation</a></li>
+                <!-- <li><a class="dropdown-item" href="./documents/image_editing.html">Image Editing</a></li> -->
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Development</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="web_development.html">Web Site Generation</a></li> 
+                <li><a class="dropdown-item" href="copilot_development.html">Using Github Co-Pilot</a></li> 
+                <li><a class="dropdown-item" href="openai_notebook_iframe.html">OpenAI API Setup </a></li> 
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Image Carousel Area -->
+  <!--
+  <section class="pt-5">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/android_text_balloon.jpg" class="d-block mx-auto w-50" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_flower.jpg" class="d-block mx-auto w-50" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_wires.jpg" class="d-block mx-auto w-50" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Section Information -->
+  <section class="py-4">
+    <div class="container">
+      <h2 id="using-github-copilot-and-chat">Using Github Copilot and Chat</h2>
+<p>This site was developed in a Github repo with documentation and tutorials being written in Visual Studio Code. Markdown documents are the master source from which HTML documentation is generated. Tutorials are written as Jupyter notebooks using a mix of Markdown and executable Python.</p>
+<p>Assuming that readers are familiar with these tools, Github Copilot and Chat was examined for its ability to assist in code generation.</p>
+<blockquote>
+<p>To help in making these tools which can be used for UX, Graphics or UI development, Github issues can be logged <a href="https://github.com/microsoft/vscode-copilot-release/issues">here</a></p>
+</blockquote>
+<p>Current impressions:</p>
+<ul>
+<li>While useful, results are tied to the LLM being used and the parameters set for prompting.</li>
+<li>Better chat integration would be useful, even if to the level provided by non-chat assistance.</li>
+<li>The results are &quot;minimalistic&quot; by default. This is good for inserting &quot;snippets&quot; but less useful
+for producing standalone results.</li>
+<li>There is no caching / storage mechanism for reuse and at least for Visual Studio Code integration is tied to the workspace.</li>
+<li>The &quot;follow-up&quot; suggested prompts are sometimes useful but many times not topical or related to the previous prompt, This can lead the user to receive multiple responses to unrelated topics.</li>
+</ul>
+<h3 id="setup">Setup</h3>
+<p>As a setup step, the Copilot and Chat plugins need to be installed.</p>
+<img src="../images/copilot_plugin.png" width="20%">
+<p>The chat interface for Copilot is available by signing up for the beta program at this time of writing. The chat feature can be used in a similar way to ChatGPT but within the context of a working environment. This has the added advantage of avoiding some context switching. (There are ChatGPT and other unofficial add-ons which are available
+but not considered here)</p>
+<p>The following is a snapshot with and chat add-ons installed:
+<img src="../images/copilot_chat_darkmode_example.png" width="80%"></p>
+<p>If chat is setup, for the Visual Studio Code integration a new tab on the left is available where prompts may be entered.</p>
+<p>Unlike code completion, the responses need to be migrated to their intended location. Options (highlighted on the left) include:</p>
+<ul>
+<li>Inserting into the editor at a location</li>
+<li>Export to file</li>
+<li>Running from terminal.</li>
+</ul>
+<p>The last option (Running from terminal) only makes sense for code which can run as a command. At the current time the response is not checked to see if it's runnable.</p>
+<p>Copilot can be turned on or off via the <img src="./resources/copillot.svg" width=16> icon highlighted on the bottom right.</p>
+<h3 id="usage">Usage</h3>
+<p>The main places for usage are mentioned in the following sections.</p>
+<h3 id="documentation--web-site-building-asset">Documentation / Web Site Building Asset</h3>
+<p>To assist when writing documentation using Markdown, HTML, CSS, Bootstrap, etc.</p>
+<ol>
+<li>
+<p>Example 1 : Dark Mode Support</p>
+<p>As an example was asking for how to add &quot;dark-mode&quot; logic for a web page.</p>
+<p><strong>Prompt</strong>: Give an example of how to write dark and light mode toggle in html</p>
+<p>The default results for ChatGPT were more verbose and tended to include content.</p>
+<details><summary>ChatGPT</summary>
+ <div class="container">
+   <iframe class="rounded" src="resources/dm.html" width="100%" height="100"></iframe>
+ </div>
+</details>
+<br>
+<p>While this is the version produced by Github Copilot Chat.</p>
+<details><summary>Copilot Chat</summary>
+ <div class="container">
+   <iframe class="rounded" src="resources/dm_github.html" width="100%" height="100"></iframe>
+ </div>
+</details>
+<br>
+<p>Interestingly it uses a mechanism which is not available for all browsers. When asked to provide such a version, it required to have an active server running, but was very close in logic to the ChatGPT one.</p>
+</li>
+<li>
+<p>Example 2: Accessibility Examples</p>
+<p>As a second example, tips for making a web page accessible
+was prompted for, along with an example. Interestingly a follow-up prompt was required to ensure accessibility for those that are color-blind.</p>
+<details><summary>Response</summary>
+ <div class="container">
+   <iframe class="rounded" src="resources/accessible_github2.html" width="100%" height="400"></iframe>
+ </div>
+</details>
+<br>
+</li>
+</ol>
+<h3 id="%22code%22-assist">&quot;Code&quot; Assist</h3>
+<p>Assist in writing Python code to programmatically use AI libraries such as OpenAI. The <a href="openai_notebook_iframe.html">example notebook</a> show this.</p>
+<p>Features such as code completion appear to be most useful in the context of writing code at this point, though Markdown assist is also useful.</p>
+<ol>
+<li>
+<p>Python Example for command line interface</p>
+<p><strong>Prompt</strong>: Write python code for a command line with arguments for a required input file name, and an optional output file pat</p>
+ <details><summary>Response</summary>
+<hr>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> argparse
+
+parser = argparse.ArgumentParser(description=<span class="hljs-string">'Process some files.'</span>)
+parser.add_argument(<span class="hljs-string">'input_file'</span>, help=<span class="hljs-string">'input file name'</span>)
+parser.add_argument(<span class="hljs-string">'-o'</span>, <span class="hljs-string">'--output'</span>, help=<span class="hljs-string">'output file path'</span>)
+
+args = parser.parse_args()
+
+print(<span class="hljs-string">'Input file:'</span>, args.input_file)
+<span class="hljs-keyword">if</span> args.output:
+    print(<span class="hljs-string">'Output file:'</span>, args.output)
+</div></code></pre>
+<hr>
+<p>In this example, we use the argparse module to create a command line interface with two arguments. The first argument is a required positional argument called input_file, which is used to specify the input file name. The second argument is an optional argument called output, which is used to specify the output file path.</p>
+<p>To run this script, you would use the following command:</p>
+<pre class="hljs"><code><div>python myscript.py input.txt -o output.txt
+</div></code></pre>
+<p>In this example, myscript.py is the name of the Python script, input.txt is the name of the input file, and output.txt is the name of the output file. Note that the -o option is used to specify the output file path. If the -o option is not used, the output file path will be None.</p>
+ </details>
+ <br>
+</li>
+<li>
+<p>Markdown Example for a scrollable table</p>
+<p><strong>Prompt</strong>: Write python code for a command line with arguments for a required input file name, and an optional output file pat</p>
+ <details><summary>Response</summary>
+ <hr>
+ <pre>
+ &lt;div style="overflow-x: auto;"&gt;
+ | Column 1 | Column 2 | Column 3 | Column 4 | Column 5 |
+ | -------- | -------- | -------- | -------- | -------- |
+ | Row 1, Column 1 | Row 1, Column 2 | Row 1, Column 3 | Row 1, Column 4 | Row 1, Column 5 |
+ | Row 2, Column 1 | Row 2, Column 2 | Row 2, Column 3 | Row 2, Column 4 | Row 2, Column 5 |
+ | Row 3, Column 1 | Row 3, Column 2 | Row 3, Column 3 | Row 3, Column 4 | Row 3, Column 5 |
+ | Row 4, Column 1 | Row 4, Column 2 | Row 4, Column 3 | Row 4, Column 4 | Row 4, Column 5 |
+ | Row 5, Column 1 | Row 5, Column 2 | Row 5, Column 3 | Row 5, Column 4 | Row 5, Column 5 |
+ | Row 6, Column 1 | Row 6, Column 2 | Row 6, Column 3 | Row 6, Column 4 | Row 6, Column 5 |
+ | Row 7, Column 1 | Row 7, Column 2 | Row 7, Column 3 | Row 7, Column 4 | Row 7, Column 5 |
+ | Row 8, Column 1 | Row 8, Column 2 | Row 8, Column 3 | Row 8, Column 4 | Row 8, Column 5 |
+ | Row 9, Column 1 | Row 9, Column 2 | Row 9, Column 3 | Row 9, Column 4 | Row 9, Column 5 |
+ | Row 10, Column 1 | Row 10, Column 2 | Row 10, Column 3 | Row 10, Column 4 | Row 10, Column 5 |
+ &lt;/div&gt;
+ </pre>
+ <hr>
+<p>In this example, we use a div element with the overflow-x: auto style to create a scrollable table. The table itself is created using standard Markdown syntax for tables. You can adjust the number of rows and columns as needed for your specific use case.</p>
+ </details>
+</li>
+</ol>
+<h3 id="pipeline--infrastructure-building">Pipeline / Infrastructure Building</h3>
+<p>The &quot;publishing&quot; of the documentation to it's final form was written using Python.</p>
+<p>Co-pilot was used to generate a fair chunk of the code
+dealing with &quot;boilerplate&quot; logic such as creating a command, file scanning and manipulation, and using a variant of the HTML generated using ChatGPT as mentioned in the <a href=" web_development.html">Web Site Development</a> page.</p>
+<p>Things to try including creating a build and deployment pipeline
+for this website using <a href="https://github.com/features/actions" target="_blank">Github Actions</a>. An example would look something like the following, which is useful even as a
+starting template.</p>
+<p><strong>Prompt</strong>: Write a github actions file which will run a custom python script to prepare files. Copies the files to a publishable folder, and creates a downloadable package.</p>
+  <details><summary>Response</summary>
+  <hr>
+  ```
+  name: Prepare and Publish
+<p>on:
+push:
+branches:
+- main</p>
+<p>jobs:
+prepare_and_publish:
+runs-on: ubuntu-latest</p>
+<pre><code> steps:
+  - name: Checkout code
+    uses: actions/checkout@v2
+
+  - name: Set up Python
+    uses: actions/setup-python@v2
+    with:
+      python-version: '3.x'
+
+  - name: Install dependencies
+    run: pip install -r requirements.txt
+
+  - name: Prepare files
+    run: python prepare_files.py
+
+  - name: Copy files to publishable folder
+    run: cp -r output_folder publishable_folder
+
+  - name: Create package
+    uses: actions/upload-artifact@v2
+    with:
+      name: my_package
+      path: publishable_folder
+</code></pre>
+<pre class="hljs"><code><div>&lt;hr&gt;
+&lt;/details&gt;
+
+
+&lt;!--End--&gt;</div></code></pre>
+
+</body>
+</html>
+
+    </div>
+  </section>
+
+  <!-- Bottom Area -->
+  <footer class="footer bg-dark text-white py-2">
+    <div class="container">
+      <ul class="social-icons">
+        <button class="btn btn-dark" type="button">
+          <a href="https://github.com/" target="_blank"><i class="fab fa-github fa-2x" style="color: #ffffff;"></i></a>
+        </button>
+        <button class="btn btn-dark" type="button">
+          <a href="https://linkedin" target="_blank"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
+        </button>
+      </ul>
+      <p>&copy; 2023 Generative-AI Learn. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
