@@ -148,121 +148,69 @@
   <!-- Section Information -->
   <section class="py-4">
     <div class="container">
-      <h2 id="ux-research-surveys-and-interviews">UX Research Surveys and Interviews</h2>
-<p>Tools such as ChatGPT can be used to generate a list of general user interview or survey questions. After the interview or survey questions are generated you can add more specific questions for the user group.</p>
-<p>Survey or interview questions returned are good enough to be used in user surveys or interviews based
-on preliminary testing.</p>
-<h3 id="chatgpt-examples">ChatGPT Examples</h3>
-<p><strong>Template for prompt</strong></p>
-<p>Generate user interview questions for an [Idea/App/User].</p>
-<p><strong>Prompt</strong>
-Create some user interview questions that I can send to users of my ride hailing app.</p>
-<details><summary>Response</summary>
-<p>Certainly! Here are some user interview questions you can ask for your ride-hailing app:</p>
-<ol>
-<li>How frequently do you use ride-hailing services?</li>
-<li>What are the main reasons you choose to use a ride-hailing app instead of other transportation options?</li>
-<li>Which features or aspects of the app do you find most valuable or useful?</li>
-<li>Are there any specific features or improvements you would like to see in the app?</li>
-<li>How would you rate the overall user experience of the app, including ease of use and navigation?</li>
-<li>Have you encountered any challenges or issues while using the app? If so, could you please describe them?</li>
-<li>How would you rate the reliability and timeliness of the rides you have taken through the app?</li>
-<li>How satisfied are you with the available payment options and the app's billing process?</li>
-<li>What is your perception of the app's pricing compared to other ride-hailing services?</li>
-<li>Are there any additional services or features you would like to see integrated into the app?</li>
-</ol>
-<p>For the survey, you can use a platform like Google Forms or SurveyMonkey to create a questionnaire based on the interview questions provided. Ensure that the survey is user-friendly, concise, and easy to understand. It's also helpful to include some demographic questions to gather insights about the users (e.g., age, location, occupation) to understand their perspectives better.</p>
-<h2 id="detailsbr"></details>
-<br></h2>
-<p><strong>Prompt</strong>
-Create a survey that I can send to users of my ride hailing app.</p>
-<details><summary>Response</summary>
-<p>Sure! Here's a sample survey that you can send to users of your ride-hailing app:</p>
-<p>Subject: Feedback Survey - We value your opinion!</p>
-<p>Dear [User's Name],</p>
-<p>Thank you for being a valued user of our ride-hailing app! We strive to provide the best experience possible, and your feedback plays a crucial role in helping us improve. We kindly request a few minutes of your time to complete this survey. Your responses will be kept anonymous and used solely for the purpose of enhancing our services.</p>
-<p>Survey Link: [Insert Survey Link]</p>
-<ol>
-<li>
-<p>How frequently do you use our ride-hailing app?</p>
+      <h1 id="illustration">Illustration</h1>
+<p>Tools exist which allow vector graphic images (SVGs) to be manipulated. For example it is possible to recolor
+existing illustrations. This can be useful to try out different themes for icons, logos and even create
+new color palettes.</p>
+<p>It is to be seen if these can be constrained based on factors such as accessibility.</p>
+<h2 id="adobe-firefly">Adobe Firefly</h2>
+<p>Adobe Firefly is a set of generative AI tools that includes the ability to recolor vector images.</p>
+<details open><summary>Details</summary>
+<h3 id="feature-tests">Feature Tests</h3>
+<p><strong>Generative Recolor</strong></p>
+<p>This tool is good at generating variations of vector images that are less realistic with clearly separated elements.</p>
+<p>User files can be uploaded, variations created and downloaded.</p>
+<p>It is import to note that all paths for the entire vector image must be closed for the generation to succeed.
+Also it appears that any shaded areas cannot be recolored.</p>
+<p>You can not adjust individual elements of the vector image. Users can choose from preset backgrounds, and tailer the results by choosing color schemes (such as &quot;complimentary&quot;), adding &quot;required&quot; colors, and modifying the prompt text.</p>
+<p>The snapshot shows an example of the options chosen.</p>
+   <img src="../images/adobe_svg_recolor.png" class="img-fluid" widht="80%" alt="Firefly Vector Recolor">
+</details>
+<hr>
+<h3 id="adobe-firefly-generation-examples">Adobe Firefly Generation Examples</h3>
+<h4 id="example-successful-recolor">Example: Successful Recolor</h4>
+<details><summary>Cat Vector Generative Recolor</summary>
 <ul>
-<li><input type="checkbox" id="checkbox0"><label for="checkbox0">Daily</label></li>
-<li><input type="checkbox" id="checkbox1"><label for="checkbox1">Weekly</label></li>
-<li><input type="checkbox" id="checkbox2"><label for="checkbox2">Monthly</label></li>
-<li><input type="checkbox" id="checkbox3"><label for="checkbox3">Occasionally</label></li>
-<li><input type="checkbox" id="checkbox4"><label for="checkbox4">Rarely</label></li>
+<li>
+<p>Prompt: trippy disco lights, faded emerald city, disco cat, disco cat 2, emerald city cat</p>
+</li>
+<li>
+<p>Disco Cat 1</p>
+  <img src="../images/cat_disco.svg" class="img-fluid" alt="Can recolor 1" width="400"/>
+</li>
+<li>
+<p>Disco Cat 2</p>
+  <img src="../images/cat_disco_2.svg" class="img-fluid" alt="Can recolor 2" width="400"/>
+</li>
+<li>
+<p>Emerald City Cat</p>
+  <img src="../images/cat_disco_3.svg" class="img-fluid" alt="Can recolor 3" width="400"/>
+</li>
 </ul>
-</li>
-<li>
-<p>On a scale of 1-5, please rate the overall user experience of our app:</p>
-<ul>
-<li>1 (Poor)</li>
-<li>2 (Below Average)</li>
-<li>3 (Average)</li>
-<li>4 (Above Average)</li>
-<li>5 (Excellent)</li>
-</ul>
-</li>
-<li>
-<p>What do you like most about our ride-hailing app?</p>
-</li>
-<li>
-<p>Is there any specific feature or functionality that you find particularly useful or impressive? Please explain.</p>
-</li>
-<li>
-<p>How would you rate the reliability and availability of our drivers?</p>
-<ul>
-<li><input type="checkbox" id="checkbox5"><label for="checkbox5">Very Satisfied</label></li>
-<li><input type="checkbox" id="checkbox6"><label for="checkbox6">Satisfied</label></li>
-<li><input type="checkbox" id="checkbox7"><label for="checkbox7">Neutral</label></li>
-<li><input type="checkbox" id="checkbox8"><label for="checkbox8">Dissatisfied</label></li>
-<li><input type="checkbox" id="checkbox9"><label for="checkbox9">Very Dissatisfied</label></li>
-</ul>
-</li>
-<li>
-<p>Have you encountered any issues or challenges while using our app? If yes, please describe the problem(s) faced.</p>
-</li>
-<li>
-<p>How would you rate the affordability of our ride-hailing services?</p>
-<ul>
-<li><input type="checkbox" id="checkbox10"><label for="checkbox10">Very Affordable</label></li>
-<li><input type="checkbox" id="checkbox11"><label for="checkbox11">Affordable</label></li>
-<li><input type="checkbox" id="checkbox12"><label for="checkbox12">Neutral</label></li>
-<li><input type="checkbox" id="checkbox13"><label for="checkbox13">Expensive</label></li>
-<li><input type="checkbox" id="checkbox14"><label for="checkbox14">Very Expensive</label></li>
-</ul>
-</li>
-<li>
-<p>Are there any additional features or improvements you would like to see in our app? Please provide your suggestions.</p>
-</li>
-<li>
-<p>Would you recommend our ride-hailing app to others?</p>
-<ul>
-<li><input type="checkbox" id="checkbox15"><label for="checkbox15">Yes, definitely</label></li>
-<li><input type="checkbox" id="checkbox16"><label for="checkbox16">Maybe</label></li>
-<li><input type="checkbox" id="checkbox17"><label for="checkbox17">No, not at the moment</label></li>
-</ul>
-</li>
-<li>
-<p>Overall, how satisfied are you with our ride-hailing app?</p>
-<ul>
-<li><input type="checkbox" id="checkbox18"><label for="checkbox18">Very Satisfied</label></li>
-<li><input type="checkbox" id="checkbox19"><label for="checkbox19">Satisfied</label></li>
-<li><input type="checkbox" id="checkbox20"><label for="checkbox20">Neutral</label></li>
-<li><input type="checkbox" id="checkbox21"><label for="checkbox21">Dissatisfied</label></li>
-<li><input type="checkbox" id="checkbox22"><label for="checkbox22">Very Dissatisfied</label></li>
-</ul>
-</li>
-<li>
-<p>If you have any additional comments, feedback, or suggestions, please feel free to share:</p>
-</li>
-</ol>
-<p>Thank you for taking the time to provide us with your valuable feedback. We appreciate your support and look forward to continuing to serve you better in the future.</p>
-<p>Best regards,</p>
-<p>[Your Name]
-[Your Company/Organization Name]</p>
 </details>
 <br>
+<details><summary>Monochromatic Recolor</summary>
+<p>In order to include the preset style options in the UI, you need to manually include the preset style prompt text into your current prompt. It would be useful to have the existing prompt modify when style option are modified.</p>
+<ul>
+<li>
+<p>Prompt: monotone, black light grey, white, triad</p>
+</li>
+<li>
+<p>Result:</p>
+  <img src="../images/adobe_svg_mono.png" class="img-fluid" alt="Mono" width="80%"/>
+</li>
+<li>
+<p>Original:<br>
+<img src="../images/warm.svg" class="img-fluid" alt="Can recolor 2" width="128"/></p>
+</li>
+</ul>
+</details>
+<hr>
+<h4 id="example-failed-recolor">Example: Failed Recolor</h4>
+<details><summary>Shaded SVG Cannot Generate</summary>
+<img src="../images/adobe_svg_shaded_failure.png" class="img-fluid" alt="shaded svg failed" width="400"/>
+</details>
+<hr>
 
     </div>
   </section>

@@ -54,7 +54,7 @@
     .mermaid svg { height: auto; }
   </style>
   <title>UX Wizard</title>
-  <link rel="icon" type="images" href="../images/favicon.png">
+  <link rel="icon" type="images" href="../images/favicon.png" class="img-fluid">
 
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 </head>
@@ -106,7 +106,7 @@
                 aria-expanded="false">Graphic Design</a>
               <ul class="dropdown-menu" aria-labelledby="menu3">
                 <li><a class="dropdown-item" href="image_generation.html">Image Generation</a></li>
-                <!-- <li><a class="dropdown-item" href="./documents/image_editing.html">Image Editing</a></li> -->
+                <li><a class="dropdown-item" href="illustration.html">Illustration</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -150,29 +150,29 @@
     <div class="container">
       <h2 id="image-generation">Image Generation</h2>
 <p>A variety of tools were tested for accuracy and visuals of creating mockups.</p>
-<p>Of the tools tested there were various issues with content organization and text readability. Occasionally, the content created is not aligned and does not follow the organization of the reference image.
+<p>Of the tools tested there were various issues with content organization and text readability. Occasionally, the content created is not aligned and does not follow the organization of the reference image.<br>
 The text generated was often scrambled with various fake words spread across the designs. On the other hand ,the color scheme was maintained in each prompt generation.</p>
 <p>Currently, it is not recommended to use AI tools to generate complex web pages. Tools can be used to generate pages with minimal content blocks or to brainstorm design layouts.</p>
 <h2 id="tools-tested">Tools Tested</h2>
 <h2 id="ando">Ando</h2>
 <p>This Figma plugin generates design ideas from sketches, images and prompt descriptions. It uses an existing frame within Figma as reference and can output images in various sizes and numbers.</p>
 <p>The plugin worked well generating similar images from its reference as well as translating vector art into a realistic image. The plugin struggled generating a similar website mockup, only maintaining a similar color scheme. Content was off-centre and text was scrambled and not readable. In addition the image generated was poorly done with elements blending into each other.</p>
-  <details><summary>Details</summary>
+  <details><summary>Examples</summary>
 <h3 id="ando-ui">Ando UI</h3>
-   <img src="../images/ando.png" alt="Ando UI" width="200"/>
+   <img src="../images/ando.png" class="img-fluid" alt="Ando UI" width="200"/>
 <h4 id="example-1-pizza-generation-from-a-reference-image">Example 1: Pizza Generation From a Reference Image</h4>
-   <img src="../images/pizza.png" alt="Ando UI" width="400"/>
+   <img src="../images/pizza.png" class="img-fluid" alt="Ando UI" width="400"/>
 <p>The screenshot above shows the original Mushroom pizza image on the left and generated image variations on the right with the prompt of: ''Large classic mushroom pizza with pepperoni". The second generated image is closer to the original image by adding in the prompt word ''circular" to the previous prompt.</p>
 <h4 id="example-2-website-homepage-generation-from-a-reference-image">Example 2: Website Homepage Generation From a Reference Image</h4>
-   <img src="../images/website_home.png" alt="Ando UI" width="400"/>
-<p><strong>Prompt:</strong>
+   <img src="../images/website_home.png" class="img-fluid" alt="Ando UI" width="400"/>
+<p><strong>Prompt:</strong><br>
 ''A vibrant red landing website page with a bowl of noodles as the main image"</p>
 <p>The text included scrambled, fake words. The content issues included misaligned content, and an ugly additional red border. The image generation issues included objects such as chopsticks blending poorly with the noodle soup. The color scheme was maintained.</p>
  </details>
 <hr>
 <h2 id="adobe-firefly">Adobe Firefly</h2>
-<p>Adobe Firefly is a set of generative AI tools that allow you to create and modify images, generate decorative text and recolor vector images. It accurate in creating stylized images and adding visual elements to existing images. It struggles with generating realistic designs, lacks detailed customization options of generated images, and is only usable with public domain and Adobe Stock content. Currently, this limits its usage and accuracy for image generation.</p>
-<details><summary>Details</summary>
+<p><a href="https://www.adobe.com/sensei/generative-ai/firefly.html" taget="_blank">Adobe Firefly</a> is a set of generative AI tools that allow you to create and modify images and generate decorative text. It can generate stylized images and adding visual elements to existing images based on a given style. It struggles with generating realistic designs, lacks detailed customization options of generated images, and is only usable with public domain and Adobe Stock content. Currently, this limits its usage and accuracy for image generation.</p>
+<details open><summary>Details</summary>
 <h3 id="advantages">Advantages</h3>
 <ul>
 <li>Prompts in general give accurate results</li>
@@ -183,7 +183,7 @@ The text generated was often scrambled with various fake words spread across the
 </ul>
 <h3 id="disadvantages">Disadvantages</h3>
 <ul>
-<li>There are limited Customization options for fine tuning designs once the prompt is inputted. You can only recolor, or replace parts of the generated image.</li>
+<li>There are limited Customization options for fine tuning designs once the prompt is inputted. You can only replace parts of the generated image.</li>
 <li>There are inconsistencies with image quality at edges of objects.</li>
 <li>Custom fonts can not be used.</li>
 <li>Video Content is not currently supported.</li>
@@ -195,112 +195,104 @@ The text generated was often scrambled with various fake words spread across the
 <p>With generative fill it was easy to add additional design elements to images. Typically you want to add elements within a small area for minimal visual interference. Isolating elements from an image such as removing the background or subjects from an image works well if there are clear foreground and background elements.</p>
 <p><strong>Text to Image</strong></p>
 <p>This tool struggled with depicting humans in realistic environments due to a lack of reference content. It was better at depicting background scenery, cartoony imagery using the &quot;art&quot; or graphic&quot; presets. Unfortunately, you can't adjust individual elements in the picture but you can change color, tone, lighting, composition presets.</p>
-<p><strong>Generative Recolor</strong></p>
-<p>This tool is good at generating variations of vector images that are less realistic with clearly separated elements. All paths of the entire vector image must be closed to generate variations.</p>
-<p>You can not adjust individual elements, only being able to choose from preset main color schemes and prompt variations.</p>
 <p><strong>Text Effects</strong></p>
 <p>The text effects tool worked the best out of the tools tested. You can apply generative art over text by choosing from options such as preset styles, adherence level to shape, font types, and background or text color.</p>
 <p>With this tool the tight match shape option worked the best with generated designs. Simpler prompts work the best with a maximum of two prompt factors used such as the color and type of texture.</p>
 </details>
 <hr>
 <h3 id="adobe-firefly-generation-examples">Adobe Firefly Generation Examples</h3>
-<details><summary>Responses:</summary>
-<h3 id="example-3-fish-generated-image-generative-fill">Example 3: Fish Generated Image Generative Fill</h3>
+<p>Currently Firefly will add a rights usage watermark for all output images while Adobe Express does not.</p>
+<p>As the options in Express and Firefly are different it may be difficult to reproduce the same images using the same prompt.</p>
+<h4 id="example-image-generative-fill">Example: Image Generative Fill</h4>
+<details><summary>Fish Generation</summary>
 <ul>
 <li>
 <p>Original Image</p>
- <img src="../images/fish.PNG" alt="Fish" width="400"/>
+ <img src="../images/fish.PNG" class="img-fluid" alt="Fish" width="400"/>
 </li>
 <li>
 <p>Removed fish from background</p>
-  <img src="../images/fish_no_bg.PNG" alt="Ando UI" width="400"/>
+  <img src="../images/fish_no_bg.PNG" class="img-fluid" alt="Ando UI" width="400"/>
 </li>
 <li>
 <p>Removed the background in fish image</p>
-  <img src="../images/no_fish_bg.PNG" alt="Ando UI" width="400"/>
+  <img src="../images/no_fish_bg.PNG" class="img-fluid" alt="Ando UI" width="400"/>
 </li>
 <li>
 <p>Additional fish added using the prompt &quot;add fish in the water&quot;</p>
-  <img src="../images/added_fish.PNG" alt="Ando UI" width="400"/>
+  <img src="../images/added_fish.PNG" class="img-fluid" alt="Ando UI" width="400"/>
 </li>
 </ul>
-<h3 id="example-4-forest-with-yellow-wheat-text-to-image-examples">Example 4: Forest With Yellow Wheat Text to Image Examples</h3>
+</details>
+<br>
+<h4 id="example-stylistic-variation">Example: Stylistic Variation</h4>
+<details><summary>Forest With Yellow Wheat Text to Image</summary>
 <ul>
 <li>
 <p>Prompt: Forest surrounded by yellow wheat</p>
 </li>
 <li>
 <p>Photo version</p>
-  <img src="../images/forest_wheat_photo.jpg" alt="Ando UI" width="400"/>
+  <img src="../images/forest_wheat_photo.jpg" class="img-fluid" alt="Ando UI" width="400"/>
 </li>
 <li>
 <p>Graphic Version</p>
-  <img src="../images/forest_wheat_graphic.jpg" alt="Ando UI" width="400"/>
+  <img src="../images/forest_wheat_graphic.jpg" class="img-fluid" alt="Ando UI" width="400"/>
 </li>
 <li>
 <p>Art Version</p>
-  <img src="../images/forest_wheat_art.jpg" alt="Ando UI" width="400"/>
-</li>
-</ul>
-<h3 id="example-5-surfer-on-mars-text-to-image">Example 5: Surfer on Mars Text to Image</h3>
-<ul>
-<li>
-<p>Art Version</p>
-  <img src="../images/surfer_mars.jpg" alt="Ando UI" width="400"/>
-</li>
-<li>
-<p>Photo Version (Misaligned Limbs, Limbs blend into surfboard)</p>
-  <img src="../images/surfer_mars_photo.jpg" alt="Ando UI" width="400"/>
-</li>
-</ul>
-<h3 id="example-6-cat-vector-generative-recolor">Example 6: Cat Vector Generative Recolor</h3>
-<ul>
-<li>
-<p>Prompts used: trippy disco lights, faded emerald city</p>
-</li>
-<li>
-<p>Disco Cat 1</p>
-  <img src="../images/cat_disco.svg" alt="Ando UI" width="400"/>
-</li>
-<li>
-<p>Disco Cat 2</p>
-  <img src="../images/cat_disco_2.svg" alt="Ando UI" width="400"/>
-</li>
-<li>
-<p>Emerald City Cat</p>
-  <img src="../images/cat_disco_3.svg" alt="Ando UI" width="400"/>
-</li>
-</ul>
-<h3 id="example-7-text-effects">Example 7: Text Effects</h3>
-<ul>
-<li>
-<p>Android wires preset text</p>
-  <img src="../images/android_text_wires.jpg" alt="Ando UI" width="400"/>
-</li>
-<li>
-<p>Android baloon preset text</p>
-  <img src="../images/android_text_balloon.jpg" alt="Ando UI" width="400"/>
-</li>
-<li>
-<p>Android flowers preset text</p>
-  <img src="../images/android_text_flower.jpg" alt="Ando UI" width="400"/>
+  <img src="../images/forest_wheat_art.jpg" class="img-fluid" alt="Ando UI" width="400"/>
 </li>
 </ul>
 </details>
+<br>
+<h4 id="example-incorrect-content-classification">Example: Incorrect Content Classification</h4>
+<p>Shows misaligned limbs, and limbs that incorrectly blend into surfboard.</p>
+<details><summary>Surfer on Mars Text to Image</summary>
+<ul>
+<li>
+<p>Art Version</p>
+  <img src="../images/surfer_mars.jpg" class="img-fluid" alt="Ando UI" width="400"/>
+</li>
+<li>
+<p>Photo Version.</p>
+  <img src="../images/surfer_mars_photo.jpg" class="img-fluid" alt="Ando UI" width="400"/>
+</li>
+</ul>
+</details>
+<br>
+<h4 id="example-text-effects">Example: Text Effects</h4>
+<details><summary>Surfer on Mars Text to Image</summary>
+<ul>
+<li>
+<p>Android wires preset text</p>
+  <img src="../images/android_text_wires.jpg" class="img-fluid" alt="Ando UI" width="400"/>
+</li>
+<li>
+<p>Android baloon preset text</p>
+  <img src="../images/android_text_balloon.jpg" class="img-fluid" alt="Ando UI" width="400"/>
+</li>
+<li>
+<p>Android flowers preset text</p>
+  <img src="../images/android_text_flower.jpg" class="img-fluid" alt="Ando UI" width="400"/>
+</li>
+</ul>
+</details>
+<br>
 <hr>
 
     </div>
   </section>
 
   <!-- Bottom Area -->
-  <footer class="footer bg-dark text-white py-2">
+  <footer class=" footer bg-dark text-white py-2 mt-2">
     <div class="container">
       <ul class="social-icons">
         <button class="btn btn-dark" type="button">
-          <a href="https://github.com/" target="_blank"><i class="fab fa-github fa-2x" style="color: #ffffff;"></i></a>
+          <a href="https://github.com/guannan-kwok/WizUX" target="_blank"><i class="fab fa-github fa-2x" style="color: #ffffff;"></i></a>
         </button>
         <button class="btn btn-dark" type="button">
-          <a href="https://linkedin" target="_blank"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
+          <a href="https://linkedin.com/in/mgkwok" target="_blank"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
         </button>
       </ul>
       <p>&copy; 2023 Generative-AI Learn. All rights reserved.</p>
