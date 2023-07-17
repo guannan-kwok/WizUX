@@ -3,8 +3,9 @@
 
 # Introduction
 
+Welcome to **WizUX** a
 <a href="https://guannan-kwok.github.io/WizUX/">
-Welcome to **WizUX** our UX Resource website.</a>
+UX Resource website.</a>
 
 Here we explore the powerful integration of AI tools in the field of User Experience (UX) design. In today's digital landscape, AI technologies have revolutionized the way we approach UX, opening up exciting possibilities for creating seamless, personalized, and intuitive experiences.</p>
 
