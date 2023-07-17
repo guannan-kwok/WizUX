@@ -282,47 +282,42 @@ starting template.</p>
 <p><strong>Prompt</strong>: Write a github actions file which will run a custom python script to prepare files. Copies the files to a publishable folder, and creates a downloadable package.</p>
   <details><summary>Response</summary>
   <hr>
-  ```
-  name: Prepare and Publish
-<p>on:
-push:
-branches:
-- main</p>
-<p>jobs:
-prepare_and_publish:
-runs-on: ubuntu-latest</p>
-<pre><code> steps:
-  - name: Checkout code
-    uses: actions/checkout@v2
+<pre class="hljs"><code><div>name: Prepare and Publish
 
-  - name: Set up Python
-    uses: actions/setup-python@v2
-    with:
-      python-version: '3.x'
+on:
+  push:
+    branches:
+      - main
 
-  - name: Install dependencies
-    run: pip install -r requirements.txt
+jobs:
+  prepare_and_publish:
+    runs-on: ubuntu-latest
 
-  - name: Prepare files
-    run: python prepare_files.py
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-  - name: Copy files to publishable folder
-    run: cp -r output_folder publishable_folder
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
 
-  - name: Create package
-    uses: actions/upload-artifact@v2
-    with:
-      name: my_package
-      path: publishable_folder
-</code></pre>
-<pre class="hljs"><code><div>&lt;hr&gt;
-&lt;/details&gt;
+    - name: Install dependencies
+      run: pip install -r requirements.txt
 
+    - name: Prepare files
+      run: python prepare_files.py
 
-&lt;!--End--&gt;</div></code></pre>
+    - name: Copy files to publishable folder
+      run: cp -r output_folder publishable_folder
 
-</body>
-</html>
+    - name: Create package
+      uses: actions/upload-artifact@v2
+      with:
+        name: my_package
+        path: publishable_folder
+</div></code></pre>
+  </details>
 
     </div>
   </section>
