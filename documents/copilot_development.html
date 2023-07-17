@@ -158,18 +158,34 @@
 <ul>
 <li>While useful, results are tied to the LLM being used and the parameters set for prompting.</li>
 <li>Better chat integration would be useful, even if to the level provided by non-chat assistance.</li>
-<li>The results are &quot;minimalistic&quot; by default. This is good for inserting &quot;snippets&quot; but less useful
+<li>The results are &quot;minimalistic&quot; by default. This is good for inserting &quot;snippets&quot; but less useful<br>
 for producing standalone results.</li>
 <li>There is no caching / storage mechanism for reuse and at least for Visual Studio Code integration is tied to the workspace.</li>
 <li>The &quot;follow-up&quot; suggested prompts are sometimes useful but many times not topical or related to the previous prompt, This can lead the user to receive multiple responses to unrelated topics.</li>
 </ul>
 <h3 id="setup">Setup</h3>
-<p>As a setup step, the Copilot and Chat plugins need to be installed.</p>
-<img src="../images/copilot_plugin.png" class="img-fluid" width="20%">
-<p>The chat interface for Copilot is available by signing up for the beta program at this time of writing. The chat feature can be used in a similar way to ChatGPT but within the context of a working environment. This has the added advantage of avoiding some context switching. (There are ChatGPT and other unofficial add-ons which are available
+<p>As a setup step, the <a href="https://code.visualstudio.com/docs/editor/artificial-intelligence" target="_blank">Copilot</a> and Chat plugins need to be installed.</p>
+<table class="p-2 table table-borderless">
+<tbody>
+<tr>
+<td><img src="../images/copilot_plugin.png" class="img-fluid" width="100%">
+<td><img src="../images/copilot_chat_plugin.png" class="img-fluid" width="100%">
+<tr>
+</tbody>
+</table>
+<p>The chat interface for Copilot is available by signing up for the beta program at this time of writing. The chat feature can be used in a similar way to ChatGPT but within the context of a working environment. This has the added advantage of avoiding some context switching. (There are ChatGPT and other unofficial add-ons which are available<br>
 but not considered here)</p>
-<p>The following is a snapshot with and chat add-ons installed:
-<img src="../images/copilot_chat_darkmode_example.png" class="img-fluid" width="80%"></p>
+<p>The following is a snapshot with and chat add-ons installed:<br>
+<img src="../images/copilot_chat_darkmode_example.png" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal4" width="80%"></p>
+<div class="modal fade" id="imageModal4" tabindex="-1" aria-labelledby="imageModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img src="../images/copilot_chat_darkmode_example.png" alt="Image 1" width="100%">
+      </div>
+    </div>
+  </div>
+</div>
 <p>If chat is setup, for the Visual Studio Code integration a new tab on the left is available where prompts may be entered.</p>
 <p>Unlike code completion, the responses need to be migrated to their intended location. Options (highlighted on the left) include:</p>
 <ul>
@@ -206,7 +222,7 @@ but not considered here)</p>
 </li>
 <li>
 <p>Example 2: Accessibility Examples</p>
-<p>As a second example, tips for making a web page accessible
+<p>As a second example, tips for making a web page accessible<br>
 was prompted for, along with an example. Interestingly a follow-up prompt was required to ensure accessibility for those that are color-blind.</p>
 <details><summary>Response</summary>
  <div class="container">
@@ -274,10 +290,10 @@ print(<span class="hljs-string">'Input file:'</span>, args.input_file)
 </ol>
 <h3 id="pipeline--infrastructure-building">Pipeline / Infrastructure Building</h3>
 <p>The &quot;publishing&quot; of the documentation to it's final form was written using Python.</p>
-<p>Co-pilot was used to generate a fair chunk of the code
+<p>Co-pilot was used to generate a fair chunk of the code<br>
 dealing with &quot;boilerplate&quot; logic such as creating a command, file scanning and manipulation, and using a variant of the HTML generated using ChatGPT as mentioned in the <a href=" web_development.html">Web Site Development</a> page.</p>
-<p>Things to try including creating a build and deployment pipeline
-for this website using <a href="https://github.com/features/actions" target="_blank">Github Actions</a>. An example would look something like the following, which is useful even as a
+<p>Things to try including creating a build and deployment pipeline<br>
+for this website using <a href="https://github.com/features/actions" target="_blank">Github Actions</a>. An example would look something like the following, which is useful even as a<br>
 starting template.</p>
 <p><strong>Prompt</strong>: Write a github actions file which will run a custom python script to prepare files. Copies the files to a publishable folder, and creates a downloadable package.</p>
   <details><summary>Response</summary>
