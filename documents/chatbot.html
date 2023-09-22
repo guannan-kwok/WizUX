@@ -150,69 +150,23 @@
   <!-- Section Information -->
   <section class="py-4">
     <div class="container">
-      <h1 id="illustration">Illustration</h1>
-<p>Tools exist which allow vector graphic images (SVGs) to be manipulated. For example it is possible to recolor
-existing illustrations. This can be useful to try out different themes for icons, logos and even create
-new color palettes.</p>
-<p>It is to be seen if these can be constrained based on factors such as accessibility.</p>
-<h2 id="adobe-firefly">Adobe Firefly</h2>
-<p><a href="https://www.adobe.com/sensei/generative-ai/firefly.html" taget="_blank">Adobe Firefly</a> is a set of generative AI tools that includes the ability to recolor vector images.</p>
-<details open><summary>Details</summary>
-<h3 id="feature-tests">Feature Tests</h3>
-<p><strong>Generative Recolor</strong></p>
-<p>This tool is good at generating variations of vector images that are less realistic with clearly separated elements.</p>
-<p>User files can be uploaded, variations created and downloaded.</p>
-<p>It is import to note that all paths for the entire vector image must be closed for the generation to succeed.
-Also it appears that any shaded areas cannot be recolored.</p>
-<p>You can not adjust individual elements of the vector image. Users can choose from preset backgrounds, and tailer the results by choosing color schemes (such as &quot;complimentary&quot;), adding &quot;required&quot; colors, and modifying the prompt text.</p>
-<p>The snapshot shows an example of the options chosen.</p>
-   <img src="../images/adobe_svg_recolor.png" class="img-fluid" widht="80%" alt="Firefly Vector Recolor">
-</details>
-<hr>
-<h3 id="adobe-firefly-generation-examples">Adobe Firefly Generation Examples</h3>
-<h4 id="example-successful-recolor">Example: Successful Recolor</h4>
-<details><summary>Cat Vector Generative Recolor</summary>
-<ul>
-<li>
-<p>Prompt: trippy disco lights, faded emerald city, disco cat, disco cat 2, emerald city cat</p>
-</li>
-<li>
-<p>Disco Cat 1</p>
-  <img src="../images/cat_disco.svg" class="img-fluid" alt="Can recolor 1" width="400"/>
-</li>
-<li>
-<p>Disco Cat 2</p>
-  <img src="../images/cat_disco_2.svg" class="img-fluid" alt="Can recolor 2" width="400"/>
-</li>
-<li>
-<p>Emerald City Cat</p>
-  <img src="../images/cat_disco_3.svg" class="img-fluid" alt="Can recolor 3" width="400"/>
-</li>
-</ul>
-</details>
+      <h2 id="using-openai-to-create-a-chatbot">Using OpenAi to Create a Chatbot</h2>
+<img src="../images/chatbot_interface.PNG" class="img-fluid" alt="Ando UI" width="1000"/>
+<p>AI tools such as <a href="https://openai.com/chatgpt" target="_blank"> ChatGPT </a> API can be used to provide responses through a chatbot. By adjusting parameters such as tone, subject matter and length - the chatbot can be themed in various ways such as offering advice only for user experience topics.</p>
+<p>This chatbot interface uses the OpenAi and gradio python libraries to interact with ChatGPT and to create the web interface. The interface runs of either a public url lasting 72 hours or off of a local server.</p>
+<p>Limitations of these AI tools in generating user insights are that the tool can lack previous context. These include user insights from previous interactions, background data of the product or user. Findings that these tools generate can be non-specific, with insights needing to be sorted through to prioritize the most relevant information. Finally findings are not referenced making it so that user will need to verify the validity of the generated insight themselves.</p>
+<h3 id="changing-the-role-of-the-chatbot">Changing the Role of the Chatbot</h3>
+<p><strong>Themed Chatbots</strong>
+You can choose and restrict the tone, subject manner, and length of responses that the chatbot provides by editing the messages section of the python code.</p>
+<p>messages = [
+{&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;You are an AI specialized in sports. Do not answer anything other than sports-related queries.&quot;},
+]</p>
 <br>
-<details><summary>Monochromatic Recolor</summary>
-<p>In order to include the preset style options in the UI, you need to manually include the preset style prompt text into your current prompt. It would be useful to have the existing prompt modify when style option are modified.</p>
-<ul>
-<li>
-<p>Prompt: monotone, black light grey, white, triad</p>
-</li>
-<li>
-<p>Result:</p>
-  <img src="../images/adobe_svg_mono.png" class="img-fluid" alt="Mono" width="80%"/>
-</li>
-<li>
-<p>Original:<br>
-<img src="../images/warm.svg" class="img-fluid" alt="Can recolor 2" width="128"/></p>
-</li>
-</ul>
-</details>
-<hr>
-<h4 id="example-failed-recolor">Example: Failed Recolor</h4>
-<details><summary>Shaded SVG Cannot Generate</summary>
-<img src="../images/adobe_svg_shaded_failure.png" class="img-fluid" alt="shaded svg failed" width="400"/>
-</details>
-<hr>
+<h2 id="chatbot-examples">Chatbot Examples</h2>
+<p><strong>Generic Chatbot:</strong></p>
+<p>Shown below is a recording of the chatbot interface. Users can type any question they wish and ChatGPT will respond in the window on the right side.
+<img src="../images/chatbot.gif" class="img-fluid" alt="Ando UI" width="1000"/></p>
+<br>
 
     </div>
   </section>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
+  <style>
+    /* Custom CSS */
+    .dropdown-toggle {
+      text-decoration: none !important;
+    }
+
+    .no-underline {
+      text-decoration: none !important;
+    }
+
+    .navbar .navbar-nav {
+      margin-left: auto;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .social-icons li a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+    } 
+    
+    table, th, td {
+      border: 1px solid;
+    }
+
+    .mermaid svg { height: auto; }
+  </style>
+  <title>UX Wizard</title>
+  <link rel="icon" type="images" href="../images/favicon.png" class="img-fluid">
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>  
+
+  <!-- Top Area -->
+  <header class="bg-dark text-white py-2">
+    <div class="container">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="d-flex align-items-center">
+          <img src="../images/logo_transparent.png" alt="Logo" height="70">
+        </div>
+        <div class="navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link no-underline">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Research</a>
+              <ul class="dropdown-menu" aria-labelledby="menu1">
+                <li><a class="dropdown-item" href="ux_research_surveys_interviews.html">Surveys and Interviews</a></li>
+                <li><a class="dropdown-item" href="feature_comparison.html">Feature Comparison</a></li>
+                <li><a class="dropdown-item" href="persona_creation.html">Persona Creation</a></li>
+                <li><a class="dropdown-item" href="research_insights.html">Research Insights</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu2">
+                <li><a class="dropdown-item" href="ux_copy.html">Generating Copy</a></li>
+                <li><a class="dropdown-item" href="design_system.html">Design System</a></li>
+                <li><a class="dropdown-item" href="user_flows.html">User Flows</a></li>
+                <li><a class="dropdown-item" href="wireframes.html">Wireframes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu3" data-bs-toggle="dropdown"
+                aria-expanded="false">Graphic Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu3">
+                <li><a class="dropdown-item" href="image_generation.html">Image Generation</a></li>
+                <li><a class="dropdown-item" href="illustration.html">Illustration</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Development</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="chatbot_comparison.html">ChatBot Comparison</a></li> 
+                <li><a class="dropdown-item" href="web_development.html">Web Site Generation</a></li> 
+                <li><a class="dropdown-item" href="copilot_development.html">Using Github Co-Pilot</a></li> 
+                <li><a class="dropdown-item" href="openai_notebook_iframe.html">OpenAI API Setup </a></li>
+                <li><a class="dropdown-item" href="chatbot.html">OpenAI Chatbot </a></li> 
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Image Carousel Area -->
+  <!--
+  <section class="pt-5">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/android_text_balloon.jpg" class="d-block mx-auto w-50" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_flower.jpg" class="d-block mx-auto w-50" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_wires.jpg" class="d-block mx-auto w-50" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Section Information -->
+  <section class="py-4">
+    <div class="container">
+      <h2 id="chatbot-comparison">ChatBot Comparison</h2>
+<p>The following AI ChatBots have been tested on this site:</p>
+<ol>
+<li>OpenAI <code>ChatGPT</code></li>
+<li>Google <code>Bard</code></li>
+<li>Microsoft <code>Bing</code></li>
+</ol>
+<p>At this time of writing another AI ChatBot Anthropic's <code>Claude</code> is only available in a few countries so it could not be tested.</p>
+<h3 id="openai-chatgpt">OpenAI ChatGPT</h3>
+<h3 id="pros">Pros</h3>
+<ul>
+<li>Allows for direct copy and pasting of content from the UI</li>
+<li>Content format is Markdown</li>
+<li>Allows for a set of <a href="https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt" target="_blank">custom instructions</a> which will be added to the prompt.</li>
+</ul>
+<h3 id="cons">Cons</h3>
+<ul>
+<li>Has a paid tiered system making either features or the most recent LLM's unavailable for non-paid users. For example, at this time of writing the free tier uses <code>GPT-3.5</code> while the paid tier uses <code>GPT-4``. Note that </code>Bing<code>uses</code>GPT-4` for free.</li>
+</ul>
+<h3 id="example-1-creating-a-wireframe-mockup-for-an-application">Example 1: Creating a Wireframe Mockup For an Application</h3>
+<p><strong>Prompt:</strong>
+Make a wireframe for a journaling app.</p>
+<details><summary>Response</summary>
+<p>Creating a detailed wireframe for a journaling app is a complex task that typically requires specialized wireframing software. However, I can provide you with a simplified text-based representation of the main components and layout of a journaling app's interface.</p>
+<p>Please note that this is a basic example, and actual wireframes are more detailed and visual. You may want to use wireframing tools like Figma, Sketch, or Adobe XD to create a more polished and interactive wireframe.</p>
+<p><strong>Journaling App Wireframe:</strong></p>
+<ol>
+<li>
+<p><strong>Header</strong></p>
+<ul>
+<li>App Logo/Name</li>
+<li>User Profile Picture/Name</li>
+<li>Settings/Options Icon</li>
+</ul>
+</li>
+<li>
+<p><strong>Navigation Bar</strong></p>
+<ul>
+<li>Home/Entries</li>
+<li>Search</li>
+<li>Calendar View</li>
+<li>Add New Entry</li>
+<li>Notifications</li>
+</ul>
+</li>
+<li>
+<p><strong>Main Content Area</strong></p>
+<ul>
+<li>List of Journal Entries (with date and title)</li>
+<li>Pagination or Scrolling</li>
+</ul>
+</li>
+<li>
+<p><strong>Entry View</strong></p>
+<ul>
+<li>Date</li>
+<li>Title</li>
+<li>Text/Content Entry Field</li>
+<li>Attachment/Image Upload</li>
+<li>Mood/Emotion Selection</li>
+<li>Tags/Keywords</li>
+</ul>
+</li>
+<li>
+<p><strong>Calendar View</strong></p>
+<ul>
+<li>Calendar Display</li>
+<li>Date Selection</li>
+<li>Summary of Entries for Selected Date</li>
+</ul>
+</li>
+<li>
+<p><strong>Search Page</strong></p>
+<ul>
+<li>Search Bar</li>
+<li>Filters (Date, Tags, Mood)</li>
+<li>Search Results List</li>
+</ul>
+</li>
+<li>
+<p><strong>Add New Entry</strong></p>
+<ul>
+<li>Date (automatically set to current date)</li>
+<li>Title Entry Field</li>
+<li>Content Entry Field</li>
+<li>Attachment/Image Upload</li>
+<li>Mood/Emotion Selection</li>
+<li>Tags/Keywords</li>
+<li>Save/Cancel Buttons</li>
+</ul>
+</li>
+<li>
+<p><strong>Notifications</strong></p>
+<ul>
+<li>List of Notifications (e.g., reminders to journal)</li>
+</ul>
+</li>
+<li>
+<p><strong>Settings</strong></p>
+<ul>
+<li>Profile Settings</li>
+<li>Privacy Settings</li>
+<li>App Preferences</li>
+<li>Help/Support</li>
+<li>Log Out</li>
+</ul>
+</li>
+<li>
+<p><strong>Footer</strong></p>
+<ul>
+<li>Copyright/Disclaimer</li>
+<li>Social Media Links</li>
+</ul>
+</li>
+</ol>
+<p>Remember that a wireframe is a blueprint for your app's interface and functionality. You can add more details, interactions, and design elements based on your specific requirements and user needs.</p>
+<hr>
+<p>In comparison to Google Bard no image reference links are provided. The content layout of each section is described in more detail compared to Bard.</p>
+</details>
+<br>
+<h3 id="example-2-feature-comparison">Example 2: Feature Comparison</h3>
+<p><strong>Prompt:</strong>
+Compare features of figma versus sketch.</p>
+<details><summary>Response</summary>
+Figma and Sketch are both popular design tools used for creating digital interfaces and prototypes, but they have some key differences in terms of features and functionality:
+<p><strong>Figma:</strong></p>
+<ol>
+<li>
+<p><strong>Web-Based Collaboration:</strong> Figma is entirely web-based, allowing for real-time collaboration among team members. Multiple users can work on the same design file simultaneously, making it ideal for remote teams.</p>
+</li>
+<li>
+<p><strong>Cross-Platform Compatibility:</strong> Figma works on both Mac and Windows, as well as Linux, making it more versatile in terms of operating systems.</p>
+</li>
+<li>
+<p><strong>Version History:</strong> Figma offers a robust version history feature, allowing users to review and restore previous versions of a design.</p>
+</li>
+<li>
+<p><strong>Interactive Prototyping:</strong> Figma offers native interactive prototyping capabilities, allowing you to create clickable prototypes directly within the tool.</p>
+</li>
+<li>
+<p><strong>Developer Handoff:</strong> Figma has built-in developer handoff features, enabling designers to generate design specs, assets, and CSS code for developers.</p>
+</li>
+<li>
+<p><strong>Auto Layout:</strong> Figma's Auto Layout feature simplifies the design of responsive and dynamic components.</p>
+</li>
+<li>
+<p><strong>Plugins:</strong> Figma supports a wide range of plugins created by the community, extending its functionality for various design tasks.</p>
+</li>
+</ol>
+<p><strong>Sketch:</strong></p>
+<ol>
+<li>
+<p><strong>Native macOS App:</strong> Sketch is a native macOS application, which means it's optimized for the macOS environment and may perform better on Mac computers.</p>
+</li>
+<li>
+<p><strong>Robust Vector Editing:</strong> Sketch excels in vector editing and is known for its precision in designing icons and graphics.</p>
+</li>
+<li>
+<p><strong>Artboards:</strong> Sketch uses artboards for designing different screens or versions of a design, which is familiar to many designers.</p>
+</li>
+<li>
+<p><strong>Symbols and Libraries:</strong> Sketch introduced Symbols and Libraries, making it easy to reuse design elements across multiple screens or projects.</p>
+</li>
+<li>
+<p><strong>Plugin Ecosystem:</strong> Sketch also has a rich ecosystem of plugins that extend its functionality.</p>
+</li>
+<li>
+<p><strong>Design Handoff:</strong> Sketch offers design handoff through third-party integrations, like Zeplin, Avocode, or InVision.</p>
+</li>
+<li>
+<p><strong>Offline Mode:</strong> Sketch can be used offline, which can be an advantage in certain situations.</p>
+</li>
+</ol>
+<p>In summary, the choice between Figma and Sketch often depends on your team's specific needs and preferences. Figma is favored for its collaboration features and cross-platform support, while Sketch is known for its precision vector editing and native macOS experience. Both tools are capable of creating high-quality designs and prototypes, so the decision should be based on your workflow and team dynamics.</p>
+<hr>
+<p>In comparison to Google Bard, Chat GPT compares features through a list rather than a table. Both GPT and Bard provide a summary of the differences and a recommendation of which application to use.</p>
+</details>
+<br>
+<h3 id="google-bard">Google Bard</h3>
+<h3 id="pros">Pros</h3>
+<ul>
+<li>
+<p>Can copy and paste content from the UI</p>
+</li>
+<li>
+<p>Content is formatted as Markdown.</p>
+</li>
+<li>
+<p>Shows a set of available alternative responses to the prompt entered in the UI
+<img src="../images/bard_alternatives.png" width="100%"></p>
+</li>
+<li>
+<p>Has the ability to regenerate responses based on additional criteria after initial generation. Options include making responses: shorter, longer, simpler, and using more casual or professional language
+<img src="../images/bard_regen_options.png" width="15%"></p>
+</li>
+<li>
+<p>Can provide source references through image and text links to websites.</p>
+</li>
+<li>
+<p>various export options for prompts through a public link, google doc export and gmail</p>
+</li>
+</ul>
+<h3 id="cons">Cons</h3>
+<ul>
+<li>A <strong>important negative</strong> is that the prompt size is limited to 2000 characters for &quot;balanced&quot; and 4000 for &quot;precise&quot; style. This makes it very hard to supply any reasonable piece of data in the prompt.</li>
+<li>Seems to intermittently &quot;hang&quot; and give no response (at time of writing).</li>
+<li>Cannot directly copy and paste prompt response content from the UI</li>
+<li>Content format is plain text requiring manual formatting</li>
+<li>Too tied to the Google ecosystem allowing storage to Google services only.</li>
+<li>Can create &quot;ficticious&quot; API calls when asked to generate source code greatly reducing the trust level.</li>
+</ul>
+<h3 id="example-1-creating-a-wireframe-mockup-for-an-application">Example 1: Creating a Wireframe Mockup For an Application</h3>
+<p><strong>Prompt:</strong>
+Make a wireframe for a journaling app.</p>
+<details><summary>Response</summary>
+<p>Sure, I can help you make a wireframe for a journaling app. Here are some of the essential elements that you can include in your wireframe:</p>
+<ul>
+<li><strong>Homepage:</strong> This is the landing page of the app, where users can create a new journal entry, view their existing entries, or access other features of the app.
+[Image of Wireframe for a journaling app homepage]</li>
+<li><strong>Journal entry form:</strong> This is where users can enter their journal entries. The form should include fields for the date, time, title, and content of the entry.
+[Image of Wireframe for a journaling app journal entry form]</li>
+<li><strong>Journal list:</strong> This is where users can view their existing journal entries. The list should be paginated and allow users to filter and search their entries.
+[Image of Wireframe for a journaling app journal list]</li>
+<li><strong>Settings:</strong> This is where users can configure their account settings, such as their profile information, notification preferences, and theme.
+[Image of Wireframe for a journaling app settings]</li>
+<li><strong>Help:</strong> This is where users can find help and support information about the app.
+[Image of Wireframe for a journaling app help]</li>
+</ul>
+<p>These are just some of the essential elements that you can include in your wireframe. The specific elements that you include will depend on the specific features that you want to include in your journaling app.</p>
+<p>Once you have created a wireframe, you can use it to prototype your app. This will help you to test the functionality of your app and identify any potential problems. Once you have prototyped your app, you can start developing the final version.</p>
+<p>I hope this helps!</p>
+<hr>
+<p>In comparison to ChatGPT Google Bard provides additional image reference links for what a section of the wireframe could look like. However, it does not create a sample wireframe for you.
+<img src="../images/bard_wireframe_response.PNG" class="img-fluid" alt="Ando UI" width="600"/></p>
+</details>
+<br>
+<h3 id="example-2-feature-comparison">Example 2: Feature Comparison</h3>
+<p><strong>Prompt:</strong>
+Compare features of figma versus sketch.</p>
+<details><summary>Response</summary>
+<p>Sure, here is a comparison of the features of Figma and Sketch:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Figma</th>
+<th>Sketch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platform</td>
+<td>Web-based</td>
+<td>macOS</td>
+</tr>
+<tr>
+<td>Pricing</td>
+<td>Freemium (unlimited free version) or paid plans starting at $12/month</td>
+<td>Paid plans starting at $99/year</td>
+</tr>
+<tr>
+<td>Collaboration</td>
+<td>Real-time collaboration for all users</td>
+<td>Real-time collaboration for up to 3 users with the free plan, up to 10 users with the Sketch Cloud plan</td>
+</tr>
+<tr>
+<td>Prototyping</td>
+<td>Built-in prototyping tools</td>
+<td>Requires third-party plugins</td>
+</tr>
+<tr>
+<td>Vector graphics</td>
+<td>Supports vector graphics</td>
+<td>Supports vector graphics</td>
+</tr>
+<tr>
+<td>Symbols</td>
+<td>Supports symbols</td>
+<td>Supports symbols</td>
+</tr>
+<tr>
+<td>Plugins</td>
+<td>Large library of plugins</td>
+<td>Smaller library of plugins</td>
+</tr>
+<tr>
+<td>Community</td>
+<td>Large and active community</td>
+<td>Smaller community</td>
+</tr>
+</tbody>
+</table>
+<p>As you can see, Figma and Sketch are both powerful design tools with a lot of features in common. However, there are also some key differences between the two. Figma is a web-based tool, which makes it more accessible to users on different platforms. It also offers a freemium plan, which makes it a more affordable option for small teams or individual designers. Figma's built-in prototyping tools are also more advanced than Sketch's.</p>
+<p>Sketch is a native macOS app, which means it can be more responsive and efficient for Mac users. It also has a larger library of plugins, which can be useful for power users. However, Sketch's pricing is more expensive than Figma's, and it does not offer a free plan.</p>
+<p>Ultimately, the best choice for you will depend on your specific needs and preferences. If you are looking for a web-based tool with a free plan and built-in prototyping tools, then Figma is a good option. If you are a Mac user who wants access to a larger library of plugins, then Sketch may be a better choice.</p>
+<p>Here are some additional things to consider when choosing between Figma and Sketch:</p>
+<ul>
+<li><strong>Your team's needs:</strong> If you are working with a team of designers, then Figma's real-time collaboration features are a must-have. Sketch's prototyping features are also more advanced than Figma's, which can be useful for teams that are creating interactive prototypes.</li>
+<li><strong>Your budget:</strong> If you are on a tight budget, then Figma's freemium plan is a great option. Sketch's pricing is more expensive, but it does offer a free trial so you can try it out before you buy it.</li>
+<li><strong>Your operating system:</strong> If you are a Mac user, then Sketch is the only option. Figma is a web-based tool, so it can be used on any operating system.</li>
+</ul>
+<p>I hope this comparison helps you choose the right design tool for your needs.</p>
+<hr>
+<p>In comparison to ChatGPT Google Bard compares features through a table rather than listing features. Both GPT and Bard provide a summary of the differences and a recommendation of which application to use.</p>
+</details>
+<br>
+<h3 id="microsoft-bing">Microsoft Bing</h3>
+<p>At this time of writing uses GPT-4 (free)</p>
+<h3 id="pros">Pros</h3>
+<ul>
+<li>Does not require any subscription or login to use, but requires a login to access additional features and longer conversations.</li>
+<li>Provides details of source references for prompt responses. Can include multiple linked references for responses.</li>
+<li>As it scans for current references, it can pull out recent information.</li>
+<li>Has export not tied to any specific ecosystem (e.g. does not only allow export to OneDrive for instance). At time of writing this includes export to: Word, PDF, and text.</li>
+<li>Adds in possible follow-up prompts.</li>
+<li>Has a preset conversation style. <strong>Strangely this option disappears when you login?</strong>:
+<img src="../images/bing_conversation_style.png" width="100%"></li>
+<li>Does a better job of creating source code but still creates &quot;ficticious&quot; API calls.</li>
+</ul>
+<h3 id="cons">Cons</h3>
+<ul>
+<li>
+<p>Does not provide support for export to Microsoft's own ecosystem (e.g. OneDrive), though does provide posting to some social media platforms but seems to fail?</p>
+</li>
+<li>
+<p>Follow-up prompts are not always relevant to the prompt.</p>
+  <img src="../images/bing_links_and_next_prompts.png" width="100%">
+</li>
+<li>
+<p>Preset conversation style starts a new prompt making it very hard to compare different results.</p>
+</li>
+</ul>
+<h2 id="example-1-creating-a-wireframe-mockup-for-an-application">Example 1: Creating a Wireframe Mockup For an Application</h2>
+<p><strong>Prompt:</strong>
+Make a wireframe for a journaling app.</p>
+<details><summary>Response</summary>
+<p>I'll try to create that. Here is a wireframe for a journaling app:</p>
+<p>!Wireframe for a journaling app</p>
+<p>This wireframe is just an example and can be modified according to your requirements. If you have any specific features in mind, please let me know.</p>
+<hr>
+<p>In comparison to ChatGPT or GoogleBard, Bing AI provides a lot less detail as to the sections of the wireframe. The image generated was not accurate and is a generic image of a wireframe for a mobile phone.</p>
+<img src="../images/bing_ai_wireframe_prompt.PNG" class="img-fluid" alt="Ando UI" width="600"/>
+</details>
+<br>
+<h3 id="example-2-feature-comparison">Example 2: Feature Comparison</h3>
+<p><strong>Prompt:</strong>
+Compare features of figma versus sketch.</p>
+<details><summary>Response</summary>
+<p>Figma and Sketch are both popular design tools used by designers worldwide. Figma is a web-based app that can be accessed from anywhere, while Sketch is a desktop app that is only available for Mac users 123.</p>
+<p>Figma has an edge over Sketch in terms of collaboration. Figma allows designers to share design files and collaborate in real-time with their entire team, while Sketch does not offer this feature 12.</p>
+<p>Figma also offers a more streamlined workflow as it is an all-in-one tool that does not require the use of additional software like InVision, Abstract, or Zeplin 1.</p>
+<p>Sketch, on the other hand, has a larger number of plugins available compared to Figma. However, many of these plugins are also available in Figma 1.</p>
+<p>Both tools have their strengths and weaknesses. It ultimately depends on the user's specific needs and preferences.</p>
+<hr>
+<p>In comparison to ChatGPT or Google Bard, Bing gives a shorter summary when comparing Figma versus Sketch. It then contrasts strengths and weaknesses before leaving the decision up to the user. It cites three sources figma, career foundry and dash.app as its sources.</p>
+</details>
+<br>
+
+    </div>
+  </section>
+
+  <!-- Bottom Area -->
+  <footer class=" footer bg-dark text-white py-2 mt-2">
+    <div class="container">
+      <ul class="social-icons">
+        <button class="btn btn-dark" type="button">
+          <a href="https://github.com/guannan-kwok/WizUX" target="_blank"><i class="fab fa-github fa-2x" style="color: #ffffff;"></i></a>
+        </button>
+        <button class="btn btn-dark" type="button">
+          <a href="https://linkedin.com/in/mgkwok" target="_blank"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
+        </button>
+      </ul>
+      <p>&copy; 2023 NanMu Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
