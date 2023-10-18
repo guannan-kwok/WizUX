@@ -46,6 +46,10 @@
       background-color: #333;
       color: #fff;
     }
+    .article{
+      text-decoration: none;
+    }
+
   </style>
   <title>UX Wizard</title>
   <link rel="icon" type="images" href="images/favicon.png">
@@ -157,7 +161,7 @@
   <!-- Introduction Section -->
   <section class="py-4">
     <div class="container">
-      <h2>Introduction</h2>
+      <h2 class="pb-2 border-bottom">Introduction</h2>
       <p>Welcome to our UX Resource website, where we explore the powerful integration of AI tools in the field of User
         Experience (UX) design. In today's digital landscape, AI technologies have revolutionized the way we approach
         UX, opening up exciting possibilities for creating seamless, personalized, and intuitive experiences.</p>
@@ -172,11 +176,78 @@
         misaligned, and not to scale.</p>
     </div>
   </section>
+  <!-- Featured Articles -->
+  
+  <div class="container px-4 py-4" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Featured Articles</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg" style="background-image: url('images/ai_thumbnail.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><a href="./documents/chatbot_comparison.html" class="link-light article">ChatBot Comparison</a></h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <small>Development</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="fa-regular fa-calendar bi me-2" style="color: #ffffff;"></i>
+                <small>September</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('images/wireframe.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><a class="link-light article" href="documents/wireframes.html">Generating Wireframes</a></h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <small>UX Design</small>
+              </li>
+              <li class="d-flex align-items-center text-white">
+                <i class="fa-regular fa-calendar bi me-2" style="color: #ffffff;"></i>
+                <small>October</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('images/github.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><a class="link-light article" href="./documents/copilot_development.html">Using Github Co-Pilot</a></h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                
+              </li>
+              <li class="d-flex align-items-center me-3 text-white">
+                <small>Development</small>
+              </li>
+              <li class="d-flex align-items-center text-white">
+                <i class="fa-regular fa-calendar bi me-2" style="color: #ffffff;"></i>
+                <small>October</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Navigation Area -->
   <section class="py-4">
     <div class="container bg-light px-2 py-2 shadow" id="hanging-icons">
-
+      <h2 class="pb-2 ps-5 mt-2">Sections</h2>
       <div class="row ps-5 pe-4 row-cols-1 row-cols-sm-4 d-flex flex-row overflow-auto">
 
         <div class="col pt-3 pb-3">
@@ -263,6 +334,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- Bottom Area -->
   <footer class=" footer bg-dark text-white py-2 mt-2">
