@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<materialx version="1.38">
+  <look name="Default_Look">
+    <materialassign name="SVGMat_Material" material="SVGMat_Material" geom="Mesh_Curve, Mesh_Curve_005, Mesh_Curve_006, Mesh_Curve_007" />
+    <materialassign name="SVGMat_001_Material" material="SVGMat_001_Material" geom="Mesh_Curve_001, Mesh_Curve_002, Mesh_Curve_003, Mesh_Curve_004, Mesh_Curve_008, Mesh_Curve_009" />
+  </look>
+  <standard_surface name="SVGMat_Shader" type="surfaceshader" nodedef="ND_standard_surface_surfaceshader">
+    <input name="base_color" type="color3" value="1, 1, 1" />
+  </standard_surface>
+  <surfacematerial name="SVGMat_Material" type="material" nodedef="ND_surfacematerial">
+    <input name="surfaceshader" type="surfaceshader" nodename="SVGMat_Shader" />
+  </surfacematerial>
+  <standard_surface name="SVGMat_001_Shader" type="surfaceshader" nodedef="ND_standard_surface_surfaceshader">
+    <input name="base_color" type="color3" value="0, 0, 0" />
+  </standard_surface>
+  <surfacematerial name="SVGMat_001_Material" type="material" nodedef="ND_surfacematerial">
+    <input name="surfaceshader" type="surfaceshader" nodename="SVGMat_001_Shader" />
+  </surfacematerial>
+</materialx>

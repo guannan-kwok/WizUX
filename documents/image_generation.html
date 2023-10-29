@@ -153,10 +153,41 @@
     <div class="container">
       <h2 id="image-generation">Image Generation</h2>
 <p>A variety of tools were tested for accuracy and visuals of creating mockups.</p>
-<p>Of the tools tested there were various issues with content organization and text readability. Occasionally, the content created is not aligned and does not follow the organization of the reference image.<br>
+<p>Of the tools tested there were various issues with content organization and text readability. Occasionally, the content created is not aligned and does not follow the organization of the reference image.
 The text generated was often scrambled with various fake words spread across the designs. On the other hand ,the color scheme was maintained in each prompt generation.</p>
 <p>Currently, it is not recommended to use AI tools to generate complex web pages. Tools can be used to generate pages with minimal content blocks or to brainstorm design layouts.</p>
 <h2 id="tools-tested">Tools Tested</h2>
+<h2 id="photoshop">Photoshop</h2>
+<p><strong>Photoshop Generative Fill Tool</strong></p>
+<p>Photoshop's generative fill tool can be used for basic image modification. It works well to approximate imagery based on the existing scenery objects and lighting.</p>
+<p>This is done by selecting the area to be replaced using selection tools such as the marquee or lasso tools. Next you type in a prompt and can choose from variations or regenerate responses in the sidebar. Photoshop does a decent job in altering the surrounding area selected to better blend the generated content with the original image.</p>
+<p>Shown on the left is the original image. On the right is the altered image using the prompt red house with yellow lights.</p>
+<img src="../images/house.png" class="img-fluid" alt="Ando UI" width="400"/>
+<img src="../images/red_house.png" class="img-fluid" alt="Ando UI" width="400"/>
+<p></p>
+<hr>
+<p><strong>Expand with Generative Fill</strong></p>
+<p>A unique feature to Photoshop is the ability to &quot;expand&quot; a picture by creating additional image content that mimics the composition of the current picture. This is done by using the crop tool while generative fill is selected. Next users use the option key to expand the picture size in both directions. Photoshop then fills in the extra area created.</p>
+<p>In this example Photoshop expands the hill portion of the picture and extends the rock area to the left of the house.</p>
+<img src="../images/red_house_water.png" class="img-fluid" alt="Ando UI" width="400"/>
+<p>The examples below show an wider flower environment. Photoshop also improves the contrast and lighting.</p>
+<img src="../images/flower.jpg" class="img-fluid" alt="Ando UI" width="250"/>
+<img src="../images/flower_expand.png" class="img-fluid" alt="Ando UI" width="370"/>
+<p>The generative expand can also be used to improve the composition of photos and fill in cut off or off-centered elements. The examples below show chipmunk and deer pictures expanded to show more of the animal or scene and provide a balanced composition.</p>
+<img src="../images/chipmunk.jpg" class="img-fluid" alt="Ando UI" width="160"/>
+<img src="../images/chipmunk_gen_expand.png" class="img-fluid" alt="Ando UI" width="400"/>
+<p></p>
+<img src="../images/deer.JPG" class="img-fluid" alt="Ando UI" width="400"/>
+<img src="../images/deer_expand.png" class="img-fluid" alt="Ando UI" width="400"/>
+<p></p>
+<hr>
+<p><strong>Creating a Variation</strong>
+Creating variations of existing images is done by selecting the area and generating content using prompts.</p>
+<p>The example below adds a body of water using the lasso tool for selection and the prompt ''Small water lake".</p>
+<img src="../images/house_water.png" class="img-fluid" alt="Ando UI" width="400"/>
+<p>Generative expand was used, then flowers were recolored using generative fill, a bee was added using the lasso tool and generative fill prompt &quot;Small honey bee&quot;.</p>
+<img src="../images/altered_flowers.png" class="img-fluid" alt="Ando UI" width="400"/>
+<hr>
 <h2 id="ando">Ando</h2>
 <p><a href="https://ando.studio/" target="_blank"> Ando </a> is a figma plugin that generates design ideas from sketches, images and prompt descriptions. It uses an existing frame within Figma as reference and can output images in various sizes and numbers.</p>
 <p>The plugin worked well generating similar images from its reference as well as translating vector art into a realistic image. The plugin struggled generating a similar website mockup, only maintaining a similar color scheme. Content was off-centre and text was scrambled and not readable. In addition the image generated was poorly done with elements blending into each other.</p>
@@ -168,7 +199,7 @@ The text generated was often scrambled with various fake words spread across the
 <p>The screenshot above shows the original Mushroom pizza image on the left and generated image variations on the right with the prompt of: ''Large classic mushroom pizza with pepperoni". The second generated image is closer to the original image by adding in the prompt word ''circular" to the previous prompt.</p>
 <h4 id="example-2-website-homepage-generation-from-a-reference-image">Example 2: Website Homepage Generation From a Reference Image</h4>
    <img src="../images/website_home.png" class="img-fluid" alt="Ando UI" width="400"/>
-<p><strong>Prompt:</strong><br>
+<p><strong>Prompt:</strong>
 ''A vibrant red landing website page with a bowl of noodles as the main image"</p>
 <p>The text included scrambled, fake words. The content issues included misaligned content, and an ugly additional red border. The image generation issues included objects such as chopsticks blending poorly with the noodle soup. The color scheme was maintained.</p>
  </details>
