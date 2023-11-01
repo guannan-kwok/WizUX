@@ -159,7 +159,7 @@ The text generated was often scrambled with various fake words spread across the
 <h2 id="tools-tested">Tools Tested</h2>
 <h2 id="photoshop">Photoshop</h2>
 <p><strong>Photoshop Generative Fill Tool</strong></p>
-<p>Photoshop's generative fill tool can be used for basic image modification. It works well to approximate imagery based on the existing scenery objects and lighting.</p>
+<p>Photoshop's generative fill tool can be used for basic image modification. It works well to approximate imagery based on the existing lighting and objects in the image.</p>
 <p>This is done by selecting the area to be replaced using selection tools such as the marquee or lasso tools. Next you type in a prompt and can choose from variations or regenerate responses in the sidebar. Photoshop does a decent job in altering the surrounding area selected to better blend the generated content with the original image.</p>
 <p>Shown on the left is the original image. On the right is the altered image using the prompt red house with yellow lights.</p>
 <img src="../images/house.png" class="img-fluid" alt="Ando UI" width="400"/>
@@ -187,6 +187,12 @@ Creating variations of existing images is done by selecting the area and generat
 <img src="../images/house_water.png" class="img-fluid" alt="Ando UI" width="400"/>
 <p>Generative expand was used, then flowers were recolored using generative fill, a bee was added using the lasso tool and generative fill prompt &quot;Small honey bee&quot;.</p>
 <img src="../images/altered_flowers.png" class="img-fluid" alt="Ando UI" width="400"/>
+<hr>
+<p><strong>Issues with Generative Expand</strong></p>
+<p>Generative expand struggles with reconstructing facial details such as eyes and mouths when using generative expand in Photoshop. Elements generated are misaligned, out of proportion and have blending issues with the existing image.</p>
+<p>Shown below is the original image on the left. On the right is the generated example. The original image was cropped and the generative expand was used to see how accurately it would match the reference.</p>
+<img src="../images/face.png" class="img-fluid" alt="Ando UI" width="400"/>
+<img src="../images/face_expand.png" class="img-fluid" alt="Ando UI" width="400"/>
 <hr>
 <h2 id="ando">Ando</h2>
 <p><a href="https://ando.studio/" target="_blank"> Ando </a> is a figma plugin that generates design ideas from sketches, images and prompt descriptions. It uses an existing frame within Figma as reference and can output images in various sizes and numbers.</p>
