@@ -51,6 +51,10 @@
       border: 1px solid;
     }
 
+    .article{
+      text-decoration: none;
+    }    
+
     .mermaid svg { height: auto; }
   </style>
   <title>UX Wizard</title>
@@ -85,41 +89,41 @@
               <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown"
                 aria-expanded="false">UX Research</a>
               <ul class="dropdown-menu" aria-labelledby="menu1">
-                <li><a class="dropdown-item" href="ux_research_surveys_interviews.html">Surveys and Interviews</a></li>
-                <li><a class="dropdown-item" href="feature_comparison.html">Feature Comparison</a></li>
-                <li><a class="dropdown-item" href="persona_creation.html">Persona Creation</a></li>
-                <li><a class="dropdown-item" href="research_insights.html">Research Insights</a></li>
+                <li><a class="dropdown-item" href="./ux_research_surveys_interviews.html">Surveys and Interviews</a></li>
+                <li><a class="dropdown-item" href="./feature_comparison.html">Feature Comparison</a></li>
+                <li><a class="dropdown-item" href="./persona_creation.html">Persona Creation</a></li>
+                <li><a class="dropdown-item" href="./research_insights.html">Research Insights</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown"
                 aria-expanded="false">UX Design</a>
               <ul class="dropdown-menu" aria-labelledby="menu2">
-                <li><a class="dropdown-item" href="ux_copy.html">Generating Copy</a></li>
-                <li><a class="dropdown-item" href="design_system.html">Design System</a></li>
-                <li><a class="dropdown-item" href="user_flows.html">User Flows</a></li>
-                <li><a class="dropdown-item" href="wireframes.html">Wireframes</a></li>
-                <li><a class="dropdown-item" href="mindmap.html">Mind Maps</a></li>
+                <li><a class="dropdown-item" href="./ux_copy.html">Generating Copy</a></li>
+                <li><a class="dropdown-item" href="./design_system.html">Design System</a></li>
+                <li><a class="dropdown-item" href="./user_flows.html">User Flows</a></li>
+                <li><a class="dropdown-item" href="./wireframes.html">Wireframes</a></li>
+                <li><a class="dropdown-item" href="./mindmap.html">Mind Maps</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" id="menu3" data-bs-toggle="dropdown"
                 aria-expanded="false">Graphic Design</a>
               <ul class="dropdown-menu" aria-labelledby="menu3">
-                <li><a class="dropdown-item" href="image_generation.html">Image Generation</a></li>
-                <li><a class="dropdown-item" href="illustration.html">Illustration</a></li>
-                <li><a class="dropdown-item" href="colorChooser.html">WCAG for 3D</a></li>
+                <li><a class="dropdown-item" href="./image_generation.html">Image Generation</a></li>
+                <li><a class="dropdown-item" href="./illustration.html">Illustration</a></li>
+                <li><a class="dropdown-item" href="./colorChooser.html">WCAG for 3D</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
                 aria-expanded="false">Development</a>
               <ul class="dropdown-menu" aria-labelledby="menu4">
-                <li><a class="dropdown-item" href="chatbot_comparison.html">ChatBot Comparison</a></li> 
-                <li><a class="dropdown-item" href="web_development.html">Web Site Generation</a></li> 
-                <li><a class="dropdown-item" href="copilot_development.html">Using Github Co-Pilot</a></li> 
-                <li><a class="dropdown-item" href="openai_notebook_iframe.html">OpenAI API Setup </a></li>
-                <li><a class="dropdown-item" href="chatbot.html">OpenAI Chatbot </a></li> 
+                <li><a class="dropdown-item" href="./chatbot_comparison.html">ChatBot Comparison</a></li> 
+                <li><a class="dropdown-item" href="./web_development.html">Web Site Generation</a></li> 
+                <li><a class="dropdown-item" href="./copilot_development.html">Using Github Co-Pilot</a></li> 
+                <li><a class="dropdown-item" href="./openai_notebook_iframe.html">OpenAI API Setup </a></li>
+                <li><a class="dropdown-item" href="./chatbot.html">OpenAI Chatbot </a></li> 
               </ul>
             </li>
           </ul>
@@ -153,11 +157,11 @@
   <section class="py-4">
     <div class="container">
       <h1 id="mind-maps">Mind Maps</h1>
-<p>In this document we will examine how to create &quot;radial&quot; mind maps and represent them in a human readable format that can be easily edited and shared.</p>
-<p>At the time of writing, there is no standardization on data format for storing mind maps. For the most part each software creates it's own format which is often non human readable.</p>
+<p>In this document we will examine how to create &quot;radial&quot; mind maps and represent them in a easily readable format that can be edited and shared.</p>
+<p>At the time of writing, there is no standardization on data format for storing mind maps. For the most part each software creates it's own format which is often hard to read or understand.</p>
 <p>We decided to use the <a href="https://mermaid.js.org/syntax/mindmap.html" target="_blank"><code>mindmap</code> extension</a> for <code>mermaid</code> format as</p>
 <ul>
-<li>it is easy to read and edit text format.</li>
+<li>it is an easy to read and edit text format.</li>
 <li>it is easy to import to as it is basically a hierarchy represented as an indented list of topics and subtopics.</li>
 <li>it has built in visualization support</li>
 <li>it can be embedded into markdown</li>
@@ -167,7 +171,7 @@
 <img src="../images/mermaid_editor_mindmap.png" width =100%>
 <sub>Example of `mermaid` mindmap extension in Mermaid Editor</sub>
 <h2 id="generated-via-chatgpt">Generated Via ChatGPT</h2>
-<p>It is possible to use generative AI to come up with initial or on-going ideas. This can be presented in graph form using APIs such as <code>mermaid</code>. In the following examples, the format of the <code>mindmap</code> extension for <code>mermaid</code> is generated using ChatGPT.</p>
+<p>It is possible to use generative AI to come up with initial or on-going ideas. This information can be presented in graph form using APIs such as <code>mermaid</code>. In the following examples, the format of the <code>mindmap</code> extension for <code>mermaid</code> is generated using ChatGPT.</p>
 <blockquote>
 <p>Note: An attempt was made to use Bing Chat, but this resulted in a lot of frustration as it continually gave the incorrect result (by not using the <code>mindmap</code> syntax`), and then literally &quot;decided&quot; to halt the chat. No further attempts were made to use Bing Chat.</p>
 </blockquote>
@@ -175,11 +179,11 @@
 <h3 id="chatgpt-prompt-notes">ChatGPT Prompt Notes</h3>
 <p>As with any prompt it is imported to be specific and clear. The following conditions where important to specify to get the desired result:</p>
 <ul>
-<li>Must indicate to use mindmap extension</li>
+<li>Must indicate to use the mindmap extension</li>
 <li>Must indicate to set a <code>root</code></li>
 <li>Must indicate to remove illegal characters and prefix text</li>
 </ul>
-<p>For now mermaid <code>mindmap</code> extension itself has poor display formatting if there are a lot of entries directly connected to the root. To be fair this is an experimental extension, and it is worth considering that to have so many items directly connected to the root is not a good breakdown.</p>
+<p>Mermaid <code>mindmap</code> extension currently has poor display formatting if there are a lot of entries directly connected to the root. To be fair this is an experimental extension, and it is worth considering that to have so many items directly connected to the root is not a good breakdown.</p>
 <h2 id="example-prompts">Example Prompts</h2>
 <h3 id="concept-example-1">Concept Example 1</h3>
 <p>The following is a made up example to get a starting mind map for a project to create a custom coffee mug label editor.</p>
@@ -252,7 +256,7 @@ mindmap
 </details>
 <h3 id="color-palette-example">Color Palette Example</h3>
 <p>This is a more specific technical prompt used to create an editor for custom color palettes.</p>
-<p>The interesting aspect about using generative AI is that it can come up with ideas that may not have been considered. For example, the idea of color calibration and encryption was not something that was considered before.</p>
+<p>The interesting aspect about using generative AI is that it can come up with ideas that may not have been considered. For example, color calibration and encryption was not something that was an additional enhancement to what was asked for in the prompt.</p>
 <h4 id="prompt">Prompt</h4>
 <blockquote>
 <p>Generate a mindmap for the idea of providing a editor to create custom color palettes for paint colors. This should include the ability to refer to palettes from real companies with real colors and LRV numbers. Additionally there should be the ability to load and save these palettes.</p>
@@ -376,7 +380,7 @@ mindmap
 </div></code></pre>
 </details>
 <h2 id="project-example">Project Example</h2>
-<p>The following is part of a mind map which connects the notion of custom color palettes to a &quot;Virtual Room&quot; material editor.</p>
+<p>The following is part of a mind map which connects the custom color palette section to the &quot;Virtual Room&quot; material editor.</p>
 <p>Included in the prompt was to enhance the visual results by using &quot;Font Awesome&quot; icons. Also custom shape requirements were specified for the root and subtopics.</p>
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
