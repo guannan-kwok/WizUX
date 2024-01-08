@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
+  <style>
+    /* Custom CSS */
+    .dropdown-toggle {
+      text-decoration: none !important;
+    }
+
+    .no-underline {
+      text-decoration: none !important;
+    }
+
+    .navbar .navbar-nav {
+      margin-left: auto;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .social-icons li a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+    } 
+    
+    table, th, td {
+      border: 1px solid;
+    }
+
+    .mermaid svg { height: auto; }
+  </style>
+  <title>UX Wizard</title>
+  <link rel="icon" type="images" href="../images/favicon.png" class="img-fluid">
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>  
+
+  <!-- Top Area -->
+  <header class="bg-dark text-white py-2">
+    <div class="container">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="d-flex align-items-center">
+          <img src="../images/logo_transparent.png" alt="Logo" height="70">
+        </div>
+        <div class="navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link no-underline">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Research</a>
+              <ul class="dropdown-menu" aria-labelledby="menu1">
+                <li><a class="dropdown-item" href="ux_research_surveys_interviews.html">Surveys and Interviews</a></li>
+                <li><a class="dropdown-item" href="feature_comparison.html">Feature Comparison</a></li>
+                <li><a class="dropdown-item" href="persona_creation.html">Persona Creation</a></li>
+                <li><a class="dropdown-item" href="research_insights.html">Research Insights</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown"
+                aria-expanded="false">UX Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu2">
+                <li><a class="dropdown-item" href="ux_copy.html">Generating Copy</a></li>
+                <li><a class="dropdown-item" href="design_system.html">Design System</a></li>
+                <li><a class="dropdown-item" href="user_flows.html">User Flows</a></li>
+                <li><a class="dropdown-item" href="wireframes.html">Wireframes</a></li>
+                <li><a class="dropdown-item" href="mindmap.html">Mind Maps</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu3" data-bs-toggle="dropdown"
+                aria-expanded="false">Graphic Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu3">
+                <li><a class="dropdown-item" href="image_generation.html">Image Generation</a></li>
+                <li><a class="dropdown-item" href="illustration.html">Illustration</a></li>
+                <li><a class="dropdown-item" href="colorChooser.html">WCAG for 3D</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Development</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="chatbot_comparison.html">ChatBot Comparison</a></li> 
+                <li><a class="dropdown-item" href="web_development.html">Web Site Generation</a></li> 
+                <li><a class="dropdown-item" href="copilot_development.html">Using Github Co-Pilot</a></li> 
+                <li><a class="dropdown-item" href="openai_notebook_iframe.html">OpenAI API Setup </a></li>
+                <li><a class="dropdown-item" href="chatbot.html">OpenAI Chatbot </a></li> 
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Image Carousel Area -->
+  <!--
+  <section class="pt-5">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/android_text_balloon.jpg" class="d-block mx-auto w-50" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_flower.jpg" class="d-block mx-auto w-50" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_wires.jpg" class="d-block mx-auto w-50" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Section Information -->
+  <section class="py-4">
+    <div class="container">
+      <h1 id="mind-maps">Mind Maps</h1>
+<p>In this document we will examine how to create &quot;radial&quot; mind maps and represent them in a human readable format that can be easily edited and shared.</p>
+<p>At the time of writing, there is no standardization on data format for storing mind maps. For the most part each software creates it's own format which is often non human readable.</p>
+<p>We decided to use the <a href="https://mermaid.js.org/syntax/mindmap.html" target="_blank"><code>mindmap</code> extension</a> for <code>mermaid</code> format as</p>
+<ul>
+<li>it is easy to read and edit text format.</li>
+<li>it is easy to import to as it is basically a hierarchy represented as an indented list of topics and subtopics.</li>
+<li>it has built in visualization support</li>
+<li>it can be embedded into markdown</li>
+<li>can be converted to SVG using a (markdown) converter for use in other applications.</li>
+</ul>
+<p>( The content presented here was embedded into html using the <code>mermaid</code> extension for Visual Studio Code. )</p>
+<img src="../images/mermaid_editor_mindmap.png" width =100%>
+<sub>Example of `mermaid` mindmap extension in Mermaid Editor</sub>
+<h2 id="generated-via-chatgpt">Generated Via ChatGPT</h2>
+<p>It is possible to use generative AI to come up with initial or on-going ideas. This can be presented in graph form using APIs such as <code>mermaid</code>. In the following examples, the format of the <code>mindmap</code> extension for <code>mermaid</code> is generated using ChatGPT.</p>
+<blockquote>
+<p>Note: An attempt was made to use Bing Chat, but this resulted in a lot of frustration as it continually gave the incorrect result (by not using the <code>mindmap</code> syntax`), and then literally &quot;decided&quot; to halt the chat. No further attempts were made to use Bing Chat.</p>
+</blockquote>
+<img src="../images/bing_failed_chat.png" width=40%>
+<h3 id="chatgpt-prompt-notes">ChatGPT Prompt Notes</h3>
+<p>As with any prompt it is imported to be specific and clear. The following conditions where important to specify to get the desired result:</p>
+<ul>
+<li>Must indicate to use mindmap extension</li>
+<li>Must indicate to set a <code>root</code></li>
+<li>Must indicate to remove illegal characters and prefix text</li>
+</ul>
+<p>For now mermaid <code>mindmap</code> extension itself has poor display formatting if there are a lot of entries directly connected to the root. To be fair this is an experimental extension, and it is worth considering that to have so many items directly connected to the root is not a good breakdown.</p>
+<h2 id="example-prompts">Example Prompts</h2>
+<h3 id="concept-example-1">Concept Example 1</h3>
+<p>The following is a made up example to get a starting mind map for a project to create a custom coffee mug label editor.</p>
+<blockquote>
+<p>Generate a MindMap using the MindMap extension for Mermaid that outlines the concept of creating custom labels for coffee mugs. Set &quot;Creating Custom Labels for Coffee Mugs&quot; as the root topic and include sections such as Introduction, Purpose of Custom Labels, Types of Custom Labels, Design Considerations, Customization Platforms, Benefits, Target Audience, Case Studies, Challenges and Solutions, Marketing and Sales Strategies, Future Trends, and Conclusion. Each section should have relevant subtopics. Avoid using the characters '%' and '#'.</p>
+</blockquote>
+<details open><summary>Prompt Result</summary>
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {'theme': 'forest' } }%%
+
+mindmap
+  Creating Custom Labels for Coffee Mugs
+    Introduction
+      Overview
+      Importance of Custom Labels
+
+    Purpose of Custom Labels
+      Personalization
+      Branding
+      Gifts and Special Occasions
+
+    Types of Custom Labels
+      Name and Initials
+      Quotes and Messages
+      Custom Artwork or Designs
+
+    Design Considerations
+      Color Palette
+      Font Styles
+      Material and Texture
+
+    Customization Platforms
+      Online Customization Tools
+      Local Print Shops
+      DIY Options
+
+    Benefits of Custom Labels
+      Unique Identity
+      Marketing and Promotion
+      Emotional Connection
+
+    Target Audience
+      Individuals
+      Businesses
+      Events and Celebrations
+
+    Case Studies
+      Successful Examples
+      Impact on Engagement and Sales
+
+    Challenges and Solutions
+      Cost Considerations
+      Production Time
+      Quality Assurance
+
+    Marketing and Sales Strategies
+      Social Media Promotion
+      Collaborations and Partnerships
+      Discounts and Promotions
+
+    Future Trends
+      Technological Advancements
+      Sustainability in Customization
+      Emerging Design Trends
+
+    Conclusion
+      Summary
+      Call to Action
+
+</div></code></pre>
+</details>
+<h3 id="color-palette-example">Color Palette Example</h3>
+<p>This is a more specific technical prompt used to create an editor for custom color palettes.</p>
+<p>The interesting aspect about using generative AI is that it can come up with ideas that may not have been considered. For example, the idea of color calibration and encryption was not something that was considered before.</p>
+<h4 id="prompt">Prompt</h4>
+<blockquote>
+<p>Generate a mindmap for the idea of providing a editor to create custom color palettes for paint colors. This should include the ability to refer to palettes from real companies with real colors and LRV numbers. Additionally there should be the ability to load and save these palettes.</p>
+</blockquote>
+<details open>
+<summary>Prompt Result</summary>
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {'theme': 'dark' } }%%
+
+mindmap
+  )Color Palette Editor(
+    Introduction
+      Overview
+      Importance of Custom Color Palettes
+
+    Features
+      Palette Creation
+        Real Company Colors
+          Reference Real Companies
+          Use Real Colors and LRV Numbers
+        Custom Colors
+          User-Defined Color Selection
+          Input LRV Numbers
+
+      Palette Management
+        Load Palettes
+          Import Palettes from Files
+          Browse Real Company Palettes
+        Save Palettes
+          Export Created Palettes
+          Save Custom Palettes Locally
+
+      User Interface
+        Intuitive Design
+        User-Friendly Controls
+        Accessibility Features
+
+    Integration
+      Virtual Room Visualization
+      Compatibility with Paint Software
+      Online Community Sharing
+
+    Benefits
+      Personalization of Spaces
+      Quick Comparison of Colors
+      Accessibility for DIY Projects
+
+    Challenges and Solutions
+      Color Accuracy
+        Calibration Options
+        Real-Time Color Preview
+      User Interface Complexity
+        Guided Tutorials
+        Tooltips and Help Sections
+      Data Security
+        Encrypted Storage
+        Privacy Settings
+
+    Future Enhancements
+      AI-Powered Color Suggestions
+      Augmented Reality Integration
+      Collaborative Editing Features
+
+    Conclusion
+      Summary
+      Call to Action
+</div></code></pre>
+</details>
+<h3 id="summary-prompt">Summary Prompt</h3>
+<p>The following was a summary prompt generated from the previous prompt.</p>
+<blockquote>
+<p>The editor should have an intuitive design and user-friendly controls. It should also have accessibility features. The editor should be integrated with a virtual room visualization tool and be compatible with paint software. There should be an online community sharing feature. The benefits of the editor should be personalization of spaces, quick comparison of colors, and accessibility for DIY projects. The challenges and solutions should be color accuracy, user interface complexity, and data security. The future enhancements should be AI-powered color suggestions, augmented reality integration, and collaborative editing features. The conclusion should be a summary and call to action. Avoid using the characters '%' and '#'.</p>
+</blockquote>
+<details open><summary>Prompt Result</summary>
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {'theme': 'dark' } }%%
+
+mindmap
+  )Color Palette Editor(
+    Introduction
+      Overview
+      Importance of Custom Color Palettes
+
+    Features
+      Palette Creation
+        Real Company Colors
+          Reference Real Companies
+          Use Real Colors and LRV Numbers
+        Custom Colors
+          User-Defined Color Selection
+          Input LRV Numbers
+
+      Palette Management
+        Load Palettes
+          Import Palettes from Files
+          Browse Real Company Palettes
+        Save Palettes
+          Export Created Palettes
+          Save Custom Palettes Locally
+
+      User Interface
+        Intuitive Design
+        User-Friendly Controls
+        Accessibility Features
+
+    Integration
+      Virtual Room Visualization
+      Compatibility with Paint Software
+      Online Community Sharing
+
+    Benefits
+      Personalization of Spaces
+      Quick Comparison of Colors
+      Accessibility for DIY Projects
+
+    Challenges and Solutions
+      Color Accuracy
+        Calibration Options
+        Real-Time Color Preview
+      UI Complexity
+        Guided Tutorials
+        Tooltips and
+</div></code></pre>
+</details>
+<h2 id="project-example">Project Example</h2>
+<p>The following is part of a mind map which connects the notion of custom color palettes to a &quot;Virtual Room&quot; material editor.</p>
+<p>Included in the prompt was to enhance the visual results by using &quot;Font Awesome&quot; icons. Also custom shape requirements were specified for the root and subtopics.</p>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<details open><summary>Virtual Room Editor Mind Map</summary>
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {'theme': 'neutral' } }%%
+
+mindmap
+  root)Virtual Room Editor(
+
+    (Material Properties Editor)
+      (Set colors)
+        (Custom color palette picker)
+
+    (Color
+    Palettes)
+    ::icon(fa fa-palette)
+
+        (Color
+        Editor)
+        ::icon(fa fa-edit)
+
+            (Random color Generation)
+            ::icon(fa fa-random)
+            (Load / Save color files)
+            ::icon(fa fa-file)
+            (Link to Purchase Site)
+            ::icon(fa fa-link)
+            (Company / Author)
+            ::icon(fa fa-user)
+            (Palette Name)
+            ::icon(fa fa-paint-brush)
+            (Preview in 2d Image)
+            ::icon(fa fa-image)
+
+        (Company Paint Palettes)
+            (Dulux Examples)
+            ::icon(fa fa-paint-brush)
+            (Behr Examples)
+            ::icon(fa fa-paint-brush)
+             
+        
+  
+
+</div></code></pre>
+</details>
+
+    </div>
+  </section>
+
+  <!-- Bottom Area -->
+  <footer class=" footer bg-dark text-white py-2 mt-2">
+    <div class="container">
+      <ul class="social-icons">
+        <button class="btn btn-dark" type="button">
+          <a href="https://github.com/guannan-kwok/WizUX" target="_blank"><i class="fab fa-github fa-2x" style="color: #ffffff;"></i></a>
+        </button>
+        <button class="btn btn-dark" type="button">
+          <a href="https://linkedin.com/in/mgkwok" target="_blank"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
+        </button>
+      </ul>
+      <p>&copy; 2023 NanMu Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
