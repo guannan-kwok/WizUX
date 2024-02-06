@@ -75,12 +75,19 @@
 
   <!-- Top Area -->
   <header data-bs-theme="dark" class="bg-black text-white py-2">
-    <div class="container">
+    <div class="container-fluid">
       <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-        <div class="d-flex align-items-center">
-          <img src="./images/logo_transparent.png" alt="Logo" height="70">
+
+        <div class="navbar-brand">
+          <img src="./images/logo_transparent.png" alt="Logo" height="50px">
         </div>
-        <div class="navbar-collapse justify-content-end">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#_top_navbarNav"
+        aria-controls="_top_navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>        
+
+        <div id="_top_navbarNav" class="collapse navbar-collapse justify-content-end">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a href="./index.html" class="nav-link no-underline">Home</a>
