@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
+  <style>
+    /* Custom CSS */
+    .dropdown-toggle {
+      text-decoration: none !important;
+    }
+
+    .no-underline {
+      text-decoration: none !important;
+    }
+
+    .navbar .navbar-nav {
+      margin-left: auto;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .social-icons li a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid;
+    }
+
+    .article {
+      text-decoration: none;
+    }
+
+    .mermaid svg {
+      height: auto;
+    }
+  </style>
+  <title>UX Wizard</title>
+  <link rel="icon" type="images" href="../images/favicon.png" class="img-fluid">
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFLW0WLHJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RFLW0WLHJV');
+  </script>
+
+</head>
+
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+        ? 'dark'
+        : 'default'
+    });
+  </script>
+
+  <!-- Top Area -->
+  <header data-bs-theme="dark" class="bg-black text-white py-2">
+    <div class="container-fluid">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+
+        <div class="navbar-brand">
+          <img src="../images/logo_transparent.png" alt="Logo" height="50px">
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#_top_navbarNav"
+        aria-controls="_top_navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>        
+
+        <div id="_top_navbarNav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link no-underline">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown" aria-expanded="false">UX
+                Research</a>
+              <ul class="dropdown-menu" aria-labelledby="menu1">
+                <li><a class="dropdown-item" href="./ux_research_surveys_interviews.html">Surveys and
+                    Interviews</a></li>
+                <li><a class="dropdown-item" href="./feature_comparison.html">Feature Comparison</a>
+                </li>
+                <li><a class="dropdown-item" href="./persona_creation.html">Persona Creation</a></li>
+                <li><a class="dropdown-item" href="./research_insights.html">Research Insights</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown" aria-expanded="false">UX
+                Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu2">
+                <li><a class="dropdown-item" href="./ux_copy.html">Generating Copy</a></li>
+                <li><a class="dropdown-item" href="./design_system.html">Design System</a></li>
+                <li><a class="dropdown-item" href="./user_flows.html">User Flows</a></li>
+                <li><a class="dropdown-item" href="./wireframes.html">Wireframes</a></li>
+                <li><a class="dropdown-item" href="./mindmap.html">Mind Maps</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu3" data-bs-toggle="dropdown"
+                aria-expanded="false">Graphic Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu3">
+                <li><a class="dropdown-item" href="./illustration_to_animation.html">Animation Generation</a></li>
+                <li><a class="dropdown-item" href="./image_generation.html">Image Generation</a></li>
+                <li><a class="dropdown-item" href="./illustration.html">Illustration</a></li>
+                <li><a class="dropdown-item" href="./colorChooser.html">WCAG for 3D</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Development</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="./chatbot_comparison.html">ChatBot Comparison</a>
+                </li>
+                <li><a class="dropdown-item" href="./web_development.html">Web Site Generation</a></li>
+                <li><a class="dropdown-item" href="./copilot_development.html">Using Github Co-Pilot</a>
+                </li>
+                <li><a class="dropdown-item" href="./openai_notebook_iframe.html">OpenAI API Setup </a>
+                </li>
+                <li><a class="dropdown-item" href="./chatbot.html">OpenAI Chatbot </a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Projects</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="https://kwokcb.github.io/web_scene_editor/">Web Scene Editor</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Image Carousel Area -->
+  <!--
+  <section class="pt-5">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/android_text_balloon.jpg" class="d-block mx-auto w-50" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_flower.jpg" class="d-block mx-auto w-50" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_wires.jpg" class="d-block mx-auto w-50" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Section Information -->
+  <section class="py-4">
+    <div class="container">
+      <h1 id="ai-animation">AI Animation</h1>
+<p>AI software was tested for its ability to convert illustration, image sets and video clips into digital animated video.</p>
+<h2 id="animated-drawings">Animated Drawings</h2>
+<p><a href="https://sketch.metademolab.com/" target="_blank"> Animated Drawings </a> allows users to convert physical or digital illustration into animated characters which use a variety of preset movement patterns.</p>
+<p>The process starts with a user uploading an image of a character. The software then creates the character outline and puts a set of anchor points used to animate different parts of the character's body. Users can choose to edit the anchor points and the character mask for better accuracy. Once the image is converted to an animation, users can choose between various animation presets split into categories such as walking, jumping, dancing, or comedic poses. Users can not choose to create their own animations, but can edit anchor points or share their creation to others in mp4 video format.</p>
+<img src="../images/anchor.png" class="img-fluid" alt="Ando UI" width="400"/>
+<p><i>Users can edit the anchor points for the limbs that will be animated on their character. </i></p>
+<p><strong>Advantages</strong></p>
+<p>Animated Drawings has an advantage when compared to other ai tools for the speed in converting a simple image to an animated character. Other benefits were the variety of motion presets due to using extensive data adapted from Adobe Mixamo and the CMU Graphics Motion Capture Lab (Carnegie Mellon University motion capture library). Additionaly the process to generate a character is very intuitive and suited for people of all age and skill levels.</p>
+<video width="600" height="400" controls>
+  <source src="../images/animation.mp4" type="video/mp4">
+</video>
+<p><strong>Disadvantages</strong></p>
+<p>While animated drawings is proficient at creating a basic animated character, there are various flaws or missing features compared to other software. The generated animations are not editable so users must choose from preset motions shown from fixed perspectives. Secondly, there are no options to add annotations, sound or background material. Finally, animations can appear rough and unnatural. This is because sharing illustrations is voluntary so the ai model has a lack of material to learn from.</p>
+<h2 id="krikey-ai">Krikey AI</h2>
+<p><a href="https://www.krikey.ai/3d-animation-editor#" target="_blank"> Krikey Ai </a> allows users to use text prompts, audio presets, and 3d model variations to create animated video.</p>
+<p>The process starts with a user either using a video recording or a text prompt to generate a 3D character animation. The AI scans the gestures preformed in the clip and approximates the motions for the 3D avatar. The text prompt method allows users to specify model preset, gesture preset (wave left hand), language, tone, and the text statement itself. Once generated users can modify the background, visual effects, camera position presets, gesture length and the voice script. Export options provided are mp4 video or the model assets as an fbx (3d character) file.</p>
+<img src="../images/timeline.png" class="img-fluid" alt="Ando UI" width="400"/>
+<p><i>Users can modify the duration and type of animation, audio effect, camera position, and text within the scene. </i></p>
+<p><strong>Advantages</strong></p>
+<p>Positives for the generated video is the intuitive process and smooth animation of the character model when using text prompts. Additionaly the ability to modify the created animation through posing, audio and text/visual effects provides a more in-depth experience when compared to other ai animation software. Models and backgrounds themselves can also be exported rather than remaining within a closed ecosystem.</p>
+<p><strong>Disadvantages</strong></p>
+<p>While Krikey AI has comprehensive features and creates realisitcs natural animations there are some limitations to its generation options. Animations are occassionaly inaccurate to what is stated in the prompt due to the AI being only able to create video based around action verbs. Another drawback is the inability to add additional elements to the scene (props) other than the character model and changing the background. The only additional editing options are for light filters, model gestrures, text effects, backgrounds and color filters. Finally users can only choose from and customize a preset avatar and can not use a non human character model.</p>
+<video width="600" height="400" controls>
+  <source src="../images/3d_model_text_animation.mp4" type="video/mp4">
+</video>
+<h2 id="kaiber-ai">Kaiber AI</h2>
+<p><a href="https://kaiber.ai/" target="_blank"> Kaiber Ai </a> allows users use text prompts, video clips and images to create animated videos.</p>
+<p>There are various methods to produce animated video generations. The first method is to create an animation through either a prompt or an image. Multiple prompts and media inputs can be used to create &quot;storyboard scenes&quot; for a narrative. An alternative method is to modify an existing video to a new style using a prompt. This video can also be modified through altering scenes to match audio or music tracks.</p>
+<p>Once the animation has been generated the camera movement, video quality and aspect ratio can be adjusted.</p>
+<p>Overall Kaiber is produces decent quality animation but various visual generation flaws, cost and prompt accuracy issues result in its usage being mainly for concept art testing or to find inspiration for an artistic project.</p>
+<img src="../images/kaiber_bird_image.png" class="img-fluid" alt="Ando UI" width="400"/>
+<p><i>Generated image for two birds on a twig with film grain prompt. </i></p>
+<p><strong>Advantages</strong></p>
+<p>Positives for the generated animations are the variety of methods to produce decent quality animation using existing material or modifying recorded content. The different animation output options are also appreciated being a frame by frame flipbook style production or a 3 second continuous interpretation of the input material. Material produced blends well together due to the abundance of reference material from enthusiasts and professionals using the service.</p>
+<p><strong>Disadvantages</strong></p>
+<p>While Kaiber AI has comprehensive features there are various issues with the blending of elements and the depiction of facial animation. For the 3 second continuous animation elements can blend into each other or change to undesired colors not specified in the prompt. Facial animation can look unnatural with jerky eye movement and facial expression.</p>
+<p>Kaiber relies on users purchasing credits to generate animation. Credits can be increasingly costly for longer animations and you are charged for any generation even if you don't want to use it.</p>
+<video width="600" height="400" controls>
+  <source src="../images/kaiber_bird.mp4" type="video/mp4">
+</video>
+<p>Text prompt: two birds on a twig, in the style of photo taken on film, film grain, vintage, 8k ultrafine detail, private press, associated press photo, masterpiece, cinematic</p>
+<h2 id="animaker">Animaker</h2>
+<p><a href="https://www.animaker.com/" target="_blank"> Animaker </a> allows users to use text prompts to create quick animated video that uses 2d vector graphics.</p>
+<p>The initial video is created when a user inputs a text prompt, the tone and the style of the animation.</p>
+<p>A variety of customization options are offered to edit the generated video. Simple but effective avatar customization options allow users to customize accesories, facial expressions, clothing and hair. There are various preset gestures, vector/photo backgrounds, and additional scenery to experiment with. For the video content itself voicover is automatically lip sysnced , with the ability to add subtitles, overlay additional content, and copyright protection (digital watermarks).</p>
+<video width="600" height="400" controls>
+  <source src="../images/animaker_expression.mp4" type="video/mp4">
+</video>
+<p>Overall Animaker produces high quality animated videos but has limitations in producing content restricted to human animation and solely in a flat vector graphic presentation.</p>
+<video width="600" height="400" controls>
+  <source src="../images/animaker_bg_avatar.mp4" type="video/mp4">
+</video>
+<p><i>Avatars are limited to 2d vector garphics. Backgrounds are limited to 2d vector presets, gradients and photos. </i></p>
+<p><strong>Advantages</strong></p>
+<p>Positives for the generated animations are te speed in creating a workable animation and the visual appeal of easy to discern vector graphics. There is little to no artifacting or visual inconsistensies found in other ai image generation due to the use of the vector art. Depictions are stylized and resemble a digital cartoon proportion and shading.</p>
+<p><strong>Disadvantages</strong></p>
+<p>While Animaker creates quick, professional vector animations it does have various limitations. The subject of an animation is limited to human model presets, and you are limited to preset customization options. The second drawback is output being limited to vector graphics and a 2d plane for the character animation. This limits creative ability and presentation options.</p>
+<h2 id="runway">Runway</h2>
+<p><a href="https://runwayml.com/" target="_blank"> Runway </a> allows users use text prompts, video clips and images to genereate audio, images and animated videos. Runway also allows users to train their own Ai image generator and to upscale existing image. content.</p>
+<p>There are various methods to produce animated video. The first method is to enter a text prompt using various setting such as frame interpolation, fixed seed numbers and upscaling to achieve the desired gerneration. Animation can be extended up to 16 seconds. The second method is to the same but by using an image for visual reference. THe final method is to transform existing footage to a prefdefined style option or to use a text prompt to state your desired output.</p>
+<p>With each of the generated animations various settings can be fine-tuned such as the degree of motion in the scene, what areas to animate, the camera motion, and lip sync to audio.</p>
+<p>Overall Runway produces quality animation but has issues with visual consistency, has high costs to use features, and steep system requirements to produce quality generation.</p>
+<video width="600" height="400" controls>
+  <source src="../images/runway_motion_area.mp4" type="video/mp4">
+</video>
+<p><i>Using a motion brush tool to specify what to animate in the generated video.</i></p>
+<p><strong>Advantages</strong></p>
+<p>Positives for the generated animations are the variety of methods to produce decent qualtiy animation using existing material or modifying recorded content. The animation output length is appreciated being an up to 16 second continuous interpretation of the input material. Material produced is cohesive due to the abundance of reference material from enthusiasts and professionals using the service.</p>
+<p><strong>Disadvantages</strong></p>
+<p>While Runway has comprehensive features there are various issues with the blending of elements and the depiction of facial animation. For the continuous animation elements can blend into each other or change to undesired colors not specified in the prompt. Facial animation can look unnatural with jerky eye movement and facial expressions.</p>
+<p>There are also additional credit costs to use tools to uspcale and remove watermarks from generated video. Output options are limited with no png or ProRes export options for video animation.</p>
+
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bottom Area -->
+  <footer class=" footer bg-dark text-white py-2 pt-2">
+    <div class="container">
+      <ul class="social-icons">
+        <button class="btn btn-dark" type="button">
+          <a href="https://github.com/guannan-kwok/WizUX" target="_blank"><i class="fab fa-github fa-2x"
+              style="color: #ffffff;"></i></a>
+        </button>
+        <button class="btn btn-dark" type="button">
+          <a href="https://linkedin.com/in/mgkwok" target="_blank"><i class="fab fa-linkedin-in fa-2x"
+              style="color: #0082ca;"></i></a>
+        </button>
+      </ul>
+      <p>&copy; 2024 NanMu Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const body = document.body;
+    // Check if the user has a preferred color scheme
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Set the initial theme based on user preferences
+    if (prefersDarkMode) {
+      body.setAttribute('data-bs-theme', 'dark');
+    } else {
+      body.setAttribute('data-bs-theme', 'light');
+    }    
+  </script>
+</body>
+
+</html>

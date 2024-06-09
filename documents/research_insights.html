@@ -45,22 +45,37 @@
       border-radius: 50%;
       background-color: #333;
       color: #fff;
-    } 
-    
-    table, th, td {
+    }
+
+    table,
+    th,
+    td {
       border: 1px solid;
     }
 
-    .article{
+    .article {
       text-decoration: none;
-    }    
+    }
 
-    .mermaid svg { height: auto; }
+    .mermaid svg {
+      height: auto;
+    }
   </style>
   <title>UX Wizard</title>
   <link rel="icon" type="images" href="../images/favicon.png" class="img-fluid">
 
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFLW0WLHJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RFLW0WLHJV');
+  </script>
+
 </head>
 
 <body>
@@ -68,10 +83,10 @@
     mermaid.initialize({
       startOnLoad: true,
       theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
+        ? 'dark'
+        : 'default'
     });
-  </script>  
+  </script>
 
   <!-- Top Area -->
   <header data-bs-theme="dark" class="bg-black text-white py-2">
@@ -93,18 +108,20 @@
               <a href="../index.html" class="nav-link no-underline">Home</a>
             </li>
             <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown"
-                aria-expanded="false">UX Research</a>
+              <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown" aria-expanded="false">UX
+                Research</a>
               <ul class="dropdown-menu" aria-labelledby="menu1">
-                <li><a class="dropdown-item" href="./ux_research_surveys_interviews.html">Surveys and Interviews</a></li>
-                <li><a class="dropdown-item" href="./feature_comparison.html">Feature Comparison</a></li>
+                <li><a class="dropdown-item" href="./ux_research_surveys_interviews.html">Surveys and
+                    Interviews</a></li>
+                <li><a class="dropdown-item" href="./feature_comparison.html">Feature Comparison</a>
+                </li>
                 <li><a class="dropdown-item" href="./persona_creation.html">Persona Creation</a></li>
                 <li><a class="dropdown-item" href="./research_insights.html">Research Insights</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown"
-                aria-expanded="false">UX Design</a>
+              <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown" aria-expanded="false">UX
+                Design</a>
               <ul class="dropdown-menu" aria-labelledby="menu2">
                 <li><a class="dropdown-item" href="./ux_copy.html">Generating Copy</a></li>
                 <li><a class="dropdown-item" href="./design_system.html">Design System</a></li>
@@ -117,6 +134,7 @@
               <a href="#" class="nav-link dropdown-toggle" id="menu3" data-bs-toggle="dropdown"
                 aria-expanded="false">Graphic Design</a>
               <ul class="dropdown-menu" aria-labelledby="menu3">
+                <li><a class="dropdown-item" href="./illustration_to_animation.html">Animation Generation</a></li>
                 <li><a class="dropdown-item" href="./image_generation.html">Image Generation</a></li>
                 <li><a class="dropdown-item" href="./illustration.html">Illustration</a></li>
                 <li><a class="dropdown-item" href="./colorChooser.html">WCAG for 3D</a></li>
@@ -126,11 +144,14 @@
               <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
                 aria-expanded="false">Development</a>
               <ul class="dropdown-menu" aria-labelledby="menu4">
-                <li><a class="dropdown-item" href="./chatbot_comparison.html">ChatBot Comparison</a></li> 
-                <li><a class="dropdown-item" href="./web_development.html">Web Site Generation</a></li> 
-                <li><a class="dropdown-item" href="./copilot_development.html">Using Github Co-Pilot</a></li> 
-                <li><a class="dropdown-item" href="./openai_notebook_iframe.html">OpenAI API Setup </a></li>
-                <li><a class="dropdown-item" href="./chatbot.html">OpenAI Chatbot </a></li> 
+                <li><a class="dropdown-item" href="./chatbot_comparison.html">ChatBot Comparison</a>
+                </li>
+                <li><a class="dropdown-item" href="./web_development.html">Web Site Generation</a></li>
+                <li><a class="dropdown-item" href="./copilot_development.html">Using Github Co-Pilot</a>
+                </li>
+                <li><a class="dropdown-item" href="./openai_notebook_iframe.html">OpenAI API Setup </a>
+                </li>
+                <li><a class="dropdown-item" href="./chatbot.html">OpenAI Chatbot </a></li>
               </ul>
             </li>
 
@@ -138,10 +159,10 @@
               <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
                 aria-expanded="false">Projects</a>
               <ul class="dropdown-menu" aria-labelledby="menu4">
-                <li><a class="dropdown-item" href="https://kwokcb.github.io/web_scene_editor/">Web Scene Editor</a></li> 
+                <li><a class="dropdown-item" href="https://kwokcb.github.io/web_scene_editor/">Web Scene Editor</a></li>
               </ul>
             </li>
-            
+
           </ul>
         </div>
       </nav>
@@ -209,10 +230,12 @@ In summary, an API is like a universal translator or communication channel that 
     <div class="container">
       <ul class="social-icons">
         <button class="btn btn-dark" type="button">
-          <a href="https://github.com/guannan-kwok/WizUX" target="_blank"><i class="fab fa-github fa-2x" style="color: #ffffff;"></i></a>
+          <a href="https://github.com/guannan-kwok/WizUX" target="_blank"><i class="fab fa-github fa-2x"
+              style="color: #ffffff;"></i></a>
         </button>
         <button class="btn btn-dark" type="button">
-          <a href="https://linkedin.com/in/mgkwok" target="_blank"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
+          <a href="https://linkedin.com/in/mgkwok" target="_blank"><i class="fab fa-linkedin-in fa-2x"
+              style="color: #0082ca;"></i></a>
         </button>
       </ul>
       <p>&copy; 2024 NanMu Consulting. All rights reserved.</p>
@@ -221,15 +244,15 @@ In summary, an API is like a universal translator or communication channel that 
 
   <script>
     const body = document.body;
-      // Check if the user has a preferred color scheme
-      const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Check if the user has a preferred color scheme
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-      // Set the initial theme based on user preferences
-      if (prefersDarkMode) {
-          body.setAttribute('data-bs-theme', 'dark');
-      } else {
-          body.setAttribute('data-bs-theme', 'light');
-      }    
+    // Set the initial theme based on user preferences
+    if (prefersDarkMode) {
+      body.setAttribute('data-bs-theme', 'dark');
+    } else {
+      body.setAttribute('data-bs-theme', 'light');
+    }    
   </script>
 </body>
 
