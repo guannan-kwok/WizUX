@@ -194,30 +194,65 @@
   <!-- Section Information -->
   <section class="py-4">
     <div class="container">
-      <h2 id="wireframing">Wireframing</h2>
-<p>AI tools such as <a href="https://uizard.io/" target="_blank"> Uizard </a> were used to convert physical sketches into digital wireframes. The software scanned the image taken of the sketch and produced a screen with the specified dimensions or screen format (mobile/desktop). Screens created can only be exported in png, jpeg and pdf formats, limiting their ability to be edited in prototyping software such as Figma.</p>
-<p>However, there were various issues with the size of the assets and with the text generated not being the same as the reference image or real english words. Visual assets were placed in the correct areas but needed to be resized afterward.</p>
-<p>Further tests showed that the sketch needs clearly defined sections with large font sizes for the best translation to a digital wireframe. A black highlighter was used to sketch the revised drawing which produced a more accurate result. Only minor edits needed to be made such as text resizing and placement to create the wireframe.</p>
-<p>Overall, Uizard can save time in creating digital wireframes for users.</p>
-<p><strong>Additional Features</strong></p>
-<p>Uizard performed better when generating screens based on preset prompts or categories. Filter parameters include the device type, design styles, dimensions, and the prompt itself.</p>
-<p>Uizard is also capable of generating heatmaps that predict areas of the design that users are likely to focus on. To generate heatmaps, the analyzed design is compared with data from other popular websites. Redder colored areas mean the higher level of focus for a user, while blue areas means lower levels of focus. Heatmaps generated prioritized headers and large description text as areas that drew users attention.</p>
-<img src="../images/focus_predictor.png" class="img-fluid" alt="Ando UI" width="400"/>
-<h2 id="wireframe-generation-examples">Wireframe Generation Examples</h2>
-<p><strong>Generated Design From Mobile Sketch:</strong></p>
-<p>On the left is the sketch and the right is the generated image by Uizard. Uizard was able to determine most of the UI elements and their position but did not draw each content block the correct size. Additionally, Uizard did not draw the third icon found at the bottom of the mobile sketch.</p>
-<img src="../images/uizard_5.png" class="img-fluid" alt="Ando UI" width="400"/>
-<p><strong>Unedited Generated Design From the Website Sketch:</strong></p>
-<p>This is the first sketch that was done for the website. On the right is the Uizard generation of the sketch. Content is placed correctly. Borders, text, and text alignment are incorrectly done.</p>
-<img src="../images/uizard_1.png" class="img-fluid" alt="Ando UI" width="800"/>
-<p><strong>Unedited Generated Design From the Revised Website Sketch:</strong></p>
-<p>This is the second sketch that was done for the website that uses more clearly defined lines. On the right is the Uizard generation of the sketch. Content is placed correctly. Borders are not clearly defined, with text placed in the incorrect position.</p>
-<img src="../images/uizard_comparison.png" class="img-fluid" alt="Ando UI" width="800"/>
-<p><strong>Refined Version of the Generated Design From the Website Sketch:</strong></p>
-<p>This is the second sketch that was done for the website.</p>
-<p>A black highlighter was used to produce thick defined lines that are easier to scan. On the right is the Uizard generation of the sketch. Content and borders are placed correctly. Some text and the text alignment are incorrectly done.</p>
-<p>The right most image is the edited version of the generated image that closely matches the original sketch.</p>
-<img src="../images/uizard_website_comparison.png" class="img-fluid" alt="Ando UI" width="800"/>
+      <h1 id="figma">Figma</h1>
+<p>Figma is a tool for people to create, share, and test designs for websites, mobile apps, and other digital experiences. It is ideal for wireframing and creating layered prototypes which can be collaborated on, referenced by developers and iterated upon. This is due to the various feedback and component editing options. Recently there have been a variety of new features that improve the experience for ux designers design capabilites as well as the ease of use in creating assets accessible by developers.</p>
+<h2 id="auto-layout">Auto Layout</h2>
+<img src="../images/Figma_Auto_Layout_Update.jpeg" class="img-fluid" alt="Ando UI" width="600"/>
+<p>Figma's recent updates to Auto Layout have streamlined the process for handling responsive designs, particularly in tasks like adjusting sizes. Previously, Auto Layout lacked the ability to automatically wrap content within a designated area when responsiveness was enabled, often resulting in crowded or broken components when designs were scaled down.</p>
+<p>However, in its latest update, Figma introduced a wrapping feature for Auto Layout. This addition enables responsive designs to automatically adjust content onto new lines, preventing cluttered layouts. Additionally, Figma's Auto Layout updates now offer controls for setting minimum and maximum widths and heights for content. This added functionality provides greater control over design elements, ensuring a more organized and cohesive layout, even in responsive states.</p>
+<img src="../images/Figma_Auto_Layout_Wrap_Update.gif" class="img-fluid" alt="Ando UI" width="600"/>
+<h2 id="variables">Variables</h2>
+<img src="../images/Figma_Variables.jpeg" class="img-fluid" alt="Ando UI" width="600"/>
+<p>Figma's introduction of variables marks a significant advancement, empowering designers to establish reusable values for elements like colors, text styles, and dimensions. These variables can then be easily applied across various design components and prototyping actions.</p>
+<p>Within Figma, variables now operate akin to design tokens, storing distinct values for elements' appearances, including text formatting and spacing. Currently, Figma supports four types of variables: Color, Number, String (Text), and Boolean.</p>
+<p>Here is a brief overview:</p>
+<ol>
+<li>Color variables
+These variables can be applied to a solid fill or a stroke. You can define custom values when you're defining variables or connect them to values from existing libraries.
+That means that if you need to change the color of a variable linked to a value from an existing library, you can just change the source variable instead of each and every instance of it. This makes updating color values much faster.</li>
+<li>Number variables
+Adding these variables means assigning a numerical value to define spacing, padding, radius, width, and height.</li>
+<li>Boolean variables
+By assigning boolean values to a variable, we can control the visibility of a layer or an instance.</li>
+<li>String variables
+String variables can be applied to text. They will help teams who work on projects with multiple languages in terms of localization and content management, but it also makes it easier to work with repeated content.</li>
+</ol>
+<p>Each variable type serves as a theming option, accommodating diverse design needs, whether adapting to different screen sizes or languages. With the latest inclusion of Figma Variables, designers gain seamless flexibility in toggling between various design element properties.</p>
+<h3 id="example-variable-usage">Example Variable Usage</h3>
+<img src="../images/Figma_and_User_Research_Course.jpeg" class="img-fluid" alt="Ando UI" width="600"/>
+<p>For example, suppose you already have a design tailored for a standard user and now need to develop a distinct design for a super user. In your standard user design, you include the following details:</p>
+<p>Credit balance: $500
+Course fees: $300 and $650
+However, for the super user, you've been tasked with modifying these figures and replacing the label 'Standard user' with 'Super user'.</p>
+<p><strong>How do Variables solve this</strong></p>
+<img src="../images/Figma_Variable_Sample_Input_Values.gif" class="img-fluid" alt="Ando UI" width="600"/>
+<p>Utilizing Variables allows you to input values for content adjustments, be it text, numbers, or colors, and seamlessly integrate them into your new design with ease.</p>
+<p>Establishing a database of diverse variables for distinct design components enables automatic customization of your designs as required.</p>
+<h3 id="advanced-prototype-capabilities-using-variables">Advanced Prototype Capabilities Using Variables</h3>
+<img src="../images/Figma_Variables_Advance_Figma_Prototype.gif" class="img-fluid" alt="Ando UI" width="600"/>
+<p>In addition to facilitating easy content modification within designs, variables offer the opportunity to craft sophisticated dynamic prototypes. Through the integration of mathematical expressions, designers can elevate their prototypes, enabling advanced user interactions like purchasing actions and beyond.</p>
+<p>Likewise, Boolean variables are now instrumental in prototype enhancement. By employing Boolean variables, designers can designate 'true' or 'false' values to particular design elements. Figma will then recognize when to activate these values and their corresponding opposites during prototype interactions.</p>
+<h2 id="dev-mode">Dev Mode</h2>
+<img src="../images/Figma_Dev_Mode_Design_to_Development.jpeg" class="img-fluid" alt="Ando UI" width="600"/>
+<p>One standout feature unveiled during Figma Config 2023 is Dev Mode, igniting excitement within the development community. This innovative addition provides developers with an exclusive workspace to seamlessly navigate design files and translate them into code.</p>
+<p>Dev Mode bridges the gap between designers and developers, fostering collaboration within a unified space. This integration promotes clearer communication between the two groups, thereby minimizing the risk of losing crucial design details during the handoff to developers.</p>
+<p>Functioning akin to a browser inspector for designs within Figma, Dev Mode equips developers with the necessary information to translate designs into code effortlessly. This includes access to details such as colors, spacing, dimensions, assets, and more. Additionally, designers gain the capability to export assets from the design, all conveniently located in one place.</p>
+<p>Within Figma's ecosystem, designers can easily designate their designs as 'Ready for Dev' using Figma's Sections feature. This handy tag enables developers to identify the specific sections of the design file ready for coding. Furthermore, developers can swiftly compare design modifications, streamlining the iterative process.</p>
+<h3 id="seamless-coding-with-dev-mode-and-vs-code-visual-studio-code-plugin">Seamless Coding with Dev Mode and VS Code (Visual Studio Code plugin)</h3>
+<img src="../images/Figma_Variable_Sample_Input_Values.gif" class="img-fluid" alt="Ando UI" width="600"/>
+<p>While developers are immersed in Dev Mode, Figma seamlessly integrates with essential coding tools, including a Visual Studio Code (VS Code) plugin.</p>
+<p>This functionality empowers developers to code effortlessly alongside the design, with the Figma interface conveniently accessible alongside their coding screen. By selecting any design element within Figma, developers can instantly access its corresponding code, simplifying the process of incorporating design elements directly into their codebase.</p>
+<img src="../images/Figma_Dev_Mode_VS_Code_plugin.gif" class="img-fluid" alt="Ando UI" width="600"/>
+<h2 id="ai-tools">AI Tools</h2>
+<p>One of the standout updates is the incorporation of AI into FigJam, Figma's collaborative brainstorming and ideation tool. This AI integration enhances the speed and efficiency with which design teams generate fresh ideas.</p>
+<p>New AI functionalities in FigJam include:</p>
+<ul>
+<li>Text prompts for generating templates or charts, summarizing note contents, and grouping notes by theme.</li>
+<li>Vector illustration generation and text copying capabilities.</li>
+<li>Autocomplete assistance, wherein AI aids in completing the text being typed within FigJam.</li>
+<li>Word suggestions, with AI recommending relevant words based on the ongoing text input.</li>
+<li>Image suggestions, where AI offers relevant image recommendations based on the ongoing text input.</li>
+</ul>
 
     </div>
   </section>
