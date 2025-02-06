@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>components.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<!--Start-->
+<h1 id="what-are-components">What are Components</h1>
+<p>Components are ui elements that are reusable across design projects
+Any time a change is made to the main component the instances are automatically updated. This allows for
+faster workflows, more consistent design system and makes it easier to collaborate with other designers for large scale projects.</p>
+<p>The master component is created when you first turn a UI element into a component and defines the properties of the component.</p>
+<p>The instance is a copy of the master component you can reuse across designs. Instances are linked to master components. When you make changes to a master component it applies the changes to the instance.  An exception to this is instance overrides.</p>
+<p>When using Figma you can identify which elements are master components and which are instances by the icon in the layers panel. Master components use a 4 diamond icon while instances use a single diamond icon.</p>
+<h2 id="organizing-and-structuring-components">Organizing and Structuring Components</h2>
+<p>When naming layers it is best to use forward slash naming to create hierarchy.</p>
+<p>Example Layer Structure:</p>
+<ul>
+<li>Input/Field/Text - Active</li>
+<li>Input/Field/Text - Default</li>
+<li>Input/Field/Text - Disabled</li>
+<li>Input/Field/Text - Feedback</li>
+<li>Input/Field/Text - Filled</li>
+<li>Input/Field/Text - View Only</li>
+</ul>
+<p>For access to a wider subcategory of “related components” in the instance menu you can combine the last two labels, ie. the input type (text) and input status (default), by separating them with a dash instead of a slash. This is particularly useful for larger categories with many subcategories. Components can be grouped in frames to better visualize its purpose such as for a data table, dropdowns etc.</p>
+<p>Another guideline to follow is to choose an easy to understand method for structing component states and variations. You can do this by separating master components for each variation. This makes it fast and consistent to change the state of instance, change multiple instances at the same time, or  save text overrides when updating a state or variation.</p>
+<p>Using nested atomic components as global building blocks is another reccomended approach. Do this by creating a set of reusable atomic components with the sole purpose of nesting atomic instances inside other related components. Take textfields as an example. We can turn a textfield’s shape into an atomic component and nest it’s instances inside every other textfield component we create. This means all textfields use the exact same building block (i.e., the atomic instance) and if the shape of textfields were to change, all we’d need to do is update the atomic component and all other textfield components would update too.</p>
+<p>Using an atomic approach allows you to seamlessly apply globalized changes to components which makes it much easier to maintain your system.</p>
+<h2 id="best-practises-when-working-with-components">Best Practises When Working with Components</h2>
+<p>Shown below are various tips when designing components.</p>
+<ol>
+<li>
+<p>When working with components, set up constraints and a layout grid to show the responsive behavior of the component(s) as it is resized.</p>
+</li>
+<li>
+<p>Preserve text overrides on instance swaps. To do this make sure the text layer within each component share the same name (e.g., “Button Text”). If you don’t do this your text overrides will not persist and you’ll need to manually update the text after you swap instances.</p>
+</li>
+<li>
+<p>Use clip content to reduce repetitive instances. Toggle whether or not elements extend beyond the bounds of the component are cropped or hidden</p>
+</li>
+<li>
+<p>Document components when hovering over it in the assets panel: provides context as to how it works and fits with the product</p>
+</li>
+<li>
+<p>Use instance overrides to adapt components. This allows you to override properties of instance without breaking link to master component. It can be used on text, color, effects (drop shadow, blur), advanced (size of component, swap nested instance, toggle on/off layers). Any updates to master component do not revert overrides in first gif sequence above. You can always reset overrirdes to go back to original properties</p>
+</li>
+<li>
+<p>Swap components by simply right clicking on the instance you want to switch and go to the Swap instance item. A submenu will appear with a list of related components.</p>
+</li>
+<li>
+<p>Detach an instance when you want to make a new component, or unique element.</p>
+</li>
+</ol>
+<h1 id="accessibility-wcag">Accessibility (WCAG)</h1>
+<p>The <strong>Web Content Accessibility Guidelines (WCAG)</strong>, created by the World Wide Web Consortium (W3C), provide a comprehensive framework for designing digital experiences that are accessible to users with disabilities.
+These guidelines ensure that digital products are inclusive and intuitive to use for all users.</p>
+<h3 id="core-principles-of-accessibility-pour"><strong>Core Principles of Accessibility (POUR)</strong></h3>
+<p>To create an accessible experience, WCAG is structured around four principles:</p>
+<ul>
+<li><strong>Perceivable</strong>: Content and interface elements must be perceivable through one or more senses. For example, users relying on screen readers or visual cues should be able to interpret the information.</li>
+<li><strong>Operable</strong>: Navigation and interactive elements must work for all users, including those who use alternative methods such as touch or voice controls.</li>
+<li><strong>Understandable</strong>: Content and functionality must be intuitive and easy to comprehend.</li>
+<li><strong>Robust</strong>: Digital interfaces accommodate a wide range of assistive tools and are able to be adapted for technological advances and changing user bases.</li>
+</ul>
+<h3 id="wcag-conformance-levels-a-aa-and-aaa"><strong>WCAG Conformance Levels: A, AA, and AAA</strong></h3>
+<p>WCAG defines three levels of conformance to the accessibility guidelines.</p>
+<h4 id="level-a-basic-accessibility"><strong>Level A (Basic Accessibility)</strong></h4>
+<p>This level addresses essential accessibility features that every website should meet to ensure basic usability. Requirements include:</p>
+<ul>
+<li>Full access to content using a keyboard.</li>
+<li>Clearly labeled forms with clear instructions.</li>
+<li>Compatibility with assistive technologies.</li>
+<li>Avoiding reliance on visual cues like shape, size, or color alone to convey critical information.</li>
+</ul>
+<h4 id="level-aa-enhanced-accessibility"><strong>Level AA (Enhanced Accessibility)</strong></h4>
+<p>This level has additional requirements such as:</p>
+<ul>
+<li>Adequate contrast between text and background (minimum 4.5:1).</li>
+<li>Logical, structured headings (e.g., H1, H2, H3) to improve content organization.</li>
+<li>Consistent navigational elements across all pages.</li>
+</ul>
+<h4 id="level-aaa-optimal-accessibility"><strong>Level AAA (Optimal Accessibility)</strong></h4>
+<p>This level is designed to offer the highest degree of accessibility but may not be practical for all content. Requirements include:</p>
+<ul>
+<li>Higher contrast ratios (minimum 7:1) for text and backgrounds.</li>
+<li>Sign language interpretation for pre-recorded video.</li>
+<li>Detailed audio descriptions for video content.</li>
+</ul>
+<p>By aligning digital designs with WCAG guidelines, UX designers can create inclusive experiences that prioritize user needs and remove barriers for individuals with disabilities.</p>
+<h1 id="accessibility-checks">Accessibility Checks</h1>
+<h3 id="color-contrast-and-font-check">Color Contrast and Font Check</h3>
+<p>When developing components it is important to check that colors used for content such as text and the background meet the minimum accessiblity requirements.</p>
+<p>This example uses the MaterialX Lab resource website. The contrast ratio between the text and the background is checked to see if the content is AA compliant.</p>
+<img src="../components/content_for_aa_check.png" class="img-fluid" alt="AA Content To Check"/> 
+<p>The resource used for testing is the accessible-colors.com website which allows users to enter font size, weight and background color to check for AA/AAA compliance.</p>
+<p>The website passes the AA/AAA check. If the website did not pass the site will suggest the nearest accessible combination by modifying the color lightness of the font or the background.</p>
+<img src="../components/accessible_colors.png" class="img-fluid" alt="AA Check Pass"/> 
+<p>An example of text/background colors that need to be altered is the color code #0000FF (blue) on a dark background with the color code of #212529. To be AA compliant the backround must be lightened or the text color lightened to be AA compliant.</p>
+<img src="../components/accessible_colors_fail.png" class="img-fluid" alt="AA Check Fail"/> 
+<!--End-->
+</body>
+</html>
