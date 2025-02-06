@@ -129,6 +129,7 @@
                 <li><a class="dropdown-item" href="./wireframes.html">Wireframes</a></li>
                 <li><a class="dropdown-item" href="./mindmap.html">Mind Maps</a></li>
                 <li><a class="dropdown-item" href="./figma.html">Figma</a></li>
+                <li><a class="dropdown-item" href="./components.html">Components</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -195,26 +196,55 @@
   <section class="py-4">
     <div class="container">
       <h2 id="chatbot-comparison">ChatBot Comparison</h2>
-<p>The following AI ChatBots have been tested on this site:</p>
+<p>The following AI ChatBot Pages have been tested on this site:</p>
 <ol>
-<li>OpenAI <code>ChatGPT</code></li>
-<li>Google <code>Bard</code></li>
-<li>Microsoft <code>Bing</code></li>
+<li><a href="#deepseek-chat"><code>DeepSeek</code></a></li>
+<li><a href="#openai-chatgpt">OpenAI <code>ChatGPT</code></a></li>
+<li><a href="#google-bard">Google <code>Bard</code></a></li>
+<li><a href="#microsoft-bing">Microsoft <code>Bing</code></a></li>
 </ol>
-<p>At this time of writing another AI ChatBot Anthropic's <code>Claude</code> is only available in a few countries so it could not be tested.</p>
+<p>At this time of writing another AI ChatBot Anthropic's <code>Claude</code> rather intrusive and requires phone and birthdate.<br>
+It is not covered here.</p>
+<hr>
+<h3 id="deepseek-chat">DeepSeek Chat</h3>
+<h4 id="pros">Pros</h4>
+<ul>
+<li>Is the fastest and most responsive of them all</li>
+<li>Is very strong and scientific and mathematical computations.
+<ul>
+<li>Formulas and logic are provided in addition to source code.</li>
+</ul>
+</li>
+<li>Provides full answers and follow-up prompts use previous context</li>
+<li>Does not make you pay for it's most recent model. This includes it's &quot;thinking&quot; model.</li>
+</ul>
+<h4 id="cons">Cons</h4>
+<ul>
+<li>Due to it's popularity can be busy quite a bit</li>
+<li>Has chat / conversation size limit. This can be<br>
+worked around by opening another chat and copying over the last context.</li>
+<li>Prompts in Chinese appear to be better than English.</li>
+</ul>
+<h4 id="example-1-asking-for-code-for-bezier-curve-logic">Example 1: Asking for code for Bezier curve logic</h4>
+<p><strong>Prompt:</strong><br>
+Can you provide the math for a graphics shader which will render a Bezier curve ?</p>
+<details open><summary>Response</summary>
+<img src="../images/deepseek_bezier_reply.png" width=100%>
+</details>
+<hr>
 <h3 id="openai-chatgpt">OpenAI ChatGPT</h3>
-<h3 id="pros">Pros</h3>
+<h4 id="pros">Pros</h4>
 <ul>
 <li>Allows for direct copy and pasting of content from the UI</li>
 <li>Content format is Markdown</li>
 <li>Allows for a set of <a href="https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt" target="_blank">custom instructions</a> which will be added to the prompt.</li>
 </ul>
-<h3 id="cons">Cons</h3>
+<h4 id="cons">Cons</h4>
 <ul>
 <li>Has a paid tiered system making either features or the most recent LLM's unavailable for non-paid users. For example, at this time of writing the free tier uses <code>GPT-3.5</code> while the paid tier uses <code>GPT-4``. Note that </code>Bing<code>uses</code>GPT-4` for free.</li>
 </ul>
-<h3 id="example-1-creating-a-wireframe-mockup-for-an-application">Example 1: Creating a Wireframe Mockup For an Application</h3>
-<p><strong>Prompt:</strong>
+<h4 id="example-1-creating-a-wireframe-mockup-for-an-application">Example 1: Creating a Wireframe Mockup For an Application</h4>
+<p><strong>Prompt:</strong><br>
 Make a wireframe for a journaling app.</p>
 <details><summary>Response</summary>
 <p>Creating a detailed wireframe for a journaling app is a complex task that typically requires specialized wireframing software. However, I can provide you with a simplified text-based representation of the main components and layout of a journaling app's interface.</p>
@@ -314,8 +344,8 @@ Make a wireframe for a journaling app.</p>
 <p>In comparison to Google Bard no image reference links are provided. The content layout of each section is described in more detail compared to Bard.</p>
 </details>
 <br>
-<h3 id="example-2-feature-comparison">Example 2: Feature Comparison</h3>
-<p><strong>Prompt:</strong>
+<h4 id="example-2-feature-comparison">Example 2: Feature Comparison</h4>
+<p><strong>Prompt:</strong><br>
 Compare features of figma versus sketch.</p>
 <details><summary>Response</summary>
 Figma and Sketch are both popular design tools used for creating digital interfaces and prototypes, but they have some key differences in terms of features and functionality:
@@ -372,8 +402,9 @@ Figma and Sketch are both popular design tools used for creating digital interfa
 <p>In comparison to Google Bard, Chat GPT compares features through a list rather than a table. Both GPT and Bard provide a summary of the differences and a recommendation of which application to use.</p>
 </details>
 <br>
+<hr>
 <h3 id="google-bard">Google Bard</h3>
-<h3 id="pros">Pros</h3>
+<h4 id="pros">Pros</h4>
 <ul>
 <li>
 <p>Can copy and paste content from the UI</p>
@@ -382,11 +413,11 @@ Figma and Sketch are both popular design tools used for creating digital interfa
 <p>Content is formatted as Markdown.</p>
 </li>
 <li>
-<p>Shows a set of available alternative responses to the prompt entered in the UI
+<p>Shows a set of available alternative responses to the prompt entered in the UI<br>
 <img src="../images/bard_alternatives.png" width="100%"></p>
 </li>
 <li>
-<p>Has the ability to regenerate responses based on additional criteria after initial generation. Options include making responses: shorter, longer, simpler, and using more casual or professional language
+<p>Has the ability to regenerate responses based on additional criteria after initial generation. Options include making responses: shorter, longer, simpler, and using more casual or professional language<br>
 <img src="../images/bard_regen_options.png" width="15%"></p>
 </li>
 <li>
@@ -405,33 +436,33 @@ Figma and Sketch are both popular design tools used for creating digital interfa
 <li>Too tied to the Google ecosystem allowing storage to Google services only.</li>
 <li>Can create &quot;ficticious&quot; API calls when asked to generate source code greatly reducing the trust level.</li>
 </ul>
-<h3 id="example-1-creating-a-wireframe-mockup-for-an-application">Example 1: Creating a Wireframe Mockup For an Application</h3>
-<p><strong>Prompt:</strong>
+<h4 id="example-1-creating-a-wireframe-mockup-for-an-application">Example 1: Creating a Wireframe Mockup For an Application</h4>
+<p><strong>Prompt:</strong><br>
 Make a wireframe for a journaling app.</p>
 <details><summary>Response</summary>
 <p>Sure, I can help you make a wireframe for a journaling app. Here are some of the essential elements that you can include in your wireframe:</p>
 <ul>
-<li><strong>Homepage:</strong> This is the landing page of the app, where users can create a new journal entry, view their existing entries, or access other features of the app.
+<li><strong>Homepage:</strong> This is the landing page of the app, where users can create a new journal entry, view their existing entries, or access other features of the app.<br>
 [Image of Wireframe for a journaling app homepage]</li>
-<li><strong>Journal entry form:</strong> This is where users can enter their journal entries. The form should include fields for the date, time, title, and content of the entry.
+<li><strong>Journal entry form:</strong> This is where users can enter their journal entries. The form should include fields for the date, time, title, and content of the entry.<br>
 [Image of Wireframe for a journaling app journal entry form]</li>
-<li><strong>Journal list:</strong> This is where users can view their existing journal entries. The list should be paginated and allow users to filter and search their entries.
+<li><strong>Journal list:</strong> This is where users can view their existing journal entries. The list should be paginated and allow users to filter and search their entries.<br>
 [Image of Wireframe for a journaling app journal list]</li>
-<li><strong>Settings:</strong> This is where users can configure their account settings, such as their profile information, notification preferences, and theme.
+<li><strong>Settings:</strong> This is where users can configure their account settings, such as their profile information, notification preferences, and theme.<br>
 [Image of Wireframe for a journaling app settings]</li>
-<li><strong>Help:</strong> This is where users can find help and support information about the app.
+<li><strong>Help:</strong> This is where users can find help and support information about the app.<br>
 [Image of Wireframe for a journaling app help]</li>
 </ul>
 <p>These are just some of the essential elements that you can include in your wireframe. The specific elements that you include will depend on the specific features that you want to include in your journaling app.</p>
 <p>Once you have created a wireframe, you can use it to prototype your app. This will help you to test the functionality of your app and identify any potential problems. Once you have prototyped your app, you can start developing the final version.</p>
 <p>I hope this helps!</p>
 <hr>
-<p>In comparison to ChatGPT Google Bard provides additional image reference links for what a section of the wireframe could look like. However, it does not create a sample wireframe for you.
+<p>In comparison to ChatGPT Google Bard provides additional image reference links for what a section of the wireframe could look like. However, it does not create a sample wireframe for you.<br>
 <img src="../images/bard_wireframe_response.PNG" class="img-fluid" alt="Ando UI" width="600"/></p>
 </details>
 <br>
-<h3 id="example-2-feature-comparison">Example 2: Feature Comparison</h3>
-<p><strong>Prompt:</strong>
+<h4 id="example-2-feature-comparison">Example 2: Feature Comparison</h4>
+<p><strong>Prompt:</strong><br>
 Compare features of figma versus sketch.</p>
 <details><summary>Response</summary>
 <p>Sure, here is a comparison of the features of Figma and Sketch:</p>
@@ -500,20 +531,21 @@ Compare features of figma versus sketch.</p>
 <p>In comparison to ChatGPT Google Bard compares features through a table rather than listing features. Both GPT and Bard provide a summary of the differences and a recommendation of which application to use.</p>
 </details>
 <br>
+<hr>
 <h3 id="microsoft-bing">Microsoft Bing</h3>
 <p>At this time of writing uses GPT-4 (free)</p>
-<h3 id="pros">Pros</h3>
+<h4 id="pros">Pros</h4>
 <ul>
 <li>Does not require any subscription or login to use, but requires a login to access additional features and longer conversations.</li>
 <li>Provides details of source references for prompt responses. Can include multiple linked references for responses.</li>
 <li>As it scans for current references, it can pull out recent information.</li>
 <li>Has export not tied to any specific ecosystem (e.g. does not only allow export to OneDrive for instance). At time of writing this includes export to: Word, PDF, and text.</li>
 <li>Adds in possible follow-up prompts.</li>
-<li>Has a preset conversation style. <strong>Strangely this option disappears when you login?</strong>:
+<li>Has a preset conversation style. <strong>Strangely this option disappears when you login?</strong>:<br>
 <img src="../images/bing_conversation_style.png" width="100%"></li>
 <li>Does a better job of creating source code but still creates &quot;ficticious&quot; API calls.</li>
 </ul>
-<h3 id="cons">Cons</h3>
+<h4 id="cons">Cons</h4>
 <ul>
 <li>
 <p>Does not provide support for export to Microsoft's own ecosystem (e.g. OneDrive), though does provide posting to some social media platforms but seems to fail?</p>
@@ -526,8 +558,8 @@ Compare features of figma versus sketch.</p>
 <p>Preset conversation style starts a new prompt making it very hard to compare different results.</p>
 </li>
 </ul>
-<h2 id="example-1-creating-a-wireframe-mockup-for-an-application">Example 1: Creating a Wireframe Mockup For an Application</h2>
-<p><strong>Prompt:</strong>
+<h4 id="example-1-creating-a-wireframe-mockup-for-an-application">Example 1: Creating a Wireframe Mockup For an Application</h4>
+<p><strong>Prompt:</strong><br>
 Make a wireframe for a journaling app.</p>
 <details><summary>Response</summary>
 <p>I'll try to create that. Here is a wireframe for a journaling app:</p>
@@ -538,8 +570,8 @@ Make a wireframe for a journaling app.</p>
 <img src="../images/bing_ai_wireframe_prompt.PNG" class="img-fluid" alt="Ando UI" width="600"/>
 </details>
 <br>
-<h3 id="example-2-feature-comparison">Example 2: Feature Comparison</h3>
-<p><strong>Prompt:</strong>
+<h4 id="example-2-feature-comparison">Example 2: Feature Comparison</h4>
+<p><strong>Prompt:</strong><br>
 Compare features of figma versus sketch.</p>
 <details><summary>Response</summary>
 <p>Figma and Sketch are both popular design tools used by designers worldwide. Figma is a web-based app that can be accessed from anywhere, while Sketch is a desktop app that is only available for Mac users 123.</p>
@@ -570,7 +602,7 @@ Compare features of figma versus sketch.</p>
               style="color: #0082ca;"></i></a>
         </button>
       </ul>
-      <p>&copy; 2024 NanMu Consulting. All rights reserved.</p>
+      <p>&copy; 2022-2024 NanMu Consulting. All rights reserved.</p>
     </div>
   </footer>
 

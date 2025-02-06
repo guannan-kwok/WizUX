@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
+  <style>
+    /* Custom CSS */
+    .dropdown-toggle {
+      text-decoration: none !important;
+    }
+
+    .no-underline {
+      text-decoration: none !important;
+    }
+
+    .navbar .navbar-nav {
+      margin-left: auto;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .social-icons li a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid;
+    }
+
+    .article {
+      text-decoration: none;
+    }
+
+    .mermaid svg {
+      height: auto;
+    }
+  </style>
+  <title>UX Wizard</title>
+  <link rel="icon" type="images" href="../images/favicon.png" class="img-fluid">
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFLW0WLHJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RFLW0WLHJV');
+  </script>
+
+</head>
+
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+        ? 'dark'
+        : 'default'
+    });
+  </script>
+
+  <!-- Top Area -->
+  <header data-bs-theme="dark" class="bg-black text-white py-2">
+    <div class="container-fluid">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+
+        <div class="navbar-brand">
+          <img src="../images/logo_transparent.png" alt="Logo" height="50px">
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#_top_navbarNav"
+        aria-controls="_top_navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>        
+
+        <div id="_top_navbarNav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link no-underline">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown" aria-expanded="false">UX
+                Research</a>
+              <ul class="dropdown-menu" aria-labelledby="menu1">
+                <li><a class="dropdown-item" href="./ux_research_surveys_interviews.html">Surveys and
+                    Interviews</a></li>
+                <li><a class="dropdown-item" href="./feature_comparison.html">Feature Comparison</a>
+                </li>
+                <li><a class="dropdown-item" href="./persona_creation.html">Persona Creation</a></li>
+                <li><a class="dropdown-item" href="./research_insights.html">Research Insights</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown" aria-expanded="false">UX
+                Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu2">
+                <li><a class="dropdown-item" href="./ux_copy.html">Generating Copy</a></li>
+                <li><a class="dropdown-item" href="./design_system.html">Design System</a></li>
+                <li><a class="dropdown-item" href="./user_flows.html">User Flows</a></li>
+                <li><a class="dropdown-item" href="./wireframes.html">Wireframes</a></li>
+                <li><a class="dropdown-item" href="./mindmap.html">Mind Maps</a></li>
+                <li><a class="dropdown-item" href="./figma.html">Figma</a></li>
+                <li><a class="dropdown-item" href="./components.html">Components</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu3" data-bs-toggle="dropdown"
+                aria-expanded="false">Graphic Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu3">
+                <li><a class="dropdown-item" href="./illustration_to_animation.html">Animation Generation</a></li>
+                <li><a class="dropdown-item" href="./image_generation.html">Image Generation</a></li>
+                <li><a class="dropdown-item" href="./illustration.html">Illustration</a></li>
+                <li><a class="dropdown-item" href="./colorChooser.html">WCAG for 3D</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Development</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="./chatbot_comparison.html">ChatBot Comparison</a>
+                </li>
+                <li><a class="dropdown-item" href="./web_development.html">Web Site Generation</a></li>
+                <li><a class="dropdown-item" href="./copilot_development.html">Using Github Co-Pilot</a>
+                </li>
+                <li><a class="dropdown-item" href="./openai_notebook_iframe.html">OpenAI API Setup </a>
+                </li>
+                <li><a class="dropdown-item" href="./chatbot.html">OpenAI Chatbot </a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Projects</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="https://kwokcb.github.io/web_scene_editor/">Web Scene Editor</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Image Carousel Area -->
+  <!--
+  <section class="pt-5">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/android_text_balloon.jpg" class="d-block mx-auto w-50" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_flower.jpg" class="d-block mx-auto w-50" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_wires.jpg" class="d-block mx-auto w-50" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Section Information -->
+  <section class="py-4">
+    <div class="container">
+      <h1 id="what-are-components">What are Components</h1>
+<p>Components are ui elements that are reusable across design projects
+Any time a change is made to the main component the instances are automatically updated. This allows for
+faster workflows, more consistent design system and makes it easier to collaborate with other designers for large scale projects.</p>
+<p>The master component is created when you first turn a UI element into a component and defines the properties of the component.</p>
+<p>The instance is a copy of the master component you can reuse across designs. Instances are linked to master components. When you make changes to a master component it applies the changes to the instance. An exception to this is instance overrides.</p>
+<p>When using Figma you can identify which elements are master components and which are instances by the icon in the layers panel. Master components use a 4 diamond icon while instances use a single diamond icon.</p>
+<h2 id="organizing-and-structuring-components">Organizing and Structuring Components</h2>
+<p>When naming layers it is best to use forward slash naming to create hierarchy.</p>
+<p>Example Layer Structure:</p>
+<ul>
+<li>Input/Field/Text - Active</li>
+<li>Input/Field/Text - Default</li>
+<li>Input/Field/Text - Disabled</li>
+<li>Input/Field/Text - Feedback</li>
+<li>Input/Field/Text - Filled</li>
+<li>Input/Field/Text - View Only</li>
+</ul>
+<p>For access to a wider subcategory of ''related components" in the instance menu you can combine the last two labels, ie. the input type (text) and input status (default), by separating them with a dash instead of a slash. This is particularly useful for larger categories with many subcategories. Components can be grouped in frames to better visualize its purpose such as for a data table, dropdowns etc.</p>
+<p>Another guideline to follow is to choose an easy to understand method for structing component states and variations. You can do this by separating master components for each variation. This makes it fast and consistent to change the state of instance, change multiple instances at the same time, or save text overrides when updating a state or variation.</p>
+<p>Using nested atomic components as global building blocks is another reccomended approach. Do this by creating a set of reusable atomic components with the sole purpose of nesting atomic instances inside other related components. Take textfields as an example. We can turn a textfield's shape into an atomic component and nest it's instances inside every other textfield component we create. This means all textfields use the exact same building block (i.e., the atomic instance) and if the shape of textfields were to change, all we'd need to do is update the atomic component and all other textfield components would update too.</p>
+<p>Using an atomic approach allows you to seamlessly apply globalized changes to components which makes it much easier to maintain your system.</p>
+<h2 id="best-practises-when-working-with-components">Best Practises When Working with Components</h2>
+<p>Shown below are various tips when designing components.</p>
+<ol>
+<li>
+<p>When working with components, set up constraints and a layout grid to show the responsive behavior of the component(s) as it is resized.</p>
+</li>
+<li>
+<p>Preserve text overrides on instance swaps. To do this make sure the text layer within each component share the same name (e.g., ''Button Text"). If you don't do this your text overrides will not persist and you'll need to manually update the text after you swap instances.</p>
+</li>
+<li>
+<p>Use clip content to reduce repetitive instances. Toggle whether or not elements extend beyond the bounds of the component are cropped or hidden</p>
+</li>
+<li>
+<p>Document components when hovering over it in the assets panel: provides context as to how it works and fits with the product</p>
+</li>
+<li>
+<p>Use instance overrides to adapt components. This allows you to override properties of instance without breaking link to master component. It can be used on text, color, effects (drop shadow, blur), advanced (size of component, swap nested instance, toggle on/off layers). Any updates to master component do not revert overrides in first gif sequence above. You can always reset overrirdes to go back to original properties</p>
+</li>
+<li>
+<p>Swap components by simply right clicking on the instance you want to switch and go to the Swap instance item. A submenu will appear with a list of related components.</p>
+</li>
+<li>
+<p>Detach an instance when you want to make a new component, or unique element.</p>
+</li>
+</ol>
+<h1 id="accessibility-wcag">Accessibility (WCAG)</h1>
+<p>The <strong>Web Content Accessibility Guidelines (WCAG)</strong>, created by the World Wide Web Consortium (W3C), provide a comprehensive framework for designing digital experiences that are accessible to users with disabilities.
+These guidelines ensure that digital products are inclusive and intuitive to use for all users.</p>
+<h3 id="core-principles-of-accessibility-pour"><strong>Core Principles of Accessibility (POUR)</strong></h3>
+<p>To create an accessible experience, WCAG is structured around four principles:</p>
+<ul>
+<li><strong>Perceivable</strong>: Content and interface elements must be perceivable through one or more senses. For example, users relying on screen readers or visual cues should be able to interpret the information.</li>
+<li><strong>Operable</strong>: Navigation and interactive elements must work for all users, including those who use alternative methods such as touch or voice controls.</li>
+<li><strong>Understandable</strong>: Content and functionality must be intuitive and easy to comprehend.</li>
+<li><strong>Robust</strong>: Digital interfaces accommodate a wide range of assistive tools and are able to be adapted for technological advances and changing user bases.</li>
+</ul>
+<h3 id="wcag-conformance-levels-a-aa-and-aaa"><strong>WCAG Conformance Levels: A, AA, and AAA</strong></h3>
+<p>WCAG defines three levels of conformance to the accessibility guidelines.</p>
+<h4 id="level-a-basic-accessibility"><strong>Level A (Basic Accessibility)</strong></h4>
+<p>This level addresses essential accessibility features that every website should meet to ensure basic usability. Requirements include:</p>
+<ul>
+<li>Full access to content using a keyboard.</li>
+<li>Clearly labeled forms with clear instructions.</li>
+<li>Compatibility with assistive technologies.</li>
+<li>Avoiding reliance on visual cues like shape, size, or color alone to convey critical information.</li>
+</ul>
+<h4 id="level-aa-enhanced-accessibility"><strong>Level AA (Enhanced Accessibility)</strong></h4>
+<p>This level has additional requirements such as:</p>
+<ul>
+<li>Adequate contrast between text and background (minimum 4.5:1).</li>
+<li>Logical, structured headings (e.g., H1, H2, H3) to improve content organization.</li>
+<li>Consistent navigational elements across all pages.</li>
+</ul>
+<h4 id="level-aaa-optimal-accessibility"><strong>Level AAA (Optimal Accessibility)</strong></h4>
+<p>This level is designed to offer the highest degree of accessibility but may not be practical for all content. Requirements include:</p>
+<ul>
+<li>Higher contrast ratios (minimum 7:1) for text and backgrounds.</li>
+<li>Sign language interpretation for pre-recorded video.</li>
+<li>Detailed audio descriptions for video content.</li>
+</ul>
+<p>By aligning digital designs with WCAG guidelines, UX designers can create inclusive experiences that prioritize user needs and remove barriers for individuals with disabilities.</p>
+<h1 id="accessibility-checks">Accessibility Checks</h1>
+<h3 id="color-contrast-and-font-check">Color Contrast and Font Check</h3>
+<p>When developing components it is important to check that colors used for content such as text and the background meet the minimum accessiblity requirements.</p>
+<p>This example uses the MaterialX Lab resource website. The contrast ratio between the text and the background is checked to see if the content is AA compliant.</p>
+<img src="../components/content_for_aa_check.png" class="img-fluid" alt="AA Content To Check"/>
+<p>The resource used for testing is the accessible-colors.com website which allows users to enter font size, weight and background color to check for AA/AAA compliance.</p>
+<p>The website passes the AA/AAA check. If the website did not pass the site will suggest the nearest accessible combination by modifying the color lightness of the font or the background.</p>
+<img src="../components/accessible_colors.png" class="img-fluid" alt="AA Check Pass"/>
+<p>An example of text/background colors that need to be altered is the color code #0000FF (blue) on a dark background with the color code of #212529. To be AA compliant the backround must be lightened or the text color lightened to be AA compliant.</p>
+<img src="../components/accessible_colors_fail.png" class="img-fluid" alt="AA Check Fail"/>
+
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bottom Area -->
+  <footer class=" footer bg-dark text-white py-2 pt-2">
+    <div class="container">
+      <ul class="social-icons">
+        <button class="btn btn-dark" type="button">
+          <a href="https://github.com/guannan-kwok/WizUX" target="_blank"><i class="fab fa-github fa-2x"
+              style="color: #ffffff;"></i></a>
+        </button>
+        <button class="btn btn-dark" type="button">
+          <a href="https://linkedin.com/in/mgkwok" target="_blank"><i class="fab fa-linkedin-in fa-2x"
+              style="color: #0082ca;"></i></a>
+        </button>
+      </ul>
+      <p>&copy; 2022-2024 NanMu Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const body = document.body;
+    // Check if the user has a preferred color scheme
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Set the initial theme based on user preferences
+    if (prefersDarkMode) {
+      body.setAttribute('data-bs-theme', 'dark');
+    } else {
+      body.setAttribute('data-bs-theme', 'light');
+    }    
+  </script>
+</body>
+
+</html>
