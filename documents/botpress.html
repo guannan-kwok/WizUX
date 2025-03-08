@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css">
+  <style>
+    /* Custom CSS */
+    .dropdown-toggle {
+      text-decoration: none !important;
+    }
+
+    .no-underline {
+      text-decoration: none !important;
+    }
+
+    .navbar .navbar-nav {
+      margin-left: auto;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .social-icons li a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid;
+    }
+
+    .article {
+      text-decoration: none;
+    }
+
+    .mermaid svg {
+      height: auto;
+    }
+  </style>
+  <title>UX Wizard</title>
+  <link rel="icon" type="images" href="../images/favicon.png" class="img-fluid">
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFLW0WLHJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RFLW0WLHJV');
+  </script>
+
+</head>
+
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+        ? 'dark'
+        : 'default'
+    });
+  </script>
+
+  <!-- Top Area -->
+  <header data-bs-theme="dark" class="bg-black text-white py-2">
+    <div class="container-fluid">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+
+        <div class="navbar-brand">
+          <img src="../images/logo_transparent.png" alt="Logo" height="50px">
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#_top_navbarNav"
+        aria-controls="_top_navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>        
+
+        <div id="_top_navbarNav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="../index.html" class="nav-link no-underline">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu1" data-bs-toggle="dropdown" aria-expanded="false">UX
+                Research</a>
+              <ul class="dropdown-menu" aria-labelledby="menu1">
+                <li><a class="dropdown-item" href="./ux_research_surveys_interviews.html">Surveys and
+                    Interviews</a></li>
+                <li><a class="dropdown-item" href="./feature_comparison.html">Feature Comparison</a>
+                </li>
+                <li><a class="dropdown-item" href="./persona_creation.html">Persona Creation</a></li>
+                <li><a class="dropdown-item" href="./research_insights.html">Research Insights</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu2" data-bs-toggle="dropdown" aria-expanded="false">UX
+                Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu2">
+                <li><a class="dropdown-item" href="./ux_copy.html">Generating Copy</a></li>
+                <li><a class="dropdown-item" href="./design_system.html">Design System</a></li>
+                <li><a class="dropdown-item" href="./user_flows.html">User Flows</a></li>
+                <li><a class="dropdown-item" href="./wireframes.html">Wireframes</a></li>
+                <li><a class="dropdown-item" href="./mindmap.html">Mind Maps</a></li>
+                <li><a class="dropdown-item" href="./figma.html">Figma</a></li>
+                <li><a class="dropdown-item" href="./components.html">Components</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu3" data-bs-toggle="dropdown"
+                aria-expanded="false">Graphic Design</a>
+              <ul class="dropdown-menu" aria-labelledby="menu3">
+                <li><a class="dropdown-item" href="./illustration_to_animation.html">Animation Generation</a></li>
+                <li><a class="dropdown-item" href="./image_generation.html">Image Generation</a></li>
+                <li><a class="dropdown-item" href="./illustration.html">Illustration</a></li>
+                <li><a class="dropdown-item" href="./colorChooser.html">WCAG for 3D</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Development</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="./chatbot_comparison.html">ChatBot Comparison</a>
+                </li>
+                <li><a class="dropdown-item" href="./web_development.html">Web Site Generation</a></li>
+                <li><a class="dropdown-item" href="./copilot_development.html">Using Github Co-Pilot</a>
+                </li>
+                <li><a class="dropdown-item" href="./openai_notebook_iframe.html">OpenAI API Setup </a>
+                </li>
+                <li><a class="dropdown-item" href="./chatbot.html">OpenAI Chatbot </a></li>
+                <li><a class="dropdown-item" href="./botpress.html">Using Botpress </a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="menu4" data-bs-toggle="dropdown"
+                aria-expanded="false">Projects</a>
+              <ul class="dropdown-menu" aria-labelledby="menu4">
+                <li><a class="dropdown-item" href="https://kwokcb.github.io/web_scene_editor/">Web Scene Editor</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Image Carousel Area -->
+  <!--
+  <section class="pt-5">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/android_text_balloon.jpg" class="d-block mx-auto w-50" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_flower.jpg" class="d-block mx-auto w-50" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/android_text_wires.jpg" class="d-block mx-auto w-50" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Section Information -->
+  <section class="py-4">
+    <div class="container">
+      <h1 id="building-a-bot-for-a-travel-website">Building a Bot For a Travel Website</h1>
+<p>This project focuses on using the Botpress service to test the capabilities of a customer service bot in providing relevant and accurate tourism resources.</p>
+<p>You can test out the bot <a href="https://guannan-kwok.github.io/travel_chatbot/">here</a>.</p>
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; height:auto;">
+  <video style="position:absolute; top:0; left:0; width:100%; height:100%;" controls>
+    <source src="../images/travel_site.mp4" type="video/mp4">
+  </video>
+</div>
+<p>A tourism website promoting Banff and Waterton National Park was built to embed the bot. The bot was designed to assist users by answering questions about the parks activities, accomodation, and trails.
+When building the bot I ran into the issue of not knowing where the tourism information was source from. To remedy this I designed the bot to source all of its responses from a knowledge base consisting of official tourism websites for Banff and Waterton National Park.
+Another issue resolved was providing a direct link for tourism information. To accomplish this the bot was programmed to searche for any phrases containing the words &quot;link to&quot; in order to provide a hyperlink to Banff and Waterton resources exclusively.</p>
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; height:auto;">
+  <video style="position:absolute; top:0; left:0; width:100%; height:100%;" controls>
+    <source src="../images/chatbot_travel.mp4" type="video/mp4">
+  </video>
+</div>
+<p>Additionaly, I wanted to test the bot's ability to facilitate bookings.
+For this, I created a simple reservation system for an italian restaurant.</p>
+<p>I wanted to test the bot's ability to handle tasks such as reserving a table at the restaurant, editing a reservation, and providing a filterable menu.</p>
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; height:auto;">
+  <video style="position:absolute; top:0; left:0; width:100%; height:100%;" controls>
+    <source src="../images/booking.mp4" type="video/mp4">
+  </video>
+</div>
+<p>For the reservation interface the bot looks for when the phrase &quot;book a reservation&quot; is typed in the chat window.</p>
+<p>The user is then shown these options:</p>
+<ul>
+<li>
+<p>Make a new reservation. This asks for the user's date of reservation, email address, and number of people. A confirmation email is then sent containing this info and the reservation number to cancel/change reservation.</p>
+</li>
+<li>
+<p>View or modify reservation: Provide the confirmation number in the email sent to view or modify current resrvation.</p>
+</li>
+<li>
+<p>Cancel reservation: To cancel the user needs to provide the confirmation number. This number is in the email sent to the user.</p>
+</li>
+<li>
+<p>Learn about the menu: View the full menu. Users can ask for reccomended dishes and filter by price or dietary restrictions.</p>
+</li>
+</ul>
+<p>Variables were created in Botpress to store reservation information such as for the confirmation number, date and time, email, and party size. This information is stored in a reservation table.
+The table is updated whenever users delete or modify their reservation.</p>
+<p>Through this project, I was able to assess how well the bot could interact with users, provide accurate tourism information, and manage reservation information.</p>
+<details>
+ <summary> More Information About Setting Up and Using Botpress </summary>
+<h1 id="botpress-overview">Botpress Overview</h1>
+<p>Botpress is a platform to build AI agents using a variety of LLMs and integrations with other software.</p>
+<h2 id="setting-up-the-first-bot">Setting Up the First Bot</h2>
+<p>For users new to Botpress they can have Botrpess create a basic bot for them.</p>
+<p>First create create a free account on the website. Next click &quot;Create new chatbot&quot; option on the homepage.</p>
+<p>Pick the menu option for creating a first time chatbot. This is a guided process where you follow on screen instructions.</p>
+<p><strong>Users select the:</strong></p>
+<ul>
+<li>The chatbot name.</li>
+<li>Where is the chatbot getting data from. You can provide various links and company names to pull information from.</li>
+<li>Which chatbot agents to include. Summary, translation, analytics, personality agents were chosen.</li>
+<li>Adjust the starting knowledge base. The knowledge base is where the bot is accesing information from when providing responses. Users can restrict information access to specific websites and files (pdf, plain text).</li>
+</ul>
+<p>When finished the initial setup click the publish button to create your first bot.</p>
+<img src="../images/botpress_sidebar_home.png" class="img-fluid" alt="Sidebar"/>
+<p>The appearance of the bot can be adjusted in the webchat tab located on the left sidebar.</p>
+<p>You can adjust the name, description, the theme (color, font). When using the bot elsewhere you can get a link or embed code for a personal website. The code is an embed code pasted under the body tag.
+After embedding the chatbot on your website refresh the page to run the bot. The chatbot should show as a icon widget on the bottom irght side of the webpage.</p>
+<h2 id="botpress-interface">Botpress Interface</h2>
+<h3 id="menu-bar-left-column">Menu Bar (Left Column)</h3>
+<p>The menu bar on the left column provides access to various features of the bot interface.</p>
+<img src="../images/home_botpress_builder.png" class="img-fluid" alt="Home"/>
+<h4 id="home">Home</h4>
+<p>The home section includes the name of the chatbot, a description of its functionality, and a set of instructions. These instructions define the bot's identity, its scope and responsibility, the greeting message on startup, the response style, capabilities, and any applicable policies.</p>
+<h4 id="search">Search</h4>
+<p>This section enables you to search for or filter information related to the bot's knowledge bases.</p>
+<img src="../images/knowledge_base_botpress.png" class="img-fluid" alt="Home"/>
+<h4 id="knowledge-bases">Knowledge Bases</h4>
+<p>Defines where the bot retrieves its information from. For example, it could be from a text file, web searches, or tourism websites.</p>
+<h4 id="tools">Tools</h4>
+<p>This section lists the actions the bot can perform. For example, the bot may conduct a web search of official Banff or Waterton tourism websites, provide links to tourism sites, and offer reservation options.</p>
+<h4 id="channels">Channels</h4>
+<p>The channels section shows the enabled communication channels, such as web chat.</p>
+<h4 id="agents">Agents</h4>
+<p>Lists agents that enhance the bot's capabilities. Agents may perform tasks like summarizing conversations, providing analytics, or translating text.</p>
+<img src="../images/workflow_botpress.png" class="img-fluid" alt="Home"/>
+<h4 id="workflows">Workflows</h4>
+<p>This section allows you to manage the flow of the conversation. It includes flow chart diagrams with connected nodes representing the bot's logic. Nodes contain tasks like sending messages (text, image, audio, or video), executing code, or managing data tables.</p>
+<h5 id="types-of-nodes">Types of Nodes</h5>
+<ul>
+<li><strong>Standard Node</strong>: A versatile building block in the bot's workflow. It allows for both instructions and transitions to other nodes.</li>
+<li><strong>Autonomous Node</strong>: Uses an LLM to determine the flow and actions based on the conversation's context.</li>
+<li><strong>Start Node</strong>: The entry point for the main conversation flow.</li>
+<li><strong>Entry Node</strong>: The start of each workflow, apart from the main flow, defining conditions for execution.</li>
+<li><strong>Exit Node</strong>: Marks the end of a workflow, typically with cleanup or finalization actions.</li>
+<li><strong>End Node</strong>: Resets the conversation session and clears data in the main flow.</li>
+</ul>
+<h4 id="variables">Variables</h4>
+<p>This section tracks user interactions and stores data for later use, visible in the bottom left corner.</p>
+<h3 id="knowledge-bases">Knowledge Bases</h3>
+<p>Specifies where the bot retrieves its information, including sources like websites, documents, tables, web searches, and APIs.</p>
+<h3 id="tables">Tables</h3>
+<p>Contains a local database for storing information, such as reservation details, and includes a default conversation table for storing summaries and transcripts.</p>
+<h3 id="actions">Actions</h3>
+<p>Allows for the creation of custom, reusable code actions. These can be used in workflows, hooks, capabilities, and tables.</p>
+<h3 id="hooks">Hooks</h3>
+<p>Hooks enable customization of the bot's behavior by executing code at specific points. They allow interception and modification of messages, session management, logging, and integrations with external systems.</p>
+<h3 id="library">Library</h3>
+<p>This feature is deprecated as of April 2025.</p>
+<hr>
+<img src="../images/integrations_botpress.png" class="img-fluid" alt="Home"/>
+<h3 id="integrations">Integrations</h3>
+<p>Displays the integrations currently installed on your bot, such as SendGrid for email notifications.</p>
+<h3 id="versions">Versions</h3>
+<p>Allows you to view, compare, and revert to previous versions of your bot.</p>
+<h3 id="bot-settings">Bot Settings</h3>
+<p>Adjust various settings, including the bot's name, the LLM used, timeout options, and client settings.</p>
+<h3 id="search">Search</h3>
+<p>A search function for finding specific settings or information.</p>
+<h3 id="help-resources">Help (Resources)</h3>
+<p>Provides access to documentation, quick references, and status updates for support.</p>
+<h3 id="user-preferences">User Preferences</h3>
+<p>Allows customization of viewing options, such as light/dark mode, grid snapping, and toggling the bot home page section on or off.</p>
+<hr>
+<h3 id="content-middle-column">Content (Middle Column)</h3>
+<p>This section contains the content displayed for the user.</p>
+<h3 id="botpress-emulator-right-column">Botpress Emulator (Right Column)</h3>
+<p>The Botpress emulator on the right column allows for bot testing by messaging. It provides options to refresh the conversation, start as a new user for training, and publish new versions of the bot.</p>
+<h2 id="botpress-agents">Botpress Agents</h2>
+<p>Agents are specialized components that enhance a bot's capabilities by performing specific tasks to improve user interaction, information retrieval, and conversation management.</p>
+<h4 id="summary-agent">Summary Agent</h4>
+<ul>
+<li>Summarizes conversation transcripts to provide a transcript that can be embedded in prompts.</li>
+</ul>
+<h4 id="personality-agent">Personality Agent</h4>
+<ul>
+<li>Customizes the chatbot's personality, ensuring that responses align with this personality.</li>
+</ul>
+<h4 id="policy-agent">Policy Agent</h4>
+<ul>
+<li>Ensures all messages follow the communication policy of the bot, adding latency to responses.</li>
+</ul>
+<h4 id="translator-agent">Translator Agent</h4>
+<ul>
+<li>Translates chatbot messages into the user's language automatically.</li>
+<li>To manually set the user's language, you can modify the <code>{{user.TranslatorAgent.language}}</code> variable, using any &quot;ISO 639-1&quot; language code (e.g., en, fr, es).</li>
+</ul>
+<h4 id="knowledge-agent">Knowledge Agent</h4>
+<ul>
+<li>Makes the chatbot answer questions based on Knowledge Bases.</li>
+<li>This agent searches for answers in the Knowledge Bases located in the same folder as the current workflow or in parent folders.</li>
+<li>The agent will only provide answers when the chatbot is on the Start Node or when the workflow is on a Capture Card that has Knowledge Bases enabled.</li>
+<li>To enable Knowledge Bases on a node, click the node in the workflow editor and enable the &quot;Knowledge Bases&quot; option in the right inspector panel.</li>
+</ul>
+<h4 id="vision-agent">Vision Agent</h4>
+<ul>
+<li><strong>Purpose</strong>: Extracts text content and descriptions from images in incoming messages.</li>
+<li>Uses GPT-4 Vision to extract content from images.</li>
+<li>The extracted content is stored in the <code>turn.VisionAgent.content</code> variable for use in the conversation.</li>
+<li>The message is also updated to include the extracted content in the &quot;preview&quot; field.</li>
+</ul>
+<h4 id="hitl-human-in-the-loop-agent">HITL (Human-in-the-Loop) Agent</h4>
+<ul>
+<li>Allows the bot to escalate conversations to human agents for further assistance.</li>
+</ul>
+<h2 id="botpress-features">Botpress Features</h2>
+<h3 id="media">Media</h3>
+<ul>
+<li><strong>Types of Media Supported</strong>: The bot supports text, images, and voice.</li>
+<li><strong>Input Media</strong>: You can input text, images, and voice.</li>
+<li><strong>Output Media</strong>: The bot can output text, images, and voice.</li>
+</ul>
+<h3 id="llms-large-language-models">LLMs (Large Language Models)</h3>
+<h4 id="personal-models">Personal Models</h4>
+<p>Each workflow can have its own model, allowing for tailored responses.</p>
+<h4 id="integrations">Integrations</h4>
+<p>The bot supports various integrations with specific input and output types. Some examples include:</p>
+<ul>
+<li><strong>OpenAI</strong></li>
+<li><strong>Dall-E Image Generation</strong></li>
+<li><strong>Google Analytics</strong></li>
+<li><strong>Calendly</strong></li>
+<li><strong>Jira</strong></li>
+<li><strong>Shopify</strong></li>
+<li><strong>Wikipedia</strong></li>
+<li><strong>Zendesk</strong></li>
+<li><strong>Trello</strong></li>
+<li><strong>Salesforce</strong></li>
+<li>User-created private or public integrations are also supported.</li>
+</ul>
+<h4 id="interfaces">Interfaces</h4>
+<p>Standard schema definitions for integrations, which act as LLM providers:</p>
+<ul>
+<li><strong>Anthropic</strong></li>
+<li><strong>OpenAI</strong></li>
+<li><strong>Groq</strong></li>
+</ul>
+<h4 id="channels">Channels</h4>
+<p>The bot supports multiple channels for communication, including:</p>
+<ul>
+<li><strong>Instagram</strong></li>
+<li><strong>Messenger</strong></li>
+<li><strong>Slack</strong></li>
+<li><strong>WhatsApp</strong></li>
+</ul>
+<h4 id="supported-llms">Supported LLMs</h4>
+<p>The bot supports the following LLMs:</p>
+<ul>
+<li><strong>GPT-4o (OpenAI)</strong></li>
+<li><strong>Claude 3.5 (Anthropic)</strong></li>
+<li><strong>Grok-1 (X)</strong></li>
+<li><strong>Cerebras</strong></li>
+<li><strong>Fireworks AI</strong></li>
+<li><strong>Hugging Face</strong></li>
+</ul>
+<h4 id="response-quality">Response Quality</h4>
+<p>You can choose the best model for higher-quality responses (e.g., GPT-4o) or a faster LLM (e.g., GPT-4o Mini).</p>
+<h3 id="files-api">Files API</h3>
+<ul>
+<li><strong>File Management</strong>: Allows for file uploads, downloads, and management of searchable documents.</li>
+<li><strong>Knowledge Base Link</strong>: Files can be linked to the knowledge base, enabling the bot to answer questions based on these files.</li>
+<li><strong>Supported Formats</strong>: The API supports both text and binary formats.</li>
+<li><strong>Document Indexing</strong>: Documents can be indexed for efficient search and retrieval.</li>
+</ul>
+<h1 id="training-botpress-model">Training Botpress Model</h1>
+<p>The travel chatbot was trained using:</p>
+<ul>
+<li><strong>Datasets</strong>: Utilizes datasets of existing tourism information from Banff/Waterton park.</li>
+<li><strong>Official Tourism Sources</strong>: Uses information from official tourism sources, such as Parks Canada, for generating responses through retrieval-augmented generation (RAG).</li>
+<li><strong>Advanced Prompting</strong>: Provides instructions within the Botpress builder to guide how the bot should respond in specific scenarios.</li>
+</ul>
+</details>
+
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bottom Area -->
+  <footer class=" footer bg-dark text-white py-2 pt-2">
+    <div class="container">
+      <ul class="social-icons">
+        <button class="btn btn-dark" type="button">
+          <a href="https://github.com/guannan-kwok/WizUX" target="_blank"><i class="fab fa-github fa-2x"
+              style="color: #ffffff;"></i></a>
+        </button>
+        <button class="btn btn-dark" type="button">
+          <a href="https://linkedin.com/in/mgkwok" target="_blank"><i class="fab fa-linkedin-in fa-2x"
+              style="color: #0082ca;"></i></a>
+        </button>
+      </ul>
+      <p>&copy; 2022-2024 NanMu Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const body = document.body;
+    // Check if the user has a preferred color scheme
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Set the initial theme based on user preferences
+    if (prefersDarkMode) {
+      body.setAttribute('data-bs-theme', 'dark');
+    } else {
+      body.setAttribute('data-bs-theme', 'light');
+    }    
+  </script>
+</body>
+
+</html>
