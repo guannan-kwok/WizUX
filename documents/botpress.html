@@ -196,7 +196,52 @@
   <!-- Section Information -->
   <section class="py-4">
     <div class="container">
-      <h1 id="botpress-overview">Botpress Overview</h1>
+      <h1 id="building-a-bot-for-a-travel-website">Building a Bot For a Travel Website</h1>
+<p>This project focuses on using the Botpress service to test the capabilities of a customer service bot in providing relevant and accurate tourism resources.</p>
+<p>You can test out the bot <a href="https://guannan-kwok.github.io/travel_chatbot/">here</a>.</p>
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; height:auto;">
+  <video style="position:absolute; top:0; left:0; width:100%; height:100%;" controls>
+    <source src="../images/travel_site.mp4" type="video/mp4">
+  </video>
+</div>
+<p>A tourism website promoting Banff and Waterton National Park was built to embed the bot. The bot was designed to assist users by answering questions about the parks activities, accomodation, and trails.
+When building the bot I ran into the issue of not knowing where the tourism information was source from. To remedy this I designed the bot to source all of its responses from a knowledge base consisting of official tourism websites for Banff and Waterton National Park.
+Another issue resolved was providing a direct link for tourism information. To accomplish this the bot was programmed to searche for any phrases containing the words &quot;link to&quot; in order to provide a hyperlink to Banff and Waterton resources exclusively.</p>
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; height:auto;">
+  <video style="position:absolute; top:0; left:0; width:100%; height:100%;" controls>
+    <source src="../images/chatbot_travel.mp4" type="video/mp4">
+  </video>
+</div>
+<p>Additionaly, I wanted to test the bot's ability to facilitate bookings.
+For this, I created a simple reservation system for an italian restaurant.</p>
+<p>I wanted to test the bot's ability to handle tasks such as reserving a table at the restaurant, editing a reservation, and providing a filterable menu.</p>
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; height:auto;">
+  <video style="position:absolute; top:0; left:0; width:100%; height:100%;" controls>
+    <source src="../images/booking.mp4" type="video/mp4">
+  </video>
+</div>
+<p>For the reservation interface the bot looks for when the phrase &quot;book a reservation&quot; is typed in the chat window.</p>
+<p>The user is then shown these options:</p>
+<ul>
+<li>
+<p>Make a new reservation. This asks for the user's date of reservation, email address, and number of people. A confirmation email is then sent containing this info and the reservation number to cancel/change reservation.</p>
+</li>
+<li>
+<p>View or modify reservation: Provide the confirmation number in the email sent to view or modify current resrvation.</p>
+</li>
+<li>
+<p>Cancel reservation: To cancel the user needs to provide the confirmation number. This number is in the email sent to the user.</p>
+</li>
+<li>
+<p>Learn about the menu: View the full menu. Users can ask for reccomended dishes and filter by price or dietary restrictions.</p>
+</li>
+</ul>
+<p>Variables were created in Botpress to store reservation information such as for the confirmation number, date and time, email, and party size. This information is stored in a reservation table.
+The table is updated whenever users delete or modify their reservation.</p>
+<p>Through this project, I was able to assess how well the bot could interact with users, provide accurate tourism information, and manage reservation information.</p>
+<details>
+ <summary> More Information About Setting Up and Using Botpress </summary>
+<h1 id="botpress-overview">Botpress Overview</h1>
 <p>Botpress is a platform to build AI agents using a variety of LLMs and integrations with other software.</p>
 <h2 id="setting-up-the-first-bot">Setting Up the First Bot</h2>
 <p>For users new to Botpress they can have Botrpess create a basic bot for them.</p>
@@ -370,35 +415,6 @@ After embedding the chatbot on your website refresh the page to run the bot. The
 <li><strong>Supported Formats</strong>: The API supports both text and binary formats.</li>
 <li><strong>Document Indexing</strong>: Documents can be indexed for efficient search and retrieval.</li>
 </ul>
-<h1 id="rocky-mountains-travel-website-and-bot">Rocky Mountains Travel Website and Bot</h1>
-<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; height:auto;">
-  <video style="position:absolute; top:0; left:0; width:100%; height:100%;" controls>
-    <source src="../images/travel_site.mp4" type="video/mp4">
-  </video>
-</div>
-<p>I built a travel website focused on the Rocky Mountains, specifically highlighting Banff and Waterton National Park. The goal of this project was to test the capabilities of a travel customer service bot that could provide relevant tourism information and links to resources. The bot was designed to assist users by answering questions about the parks, suggesting activities, and offering detailed information on accommodations, weather, and local attractions.</p>
-<p>I also wanted to test the bot's ability to facilitate bookings directly through the website. For this, I integrated a reservation system for an Italian restaurant, allowing users to make bookings within the bot interface. This integration served as a test case to ensure that the bot could handle specific tasks such as reserving a table, confirming details, and providing menu filtering options.</p>
-<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; height:auto;">
-  <video style="position:absolute; top:0; left:0; width:100%; height:100%;" controls>
-    <source src="../images/chatbot_travel.mp4" type="video/mp4">
-  </video>
-</div>
-<p>For providing tourism information the bot pulls from a knowledge base consisting of official tourism websites for Banff and Waterton National Park. The bot searches for the phrases containing the words &quot;link to&quot; in order to provide a hyperlink to Banff and Waterton resources.</p>
-<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; height:auto;">
-  <video style="position:absolute; top:0; left:0; width:100%; height:100%;" controls>
-    <source src="../images/booking.mp4" type="video/mp4">
-  </video>
-</div>
-<p>For the reservation interface the bot looks for the phrase &quot;book a reservation&quot;. The user is then shown the various options they have to:</p>
-<ul>
-<li>Make a new reservation. This asks for the user's date of reservation, email address, and number of people. A confirmation email is then sent containg this info and the resrvation number to cancel/change reservation.</li>
-<li>View or modify reservation: Provide the confirmation number provided in the email sent to view or modify current resrvation.</li>
-<li>Cancel reservation: Provide confirmation number in email to delete reservation.</li>
-<li>Learn about menu: View the full menu. Ask for reccomendations and filter by price or dietary restrictions.</li>
-</ul>
-<p>Various variables were created to store reservation information such as for the confirmation number, date and time, email, and party size. This information is stored in a reservation table which shows all current reservations. The table updated in real time when users delete or modify their reservation.</p>
-<p>Through this project, I was able to assess how well the bot could interact with users, provide helpful information in real-time, and manage tasks like reservations efficiently.</p>
-<p>You can test out the bot <a href="https://guannan-kwok.github.io/travel_chatbot/">here</a>.</p>
 <h1 id="training-botpress-model">Training Botpress Model</h1>
 <p>The travel chatbot was trained using:</p>
 <ul>
@@ -406,6 +422,7 @@ After embedding the chatbot on your website refresh the page to run the bot. The
 <li><strong>Official Tourism Sources</strong>: Uses information from official tourism sources, such as Parks Canada, for generating responses through retrieval-augmented generation (RAG).</li>
 <li><strong>Advanced Prompting</strong>: Provides instructions within the Botpress builder to guide how the bot should respond in specific scenarios.</li>
 </ul>
+</details>
 
     </div>
   </section>
